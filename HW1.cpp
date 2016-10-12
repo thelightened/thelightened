@@ -16,7 +16,7 @@ int main(void)
         factorial = factorial * i;
         e1 = (double)e1 + pow((double)x, i) / (double)factorial;
         e2 = e1 + pow((double)x, i) / (double)(factorial * (i + 1));
-        i++ ;
+        i++ ;dick
         e3 = (double) fabs((double)e1 - (double)e2);
     } 
 
