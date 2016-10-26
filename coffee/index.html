@@ -8,60 +8,79 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	
+  	<style type=text/css> 
+  	<!--
+	/*全部設定字體*/
+ 	body { font-family:微軟正黑體;}
+	//-->
+</style>
+
   	<style>
     .head {
-    	border-bottom: 10px;
-    	border-top: 10px;
-      	background-image: url("image/beige.jpg");
-      	
+    	padding-bottom:10px;
+    	padding-top: 10px;
+      	background-image: url("image/tileable_wood_texture.png");
+      
     }    
     /* Remove the navbar's default rounded borders and increase the bottom margin */
     .navbar {
-      	margin-bottom: 0px;
+      	margin-bottom: -10px;
       	border-radius: 0;
-      	background-color: #000000;
+      	background-color: #352c21;
     }
     
     /* Remove the jumbotron's default bottom margin */
     .jumbotron {
       	margin-bottom: 0;
-      	background-image: url("image/beige.jpg");
+      	background-image: url("image/tileable_wood_texture.png");
     }
    
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 850px}
+    .row.content {height: 1000px}
 
     .carousel-inner img {
-    width: 100%; /* Set width to 100% */
-    margin: auto;
- 	}
+    	width: 100%; /* Set width to 100% */
+    	margin: auto;
+	}
 
     /* Set gray background color and 100% height */
     .sidenav {
-      padding-top: 0px;
-      background-image: url("image/coffeebean.jpg");
-      height: 100%;
-      opacity: 0.7;
+      	padding-top: 0px;
+      	background-color: #352c21;
+      	height: 100%;
     }
 
     /* Add a gray background color and some padding to the footer */
     footer {
-      background-color: #000000;
-      color: white;
-      padding: 35px;
+     	background-image: url("image/tileable_wood_texture.png");
+     	color: brown;
+     	padding: 35px;
     }
  
     </style>
 </head>
 
 <body>
+
 	
 <div class="head">
-	<div class="container text-center">
-		<img src="image/logo4.png" class="img-rounded" alt="thelightened.html" width="180" height=70;border:0;">
-    	<img src="image/logo3.png" class="img-rounded" alt="thelightened.html" width="180" height=180;border:0;">
+	<div class="container">
+  		<div class="row">
+    		<div class="col-sm-3 ">
+    		</div>
+      		<div class="col-sm-2 ">
+      		</div>
+      		<div class="col-sm-2 ">
+      			<img src="image/logo3.png" class="img-rounded" alt="thelightened.html" width="200" height=200;">
+      		</div>
+      		<div class="col-sm-2 ">
+      		</div>
+      		<div class="col-sm-3 ">
+      		</div>
+		</div>
 	</div>
-
+</div>
+	
 <nav class="navbar navbar-inverse">
   	<div class="container-fluid">
     	<div class="navbar-header">
@@ -87,12 +106,11 @@
   	</div>
 </nav>
 
-<div class="container-fluid text-center">
+<div class="head">
   	<div class="row content">
-    	<div class="col-sm-2 sidenav">
-    		
-    	</div>
-      	<div class="col-sm-8 text-left">
+
+    	
+      	<div class="col-sm-12 text-left">
     
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
@@ -105,7 +123,7 @@
     			<!-- Wrapper for slides -->
     			<div class="carousel-inner" role="listbox">
       					<div class="item active">
-        					<img src="image/beansinbasket.jpg">
+        					<img src="image/beansinbasket.jpg" >
         					<div class="carousel-caption">
           					<h3></h3>
           					<p></p>
@@ -120,6 +138,9 @@
         					</div>
       					</div>
     
+
+
+
     				<!-- Left and right controls -->
     				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
     					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -132,14 +153,23 @@
 				</div>
 			</div>
       	</div>
-    	<div class="col-sm-2 sidenav">
-    		
-    	</div>
+    	
   	</div>
 </div>
 
-<footer class="container-fluid text-center">
-  	<h5><b>聯絡資訊</b></h5>
+<footer class="container-fluid text-left">
+  	<div>
+  		<h2>
+  			<b>	
+  				<hr><p>聯絡資訊</p>
+  				<p>地址:台北市溫州街74巷5弄3號1樓</p>
+				<p>電話:02-2369-0041</p>
+			</b>
+		</h2>
+  	</div>
+  	<div class="container-fluid text-right">
+  	<img src="image/logo4.png" class="img-rounded" alt="thelightened.html" width="180" height=70;border:0;">
+  	</div>
 </footer>
 
 </body>
