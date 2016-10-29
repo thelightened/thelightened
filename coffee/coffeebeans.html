@@ -17,15 +17,15 @@
 
     <style>
     .head {
-      	padding-bottom:10px;
-      	padding-top: 10px;
+        padding-bottom:10px;
+        padding-top: 10px;
         background-image: url("image/tileable_wood_texture.png");
       
     }    
     
     /* Remove the navbar's default rounded borders and increase the bottom margin */
     .navbar {
-        margin-bottom: -10px;
+        margin-bottom: 0px;
         border-radius: 0;
         background-color: #352c21;
     }
@@ -37,12 +37,12 @@
     }
    
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 550px}
+    .row.content {height: 500px}
 
     .carousel-inner img {
-      	width: 100%;  /*Set width to 100%*/ 
-      	margin: auto;
-      	max-height: 475px;
+        width: 100%;  /*Set width to 100%*/ 
+        margin: auto;
+        max-height: 475px;
     }
 
     /* Set gray background color and 100% height */
@@ -54,9 +54,9 @@
 
     /* Add a gray background color and some padding to the footer */
     footer {
-      	background-color: #352c21;
-      	padding: 20px;
-      	color: white;
+        background-color: #352c21;
+        padding: 20px;
+        color: white;
     }
 
     </style>
@@ -72,7 +72,7 @@
           <div class="col-sm-2 ">
           </div>
           <div class="col-sm-2 ">
-            <img src="image/logo3.png" class="img-rounded" alt="thelightened.html" width="200" height="200">
+            <a href="index.html"><img src="image/logo3.png" class="img-rounded" width="200" height="200"></a>
           </div>
           <div class="col-sm-2 ">
           </div>
@@ -93,9 +93,9 @@
         </div>
       <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a href="index.html"><b>About 點亮咖啡</b></a></li>
-            <li><a href="#"><b>專欄</b></a></li>
-            <li><a href="#"><b>咖啡豆</b></a></li>
+            <li><a href="#"><b>About 點亮咖啡</b></a></li>
+            <li><a href="blog.html"><b>專欄</b></a></li>
+            <li><a href="coffeebeans.html"><b>咖啡豆</b></a></li>   
             <li><a href="#"><b>公平貿易產品</b></a></li>
             <li><a href="#"><b>夥伴商店</b></a></li>
           </ul>
@@ -107,234 +107,232 @@
     </div>
 </nav>
 
-<div class="container">
-  <div class="row">
+<div class="head">
     
-    <div class="col-sm-2">
-        <div class="panel panel-default">
-          <div class="panel-heading">COFFEE BEANS</div>
-          <div class="panel-body">
-            <a href="cafe.jpg" data-toggle="modal" data-target="#myModal">
-              <img src="cafe.jpg" class="img-responsive" style="width:100%" alt="Image">
-            </a>
+  <div class="row" style="position: relative; margin-left: auto; margin-right: auto;">
+    
+      <div class="col-sm-3">
+          <div class="panel panel-success">
+            <div class="panel-heading">巴西</div>
+              <div class="panel-body" style="background-color:  #FFFFFF;">
+                <a href="image/拉花2.jpg" data-toggle="modal" data-target="#myModal">
+                    <img src="image/拉花2.jpg" class="img-responsive" style="width:100%" alt="Image">
+                </a>
+              </div>
+            <div class="panel-footer">$550</div>
           </div>
-          <div class="panel-footer">$550</div>
-        </div>
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-      <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
+            <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+              </div>
           </div>
-          <div class="modal-body">
-            <p>Some text in the modal.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-        </div>
       </div>
-    </div>
 
-    <div class="col-sm-2">
-        <div class="panel panel-default">
-          <div class="panel-heading">COFFEE BEANS</div>
-          <div class="panel-body">
-            <a href="cafe.jpg" data-toggle="modal" data-target="#myModal">
-              <img src="cafe.jpg" class="img-responsive" style="width:100%" alt="Image">
-            </a>
+      <div class="col-sm-3">
+          <div class="panel panel-success">
+            <div class="panel-heading">巴西</div>
+              <div class="panel-body" style="background-color:  #FFFFFF;">
+                <a href="image/拉花2.jpg" data-toggle="modal" data-target="#myModal">
+                    <img src="image/拉花2.jpg" class="img-responsive" style="width:100%" alt="Image">
+                </a>
+              </div>
+            <div class="panel-footer">$550</div>
           </div>
-          <div class="panel-footer">$550</div>
-        </div>
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-      <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
+            <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+              </div>
           </div>
-          <div class="modal-body">
-            <p>Some text in the modal.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-        </div>
       </div>
-    </div>
 
-    <div class="col-sm-2">
-        <div class="panel panel-default">
-          <div class="panel-heading">COFFEE BEANS</div>
-          <div class="panel-body">
-            <a href="cafe.jpg" data-toggle="modal" data-target="#myModal">
-              <img src="cafe.jpg" class="img-responsive" style="width:100%" alt="Image">
-            </a>
+      <div class="col-sm-3">
+          <div class="panel panel-success">
+            <div class="panel-heading">巴西</div>
+              <div class="panel-body" style="background-color:  #FFFFFF;">
+                <a href="image/拉花2.jpg" data-toggle="modal" data-target="#myModal">
+                    <img src="image/拉花2.jpg" class="img-responsive" style="width:100%" alt="Image">
+                </a>
+              </div>
+            <div class="panel-footer">$550</div>
           </div>
-          <div class="panel-footer">$550</div>
-        </div>
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-      <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
+            <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+              </div>
           </div>
-          <div class="modal-body">
-            <p>Some text in the modal.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-        </div>
       </div>
-    </div>
 
-    <div class="col-sm-2">
-        <div class="panel panel-default">
-          <div class="panel-heading">COFFEE BEANS</div>
-          <div class="panel-body">
-            <a href="cafe.jpg" data-toggle="modal" data-target="#myModal">
-              <img src="cafe.jpg" class="img-responsive" style="width:100%" alt="Image">
-            </a>
+
+      <div class="col-sm-3">
+          <div class="panel panel-success">
+            <div class="panel-heading">巴西</div>
+              <div class="panel-body" style="background-color:  #FFFFFF;">
+                <a href="image/拉花2.jpg" data-toggle="modal" data-target="#myModal">
+                    <img src="image/拉花2.jpg" class="img-responsive" style="width:100%" alt="Image">
+                </a>
+              </div>
+            <div class="panel-footer">$550</div>
           </div>
-          <div class="panel-footer">$550</div>
-        </div>
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-      <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
+            <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+              </div>
           </div>
-          <div class="modal-body">
-            <p>Some text in the modal.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-        </div>
       </div>
-    </div>
   
   </div>
-</div>
-
-<div class="container">
-  <div class="row">
-
-    <div class="col-sm-2">
-        <div class="panel panel-default">
-          <div class="panel-heading">COFFEE BEANS</div>
-          <div class="panel-body">
-            <a href="cafe.jpg" data-toggle="modal" data-target="#myModal">
-              <img src="cafe.jpg" class="img-responsive" style="width:100%" alt="Image">
-            </a>
-          </div>
-          <div class="panel-footer">$550</div>
-        </div>
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-      <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
-          </div>
-          <div class="modal-body">
-            <p>Some text in the modal.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-2">
-        <div class="panel panel-default">
-          <div class="panel-heading">COFFEE BEANS</div>
-          <div class="panel-body">
-            <a href="cafe.jpg" data-toggle="modal" data-target="#myModal">
-              <img src="cafe.jpg" class="img-responsive" style="width:100%" alt="Image">
-            </a>
-          </div>
-          <div class="panel-footer">$550</div>
-        </div>
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-      <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
-          </div>
-          <div class="modal-body">
-            <p>Some text in the modal.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-2">
-        <div class="panel panel-default">
-          <div class="panel-heading">COFFEE BEANS</div>
-          <div class="panel-body">
-            <a href="cafe.jpg" data-toggle="modal" data-target="#myModal">
-              <img src="cafe.jpg" class="img-responsive" style="width:100%" alt="Image">
-            </a>
-          </div>
-          <div class="panel-footer">$550</div>
-        </div>
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-      <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
-          </div>
-          <div class="modal-body">
-            <p>Some text in the modal.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
-   </div>
-  </div>
-</div>
   
-<div class="col-sm-2 sidenav"></div>
+  <div class="row" style="position: relative; margin-left: auto; margin-right: auto;">
+
+    <div class="col-sm-3">
+            <div class="panel panel-success">
+              <div class="panel-heading">巴西</div>
+                <div class="panel-body" style="background-color:  #FFFFFF;">
+                  <a href="image/拉花2.jpg" data-toggle="modal" data-target="#myModal">
+                      <img src="image/拉花2.jpg" class="img-responsive" style="width:100%" alt="Image">
+                  </a>
+                </div>
+              <div class="panel-footer">$550</div>
+            </div>
+              <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>Some text in the modal.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                  </div>
+                </div>
+            </div>
+     </div>
+
+     <div class="col-sm-3">
+          <div class="panel panel-success">
+            <div class="panel-heading">巴西</div>
+              <div class="panel-body" style="background-color:  #FFFFFF;">
+                <a href="image/拉花2.jpg" data-toggle="modal" data-target="#myModal">
+                    <img src="image/拉花2.jpg" class="img-responsive" style="width:100%" alt="Image">
+                </a>
+              </div>
+            <div class="panel-footer">$550</div>
+          </div>
+            <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-sm-3">
+          <div class="panel panel-success">
+            <div class="panel-heading">巴西</div>
+              <div class="panel-body" style="background-color:  #FFFFFF;">
+                <a href="image/拉花2.jpg" data-toggle="modal" data-target="#myModal">
+                    <img src="image/拉花2.jpg" class="img-responsive" style="width:100%" alt="Image">
+                </a>
+              </div>
+            <div class="panel-footer">$550</div>
+          </div>
+            <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+
 </div>
 
 <footer class="container-fluid text-left">
     <div class="container">
-      <div class="row">
+      <div class="row.content">
         <div class="col-sm-4">
           <h4>
             <p>台北市溫州街74巷5弄3號1樓</p>
