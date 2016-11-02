@@ -16,10 +16,11 @@
 	</style>
 
   	<style>
+	{% load static %}
     .head {
     	padding-bottom:10px;
     	padding-top: 10px;
-      	background-image: url("image/tileable_wood_texture.png");
+      	background-image: url("{% static "image/tileable_wood_texture.png" %}");
       
     }    
     
@@ -33,7 +34,7 @@
     /* Remove the jumbotron's default bottom margin */
     .jumbotron {
       	margin-bottom: 0;
-      	background-image: url("image/tileable_wood_texture.png");
+      	background-image: url("{% static "image/tileable_wood_texture.png" %}");
     }
    
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -72,7 +73,7 @@
       		</div>
       		<div class="col-sm-2 ">
             
-      			<a href="index.html"><img src="image/logo3.png" class="img-rounded" width="200" height="200"></a>
+   			<a href="{{TEMPLATE_DIRS }}/index"><img src="{% static "image/logo3.png" %}" class="img-rounded" width="200" height="200"></a>
 
       		</div>
       		<div class="col-sm-2 ">
@@ -95,8 +96,8 @@
     	<div class="collapse navbar-collapse" id="myNavbar">
       		<ul class="nav navbar-nav">
         		<li><a href="#"><b>About 點亮咖啡</b></a></li>
-        		<li><a href="blog.html"><b>專欄</b></a></li>
-        		<li><a href="coffeebeans.html"><b>咖啡豆</b></a></li>   
+        		<li><a href="{{TEMPLATE_DIRS }}/blog"><b>專欄</b></a></li>
+        		<li><a href="{{TEMPLATE_DIRS }}/coffeebeans"><b>咖啡豆</b></a></li>   
         		<li><a href="#"><b>公平貿易產品</b></a></li>
         		<li><a href="#"><b>夥伴商店</b></a></li>
       		</ul>
@@ -125,7 +126,7 @@
     			<!-- Wrapper for slides -->
     			<div class="carousel-inner" role="listbox">
       				<div class="item active">
-        				<img src="image/耳掛包2.jpg" width="60%" height="60%">
+        				<img src="{% static "image/耳掛包2.jpg" %}" width="60%" height="60%">
         				<div class="carousel-caption">
           					<h3></h3>
           					<p></p>
@@ -133,7 +134,7 @@
       				</div>
 
       				<div class="item">
-        				<img src="image/杯墊.jpg">
+        				<img src="{% static "image/杯墊.jpg" %}">
         				<div class="carousel-caption">
           					<h3></h3>
           					<p></p>
@@ -141,7 +142,7 @@
       				</div>
 
       				<div class="item ">
-        				<img src="image/咖啡豆們.jpg" >
+        				<img src="{% static "image/咖啡豆們.jpg" %}" >
         				<div class="carousel-caption">
           					<h3></h3>
           					<p></p>
@@ -149,7 +150,7 @@
       				</div>
 
       				<div class="item ">
-        				<img src="image/德國難民照片展一角.jpg" >
+        				<img src="{% static "image/德國難民照片展一角.jpg" %}">
         				<div class="carousel-caption">
           					<h3></h3>
           					<p></p>
@@ -157,7 +158,7 @@
       				</div>
 
       				<div class="item ">
-        				<img src="image/初二的哥斯大黎加.jpg" >
+        				<img src="{% static "image/初二的哥斯大黎加.jpg" %}" >
         				<div class="carousel-caption">
           					<h3></h3>
           					<p></p>
@@ -195,7 +196,7 @@
   			</div>
   			<div class="col-sm-4">
   				<div class="container-fluid text-right">
-  					<br><img src="image/logo4.png" class="img-rounded" alt="thelightened.html" width="180" height="70">
+  					<br><img src="{% static "image/logo4.png" %}" class="img-rounded" alt="thelightened.html" width="180" height="70">
   				</div>
   			</div>
   		</div>

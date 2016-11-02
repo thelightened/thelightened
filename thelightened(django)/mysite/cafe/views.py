@@ -7,4 +7,7 @@ def index(request):
 
 def test(request):
 	return render_to_response('test.html')
+	
+def coffeebeans(request):
+	return render_to_response('coffeebeans.html')
 
