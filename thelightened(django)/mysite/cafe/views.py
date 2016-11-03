@@ -1,5 +1,5 @@
 from django.shortcuts import render_to_response
-
+from cafe.models import IndexImage, MyModel
 
 
 def index(request):

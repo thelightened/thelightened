@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from views import login,indexhomepage
+from django.conf import settings
 from cafe.views import index, test, coffeebeans
 
 urlpatterns = patterns('',
@@ -11,4 +12,6 @@ urlpatterns = patterns('',
     url(r'^login/$',login),
 	url(r'^coffeebeans/$',coffeebeans),
     url(r'^indexhomepage/$',indexhomepage),	
+    url(r'^tinymce/', include('tinymce.urls')),
+    url(r'^mce_filebrowser/', include('mce_filebrowser.urls')),
 )
