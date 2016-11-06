@@ -36,11 +36,15 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'django.contrib.sites', #django sites framework
     'cafe',
     'tinymce',
     'sorl.thumbnail',
     'mce_filebrowser',
+	# 'google_analytics',
 )
+
+SITE_ID = 1
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -81,6 +85,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+# GOOGLE_ANALYTICS_MODEL = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
