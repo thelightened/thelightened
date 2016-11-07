@@ -24,3 +24,7 @@ def login(request):
 
 def indexhomepage(request):	
 	return render_to_response('indexhomepage.html',RequestContext(request,locals()))
+
+def logout(request):	
+	auth.logout(request)
+	return HttpResponseRedirect('/indexhomepage/')

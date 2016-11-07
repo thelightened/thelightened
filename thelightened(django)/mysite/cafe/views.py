@@ -11,5 +11,3 @@ def test(request):
 def coffeebeans(request):
 	return render_to_response('coffeebeans.html')
 
-def blog(request):
-	return render_to_response('blog.html')
