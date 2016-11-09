@@ -8,7 +8,6 @@ urlpatterns = patterns('',
    
     url(r'^admin/', include(admin.site.urls)),
     url(r'^index/$',index),
-    url(r'^test/$',test),
     url(r'^login/$',login),
     url(r'^logout/$',logout),
 	url(r'^coffeebeans/$',coffeebeans),
