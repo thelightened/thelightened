@@ -18,48 +18,48 @@
   	<style>
 	{% load static %}
     .head {
-    	padding-bottom:10px;
-    	padding-top: 10px;
-      	background-image: url("{% static "image/tileable_wood_texture.png" %}");
+        padding-bottom:10px;
+        padding-top: 10px;
+        background-image: url("{% static "image/tileable_wood_texture.png" %}");
       
     }    
     
     /* Remove the navbar's default rounded borders and increase the bottom margin */
     .navbar {
-      	margin-bottom: -10px;
-      	border-radius: 0;
-      	background-color: #352c21;
+        margin-bottom: -10px;
+        border-radius: 0;
+        background-color: #352c21;
     }
     
     /* Remove the jumbotron's default bottom margin */
     .jumbotron {
-      	margin-bottom: 0;
-      	background-image: url("{% static "image/tileable_wood_texture.png" %}");
+        margin-bottom: 0;
+        background-image: url("{% static "image/tileable_wood_texture.png" %}");
     }
    
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 550px}
+    .row.content {height: 700px}
 
     .carousel-inner img {
-    	width: 100%;  /*Set width to 100%*/ 
-    	margin: auto;
-    	max-height: 475px;
-	}
+      width: 100%;  /*Set width to 100%*/ 
+      max-height: 500px;
+  }
 
     /* Set gray background color and 100% height */
     .sidenav {
-      	padding-top: 0px;
-      	background-color: #352c21;
-      	height: 100%;
+        padding-top: 0px;
+        background-color: #FFFFFF;
+        height: 100%;
     }
 
     /* Add a gray background color and some padding to the footer */
     footer {
-     	background-color: #352c21;
-     	padding: 20px;
-     	color: white;
+      background-color: #352c21;
+      padding: 20px;
+      color: white;
     }
- 	</style>
+  </style>
+
 </head>
 
 <body>
@@ -95,11 +95,11 @@
       	</div>
     	<div class="collapse navbar-collapse" id="myNavbar">
       		<ul class="nav navbar-nav">
-        		<li><a href="#"><b>About 點亮咖啡</b></a></li>
-        		<li><a href="{{TEMPLATE_DIRS }}/blog"><b>專欄</b></a></li>
-        		<li><a href="{{TEMPLATE_DIRS }}/coffeebeans"><b>咖啡豆</b></a></li>   
-        		<li><a href="#"><b>公平貿易產品</b></a></li>
-        		<li><a href="#"><b>夥伴商店</b></a></li>
+        		<li><a href="{{TEMPLATE_DIRS }}/about"><b>About 點亮咖啡</b></a></li>
+            <li><a href="{{TEMPLATE_DIRS }}/blog"><b>專欄</b></a></li>
+            <li><a href="{{TEMPLATE_DIRS }}/coffeebeans"><b>咖啡豆</b></a></li>   
+            <li><a href="{{TEMPLATE_DIRS }}/product"><b>公平貿易產品</b></a></li>
+            <li><a href="{{TEMPLATE_DIRS }}/partnershop"><b>夥伴商店</b></a></li>
       		</ul>
       		<ul class="nav navbar-nav navbar-right">
         		<li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
@@ -109,9 +109,9 @@
   	</div>
 </nav>
 
-<div class="head">
-  	<div class="row content">
-		<div class="col-sm-12 text-left">
+<div class="sidenav">
+      <div class="row content">
+        <div class="col-sm-12 ">
     		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
     			<!-- Indicators -->

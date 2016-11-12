@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<title>about</title>
+		<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	
+  	<style type=text/css> 
+  		<!--
+		/*全部設定字體*/
+ 		body { font-family:微軟正黑體;}
+		//-->
+	</style>
+  
+    <style>
+    {% load static %}
+    .head {
+        padding-bottom:10px;
+        padding-top: 10px;
+        background-image: url("{% static "image/tileable_wood_texture.png" %}");
+      
+    }    
+    
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
+    .navbar {
+        margin-bottom: 0px;
+        border-radius: 0;
+        background-color: #352c21;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */
+    .jumbotron {
+        margin-bottom: 0;
+        background-image: url("{% static "image/tileable_wood_texture.png" %}");
+    }
+   
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 500px}
+
+    .carousel-inner img {
+        width: 100%;  /*Set width to 100%*/ 
+        margin: auto;
+        max-height: 475px;
+    }
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+        padding-top: 0px;
+        background-color: #352c21;
+        height: 100%;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+        background-color: #352c21;
+        padding: 20px;
+        color: white;
+    }
+</style>
+
+</head>
+
+<body>
+
+	<div class="head">
+		<div class="container">
+  			<div class="row">
+    			<div class="col-sm-3 ">
+    			</div>
+      			<div class="col-sm-2 ">
+      			</div>
+      			<div class="col-sm-2 ">
+            		<a href="{{TEMPLATE_DIRS }}/index"><img src="{% static "image/logo3.png" %}" class="img-rounded" width="200" height="200"></a>
+            	</div>
+      			<div class="col-sm-2 ">
+      			</div>
+      			<div class="col-sm-3 ">
+      			</div>
+			</div>
+		</div>
+	</div>
+	
+	<nav class="navbar navbar-inverse">
+	  	<div class="container-fluid">
+	    	<div class="navbar-header">
+		      	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        	<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+		      	</button>
+	      	</div>
+	    	<div class="collapse navbar-collapse" id="myNavbar">
+	      		<ul class="nav navbar-nav">
+            <li><a href="{{TEMPLATE_DIRS }}/about"><b>About 點亮咖啡</b></a></li>
+            <li><a href="{{TEMPLATE_DIRS }}/blog"><b>專欄</b></a></li>
+            <li><a href="{{TEMPLATE_DIRS }}/coffeebeans"><b>咖啡豆</b></a></li>   
+            <li><a href="{{TEMPLATE_DIRS }}/product"><b>公平貿易產品</b></a></li>
+            <li><a href="{{TEMPLATE_DIRS }}/partnershop"><b>夥伴商店</b></a></li>
+          </ul>
+	      		<ul class="nav navbar-nav navbar-right">
+	        		<li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+	        		<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+	      		</ul>
+	    	</div>
+	  	</div>
+	</nav>
+<div class="container-fluid text-left">
+
+<hr>
+
+<div class="row">
+              <div class="col-md-4">
+                <img src="{% static "image/boss.jpg" %}"  width="350" height="350">              
+              </div>
+
+              <div class="col-md-8">
+                <h1>【關於老闆】</h1>
+                <hr>
+                <h4><p>text</p></h4>
+                
+
+              </div>
+            </div>
+<hr>
+<div class="row">
+              <div class="col-md-4">
+                <img src="{% static "image/place.jpg" %}"  width="350" height="350">              
+              </div>
+
+              <div class="col-md-8">
+                <h1>【點亮咖啡】</h1>
+                <hr>
+                <h4><p>text</p></h4>
+
+              </div>
+            </div>
+<hr>
+<div class="row">
+              <div class="col-md-4">
+                <img src="{% static "image/咖啡豆們.jpg" %}"  width="350" height="350">              
+              </div>
+
+              <div class="col-md-8">
+                <h1>【直接貿易】</h1>
+                <hr>
+                <h4><p>text</p></h4>
+
+              </div>
+            </div>
+<hr>
+<div class="row">
+              <div class="col-md-4">
+                <img src="{% static "image/產品照-海地小農與coffee cherry.jpg" %}"  width="350" height="350">              
+              </div>
+
+              <div class="col-md-8">
+                <h1>【公平貿易】</h1>
+                <hr>
+                <h4><p>text</p></h4>
+
+              </div>
+            </div>
+<hr>
+</div>
+
+
+
+
+
+<footer class="container-fluid text-left">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <h5>台北市溫州街74巷5弄3號1樓</h5>
+          <h5><span class="glyphicon glyphicon-phone-alt"></span> 02-23690041</h5>
+          <h5><span class="glyphicon glyphicon-time"></span>  12:00 - 21:30</h5>
+        </div>
+        <div class="col-sm-4">
+          
+        </div>
+        <div class="col-sm-4">
+          <div class="container-fluid text-right">
+            <br><img src="{% static "image/logo4.png" %}" class="img-rounded" alt="index.html" width="180" height="70">
+          </div>
+        </div>
+      </div>
+  </div>
+
+</footer>
+</body>
+</html>

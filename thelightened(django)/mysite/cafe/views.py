@@ -13,3 +13,13 @@ def coffeebeans(request):
 
 def blog(request):
 	return render_to_response('blog.html')
+
+def product(request):
+	return render_to_response('product.html')
+
+def about(request):
+	return render_to_response('about.html')
+
+def partnershop(request):
+	return render_to_response('partnershop.html')
+
