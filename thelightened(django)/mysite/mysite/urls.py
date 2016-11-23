@@ -1,8 +1,8 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
-from cafe.views import index, test, coffeebeans, blog, product, partnershop, about,indexrequest,logout,register,accounts,fblog
-import allauth
+from cafe.views import index, test, coffeebeans, blog, product, partnershop, about,indexrequest,logout,register,fblog#accounts
+
 
 urlpatterns = patterns('',
    
@@ -18,6 +18,5 @@ urlpatterns = patterns('',
     url(r'^partnershop/$',partnershop),
     url(r'^tinymce/', include('tinymce.urls')),
     url(r'^mce_filebrowser/', include('mce_filebrowser.urls')),
-    url(r'^accounts$/', include('allauth.urls')),
     url(r'^fblog/$',fblog),
 )

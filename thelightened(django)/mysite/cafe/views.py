@@ -58,8 +58,6 @@ def register(request):
 		form = UserCreationForm()
 	return render_to_response('indexregister.html',RequestContext(request,locals()))
 
-def accounts(request):
-	return render_to_response('/accounts/')
 
 def fblog(request):
 	return render_to_response('fblog.html')
