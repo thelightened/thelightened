@@ -63,6 +63,24 @@
 </head>
 
 <body>
+    
+      <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '101197950365729',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <div class="head">
 	<div class="container">
@@ -83,7 +101,14 @@
 		</div>
 	</div>
 </div>
-	
+	 
+   <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
 <nav class="navbar navbar-inverse">
   	<div class="container-fluid">
     	<div class="navbar-header">
@@ -102,12 +127,27 @@
             <li><a href="{{TEMPLATE_DIRS }}/partnershop"><b>夥伴商店</b></a></li>
       		</ul>
       		<ul class="nav navbar-nav navbar-right">
+
+
+
+
+           <form action="" method="post">
+      <input type ="submit" value ="登入" />
+      <label for="username"  ><font color="#808080">用戶名稱:</font></label> {%  csrf_token %}
+      <input type="text"  name ="username" value="{{username}}" id="username" <br />
+      <label for="password"><font color="#808080"> 用戶密碼: </font></label>
+      <input type="password" name="password" value ="" id="password">   
+      還沒有帳號?，請 <a href='/indexregister/'>註冊  </a>
+           </form>
+
         		<li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
         		<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       		</ul>
     	</div>
   	</div>
 </nav>
+
+
 
 <div class="sidenav">
       <div class="row content">
@@ -203,5 +243,8 @@
 	</div>
 
 </footer>
+
+
+</script>
 </body>
 </html>

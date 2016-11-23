@@ -42,9 +42,11 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'mce_filebrowser',
 	# 'google_analytics',
+
 )
 
-SITE_ID = 1
+
+SITE_ID = 2
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -95,3 +97,4 @@ STATIC_URL = '/static/'
 TINYMCE_DEFAULT_CONFIG = {
   'file_browser_callback': 'mce_filebrowser'
 }
+
