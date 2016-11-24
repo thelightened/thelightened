@@ -8,6 +8,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 def index(request):
 
+	index = IndexImage.objects.all()
 	if request.user.is_authenticated():
 		return HttpResponseRedirect('/indexrequest/')
 
