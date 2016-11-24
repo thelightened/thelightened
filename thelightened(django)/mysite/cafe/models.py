@@ -8,6 +8,6 @@ class MyModel(models.Model):
 
 class IndexImage(models.Model):
 		name = models.CharField(max_length=20)
-		image = models.ImageField(upload_to = "images" )
+		image = models.ImageField(upload_to = "cafe/static/image")
 		def __unicode__(self):
 			return self.name
