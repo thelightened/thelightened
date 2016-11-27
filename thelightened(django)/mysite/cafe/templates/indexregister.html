@@ -15,57 +15,52 @@
 		//-->
 	</style>
 
-     <!-- 確認使用者身分-->
-  <body>
-
-  </body>  
   	<style>
+	{% load static %}
     .head {
-    	padding-bottom:10px;
-    	padding-top: 10px;
-      	background-image: url("image/tileable_wood_texture.png");
+        padding-bottom:10px;
+        padding-top: 10px;
+        background-image: url("{% static "image/tileable_wood_texture.png" %}");
       
     }    
     
     /* Remove the navbar's default rounded borders and increase the bottom margin */
     .navbar {
-      	margin-bottom: -10px;
-      	border-radius: 0;
-      	background-color: #352c21;
+        margin-bottom: -10px;
+        border-radius: 0;
+        background-color: #352c21;
     }
     
     /* Remove the jumbotron's default bottom margin */
     .jumbotron {
-      	margin-bottom: 0;
-      	background-image: url("image/tileable_wood_texture.png");
+        margin-bottom: 0;
+        background-image: url("{% static "image/tileable_wood_texture.png" %}");
     }
    
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 550px}
+    .row.content {height: 700px}
 
     .carousel-inner img {
-    	width: 100%;  /*Set width to 100%*/ 
-    	margin: auto;
-    	max-height: 475px;
-	}
+      width: 100%;  /*Set width to 100%*/ 
+      max-height: 500px;
+  }
 
     /* Set gray background color and 100% height */
     .sidenav {
-      	padding-top: 0px;
-      	background-color: #352c21;
-      	height: 100%;
+        padding-top: 0px;
+        background-color: #FFFFFF;
+        height: 100%;
     }
 
     /* Add a gray background color and some padding to the footer */
     footer {
-     	background-color: #352c21;
-     	padding: 20px;
-     	color: white;
+      background-color: #352c21;
+      padding: 20px;
+      color: white;
     }
- 	</style>
-</head>
+  </style>
 
-  
+</head>
 
 <body>
 
@@ -78,7 +73,7 @@
       		</div>
       		<div class="col-sm-2 ">
             
-      			<a href="index.html"><img src="image/logo3.png" class="img-rounded" width="200" height="200"></a>
+   			<a href="{{TEMPLATE_DIRS }}/index"><img src="{% static "image/logo3.png" %}" class="img-rounded" width="200" height="200"></a>
 
       		</div>
       		<div class="col-sm-2 ">
@@ -100,31 +95,33 @@
       	</div>
     	<div class="collapse navbar-collapse" id="myNavbar">
       		<ul class="nav navbar-nav">
-        		<li><a href="#"><b>About 點亮咖啡</b></a></li>
-        		<li><a href="blog.html"><b>專欄</b></a></li>
-        		<li><a href="coffeebeans.html"><b>咖啡豆</b></a></li>   
-        		<li><a href="#"><b>公平貿易產品</b></a></li>
-        		<li><a href="#"><b>夥伴商店</b></a></li>
+        		<li><a href="{{TEMPLATE_DIRS }}/about"><b>About 點亮咖啡</b></a></li>
+            <li><a href="{{TEMPLATE_DIRS }}/blog"><b>專欄</b></a></li>
+            <li><a href="{{TEMPLATE_DIRS }}/coffeebeans"><b>咖啡豆</b></a></li>   
+            <li><a href="{{TEMPLATE_DIRS }}/product"><b>公平貿易產品</b></a></li>
+            <li><a href="{{TEMPLATE_DIRS }}/partnershop"><b>夥伴商店</b></a></li>
       		</ul>
       		<ul class="nav navbar-nav navbar-right">
+
+
         		<li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
         		<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       		</ul>
     	</div>
   	</div>
 </nav>
+
 <p></p>
-    <form action="" method="post">
-      <label for="username">用戶名稱:</label> {%  csrf_token %}
-      <input type="text" name ="username" value="{{username}}" id="username" <br />
-      <label for="password"> 用戶密碼: </label>
-      <input type="password" name="password" value ="" id="password"> <br />
-      <input type ="submit" value ="登入" />
-    </form>
-    
-<div class="head">
-  	<div class="row content">
-		<div class="col-sm-12 text-left">
+ <h2><註冊新帳號></h2>
+      
+      <form action="" method="post">{% csrf_token %}
+      {{ form.as_p }}
+        <input type="submit" value="註冊">
+      </form>
+
+<div class="sidenav">
+      <div class="row content">
+        <div class="col-sm-12 ">
     		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
     			<!-- Indicators -->
@@ -137,7 +134,47 @@
       			</ol>
 
     			<!-- Wrapper for slides -->
+    			<div class="carousel-inner" role="listbox">
+      				<div class="item active">
+        				<img src="{% static "image/耳掛包2.jpg" %}" width="60%" height="60%">
+        				<div class="carousel-caption">
+          					<h3></h3>
+          					<p></p>
+        				</div>
+      				</div>
 
+      				<div class="item">
+        				<img src="{% static "image/杯墊.jpg" %}">
+        				<div class="carousel-caption">
+          					<h3></h3>
+          					<p></p>
+        				</div>
+      				</div>
+
+      				<div class="item ">
+        				<img src="{% static "image/咖啡豆們.jpg" %}" >
+        				<div class="carousel-caption">
+          					<h3></h3>
+          					<p></p>
+        				</div>
+      				</div>
+
+      				<div class="item ">
+        				<img src="{% static "image/德國難民照片展一角.jpg" %}">
+        				<div class="carousel-caption">
+          					<h3></h3>
+          					<p></p>
+        				</div>
+      				</div>
+
+      				<div class="item ">
+        				<img src="{% static "image/初二的哥斯大黎加.jpg" %}" >
+        				<div class="carousel-caption">
+          					<h3></h3>
+          					<p></p>
+        				</div>
+      				</div>
+    
 					<!-- Left and right controls -->
     				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
     					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -153,7 +190,6 @@
     </div>
 </div>
 
-   
 <footer class="container-fluid text-left">
   	<div class="container">
   		<div class="row">
@@ -170,7 +206,7 @@
   			</div>
   			<div class="col-sm-4">
   				<div class="container-fluid text-right">
-  					<br><img src="image/logo4.png" class="img-rounded" alt="thelightened.html" width="180" height="70">
+  					<br><img src="{% static "image/logo4.png" %}" class="img-rounded" alt="thelightened.html" width="180" height="70">
   				</div>
   			</div>
   		</div>
