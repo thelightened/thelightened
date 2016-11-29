@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-		<title>The Lightened</title>
-		<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  	
-  	<style type=text/css> 
-  		<!--
-		/*全部設定字體*/
- 		body { font-family:微軟正黑體;}
-		//-->
-	</style>
+    <title>The Lightened</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
 
-  	<style>
-	{% load static %}
+
+    <style>
+    {% load static %}
+    /*全部設定字體*/
+    body { font-family:微軟正黑體; background-color: black;
+      font-size: 0.9em;}
+
     .head {
-        padding-bottom:10px;
-        padding-top: 10px;
-        background-image: url("{% static "image/tileable_wood_texture.png" %}");
+      padding-bottom:10px;
+      padding-top: 10px;
+        background-image: url("{% static "image/back.jpg" %}");
       
     }    
     
     /* Remove the navbar's default rounded borders and increase the bottom margin */
     .navbar {
-        margin-bottom: -10px;
+        margin-bottom: 0px;
         border-radius: 0;
         background-color: #352c21;
     }
-    
-    /* Remove the jumbotron's default bottom margin */
-    .jumbotron {
+        .jumbotron {
         margin-bottom: 0;
-        background-image: url("{% static "image/tileable_wood_texture.png" %}");
+        background-image: url("image/tileable_wood_texture.png");
     }
    
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -55,15 +53,17 @@
     /* Add a gray background color and some padding to the footer */
     footer {
       background-color: #352c21;
-      padding: 20px;
-      color: white;
+      padding: 10px;
+      color: gray;
     }
   </style>
 
 </head>
 
 <body>
-    
+    <div class="col-sm-1">
+</div>
+<div class="col-sm-10">
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -156,17 +156,15 @@
 
 
 <div class="head">
-	<div class="container">
+	<div class="container-fluid text-center">
   		<div class="row">
     		<div class="col-sm-3 ">
+          <a href="{{TEMPLATE_DIRS }}/index"><img src="{% static "image/logo3.png" %}" class="img-rounded" width="180" height="180"></a>
     		</div>
       		<div class="col-sm-2 ">
       		</div>
-      		<div class="col-sm-2 ">
-            
-   			<a href="{{TEMPLATE_DIRS }}/index"><img src="{% static "image/logo3.png" %}" class="img-rounded" width="200" height="200"></a>
-
-      		</div>
+      		<div class="col-sm-2 ">     
+   		    		</div>
       		<div class="col-sm-2 ">
       		</div>
       		<div class="col-sm-3 ">
@@ -193,7 +191,7 @@
       	</div>
     	<div class="collapse navbar-collapse" id="myNavbar">
       		<ul class="nav navbar-nav">
-        		<li><a href="{{TEMPLATE_DIRS }}/about"><b>About 點亮咖啡</b></a></li>
+        		<li><a href="{{TEMPLATE_DIRS }}/about"><b>點亮咖啡</b></a></li>
             <li><a href="{{TEMPLATE_DIRS }}/blog"><b>專欄</b></a></li>
             <li><a href="{{TEMPLATE_DIRS }}/coffeebeans"><b>咖啡豆</b></a></li>   
             <li><a href="{{TEMPLATE_DIRS }}/product"><b>公平貿易產品</b></a></li>
@@ -275,13 +273,14 @@
 </div>
 
 <footer class="container-fluid text-left">
-  	<div class="container">
-  		<div class="row">
-  			<div class="col-sm-4">
-  		<h4>
-  					<p>台北市溫州街74巷5弄3號1樓</p>
-					<p><span class="glyphicon glyphicon-phone-alt"></span>	02-23690041</p>
-					<p><span class="glyphicon glyphicon-time"></span>	12:00 - 21:30</p>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          
+        <h6><span class="glyphicon glyphicon-phone-alt"></span>  連絡電話：02-23690041　
+        <span class="glyphicon glyphicon-time"></span>  營業時間：12:00 - 21:30<h6>
+        <h6>地址：台北市溫州街74巷5弄3號1樓</h6>
 
 				</h4>
   			</div>
@@ -289,15 +288,17 @@
   				
   			</div>
   			<div class="col-sm-4">
-  				<div class="container-fluid text-right">
+  				<div class="container-fluid text-center">
   					<br><img src="{% static "image/logo4.png" %}" class="img-rounded" alt="thelightened.html" width="180" height="70">
   				</div>
   			</div>
   		</div>
 	</div>
 
-</footer> --> 
-
+</footer> 
+</div>
+<div class="col-sm-1">
+</div>
 
 
 </body>

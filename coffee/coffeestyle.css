@@ -1,0 +1,44 @@
+<style>
+
+  	/*全部設定字體*/
+ 		body { font-family:微軟正黑體; background-color: black;
+ 			font-size: 0.9em;}
+
+    .head {
+    	padding-bottom:10px;
+    	padding-top: 10px;
+      	background-image: url("image/back.jpg");
+      
+    }    
+    
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
+    .navbar {
+      	margin-bottom: 0px;
+      	border-radius: 0;
+      	background-color: #352c21;
+    }
+    
+
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 700px}
+
+    .carousel-inner img {
+    	width: 100%;  /*Set width to 100%*/ 
+    	max-height: 500px;
+	}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+        padding-top: 0px;
+        background-color: #FFFFFF;
+        height: 100%;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+     	background-color: #352c21;
+     	padding: 10px;
+     	color: gray;
+    }
+ 	</style>
