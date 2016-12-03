@@ -15,11 +15,11 @@
 
   	/*全部設定字體*/
  		body { font-family:微軟正黑體; background-color: black;
- 			font-size: 0.9em;}
+ 			}
 
     .head {
-    	padding-bottom:10px;
-    	padding-top: 10px;
+    	padding-bottom:15px;
+    	padding-top: 15px;
       	background-image: url("image/back.jpg");
       
     }    
@@ -30,11 +30,13 @@
       	border-radius: 0;
       	background-color: #352c21;
     }
-    
-
-
+        .jumbotron {
+        margin-bottom: 0;
+        background-image: url("image/tileable_wood_texture.png");
+    }
+   
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 700px}
+    .row.content {height: 600px}
 
     .carousel-inner img {
     	width: 100%;  /*Set width to 100%*/ 
@@ -51,7 +53,7 @@
     /* Add a gray background color and some padding to the footer */
     footer {
      	background-color: #352c21;
-     	padding: 10px;
+     	padding-bottom: 10px;
      	color: gray;
     }
  	</style>
@@ -59,14 +61,13 @@
 </head>
 
 <body>
-<div class="col-sm-1">
-</div>
-	<div class="col-sm-10">
+
+
 	  <div class="head">
       <div class="container-fluid text-center">
           <div class="row">
             <div class="col-sm-3 ">
-            	<a href="index.html"><img src="image/logo3.png" class="img-rounded" width="180" height="180"></a>
+            	<a href="index.html"><img src="image/logo3.png" class="img-rounded" width="190" height="190"></a>
               </div>
               <div class="col-sm-2 ">
               </div>
@@ -79,7 +80,7 @@
           </div>
       </div>
   </div>
-	
+
 	<nav class="navbar navbar-inverse">
 	  	<div class="container-fluid">
 	    	<div class="navbar-header">
@@ -92,13 +93,13 @@
 	      	</div>
 	    	<div class="collapse navbar-collapse" id="myNavbar">
 
-	      		<ul class="nav navbar-nav">
+	      		<ul class="nav navbar-nav" "text-center">
 	      			
-	        		<li><a href="about.html"><b>點亮咖啡</b></a></li>
-	        		<li><a href="blog.html"><b>專欄</b></a></li>
-	        		<li><a href="coffeebeans.html"><b>咖啡豆</b></a></li>   
-	        		<li><a href="#"><b>公平貿易產品</b></a></li>
-	        		<li><a href="partnershop.html"><b>夥伴商店</b></a></li>
+	        		<li><a href="about.html"><b>點亮咖啡	</b></a></li>
+	        		<li><a href="blog.html"><b>專欄	</b></a></li>
+	        		<li><a href="coffeebeans.html"><b>咖啡豆們  </b></a></li>   
+	        		<li><a href="#"><b>公平貿易產品  </b></a></li>
+	        		<li><a href="partnershop.html"><b>夥伴商店  </b></a></li>
 
 	      		</ul>
 	      		<ul class="nav navbar-nav navbar-right">
@@ -108,9 +109,13 @@
 	    	</div>
 	  	</div>
 	</nav>
+<div class="col-sm-1" style="background-color:black";>
+</div>
+<div class="col-sm-10">
 
 	<div class="sidenav">
 	  	<div class="row content">
+	  					
 	    	<div class="col-sm-12 ">
 		    
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -180,33 +185,31 @@
 		    </div>
 		</div>
 	</div>
-
-<footer class="container-fluid text-left">
+</div>
+<div class="col-sm-1">
+	</div>
+						
+<footer class="container-fluid text-center">
   	
   	<div class="container">
   		<div class="row">
-  			<div class="col-sm-4">
-  				
-				<h6><span class="glyphicon glyphicon-phone-alt"></span>  連絡電話：02-23690041　
-				<span class="glyphicon glyphicon-time"></span>	營業時間：12:00 - 21:30<h6>
-				<h6>地址：台北市溫州街74巷5弄3號1樓</h6>
+
 				
 
-			</div>
-  			<div class="col-sm-4">
-  				
+  			<div class="col-sm-9">
+  				<br>
+  				<p align="center"><a href="https://www.facebook.com/thelightened/"><img src="image/icon_fb.gif" width="35"></a>　點亮咖啡Thelightened直接貿易咖啡廳　|　聯絡電話：02-23690041　|　營業時間：12:00 - 21:30<br>地址：台北市溫州街74巷5弄3號1樓<br><br>點亮咖啡版權所有 © 2016 Thelightened. All Rights Reserved</p>
   			</div>
-  			<div class="col-sm-4">
-  				<div class="container-fluid text-center">
-  					<br><img src="image/logo4.png" class="img-rounded" alt="thelightened.html" width="180" height="70">
+  			<div class="col-sm-3">
+  				<div class="container-fluid text-left">
+  					<br>
+  					<br><img src="image/logo4.png" class="img-rounded" alt="thelightened.html" width="170" height="65">
   				</div>
   			</div>
   		</div>
 	</div>
 
 </footer>
-</div>
-<div class="col-sm-1">
-</div>
+
 </body>
 </html>
