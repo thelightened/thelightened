@@ -19,4 +19,5 @@ urlpatterns = patterns('',
     url(r'^tinymce/', include('tinymce.urls')),
     url(r'^mce_filebrowser/', include('mce_filebrowser.urls')),
     url(r'^fblog/$',fblog),
+    url(r'^', include('cafe.urls'),
 )
