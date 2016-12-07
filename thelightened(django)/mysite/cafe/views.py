@@ -4,7 +4,7 @@ from cafe.models import IndexImage, MyModel
 from django.contrib import auth
 from django.template import RequestContext
 from django.contrib.auth.forms import UserCreationForm
-
+from django.conf.urls import patterns, url
 
 def index(request):
 
@@ -47,7 +47,7 @@ def partnershop(request):
 
 def logout(request):	
 	auth.logout(request)
-	return HttpResponseRedirect('/index/')
+	return HttpResponseRedirect('/indexrequest/')
 
 def register(request):
 	if request.method == 'POST':
@@ -60,5 +60,3 @@ def register(request):
 	return render_to_response('indexregister.html',RequestContext(request,locals()))
 
 
-def fblog(request):
-	return render_to_response('fblog.html')
