@@ -10,19 +10,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-
-
-    <style>
+  <style>
     {% load static %}
     /*全部設定字體*/
     body { font-family:微軟正黑體; background-color: black;
       font-size: 0.9em; font-color:white;}
 
     .head {
-      padding-bottom:10px;
-      padding-top: 10px;
+        padding-bottom:10px;
+        padding-top: 10px;
         background-image: url("{% static "image/back.jpg" %}");
-      
     }    
     
     /* Remove the navbar's default rounded borders and increase the bottom margin */
@@ -31,7 +28,7 @@
         border-radius: 0;
         background-color: #352c21;
     }
-        .jumbotron {
+    .jumbotron {
         margin-bottom: 0;
         background-image: url("image/tileable_wood_texture.png");
     }
@@ -40,9 +37,9 @@
     .row.content {height: 700px}
 
     .carousel-inner img {
-      width: 100%;  /*Set width to 100%*/ 
-      max-height: 500px;
-  }
+        width: 100%;  /*Set width to 100%*/ 
+        max-height: 500px;
+    }
 
     /* Set gray background color and 100% height */
     .sidenav {
@@ -53,17 +50,15 @@
 
     /* Add a gray background color and some padding to the footer */
     footer {
-      background-color: #352c21;
-      padding: 10px;
-      color: gray;
+        background-color: #352c21;
+        padding: 10px;
+        color: gray;
     }
   </style>
 
 </head>
 
 <body>
-
-
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -74,9 +69,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
-
-    <div class="col-sm-1">
+<div class="col-sm-1">
 </div>
 <div class="col-sm-10">
 <script>
@@ -156,15 +149,10 @@ FB.getLoginStatus(function(response) {
     });
   }
 </script>
-
-
-
-<div id="status">
 </div>
 
-
-
-<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true" onlogin="checkLoginState();"></div>
+<div class="col-sm-1">
+</div>
 
 <div class="head">
 	<div class="container-fluid text-center">
@@ -172,20 +160,20 @@ FB.getLoginStatus(function(response) {
     		<div class="col-sm-3 ">
           <a href="{{TEMPLATE_DIRS }}/index"><img src="{% static "image/logo3.png" %}" class="img-rounded" width="180" height="180"></a>
     		</div>
-      		<div class="col-sm-2 ">
-      		</div>
-      		<div class="col-sm-2 ">     
-   		    		</div>
-      		<div class="col-sm-2 ">
-      		</div>
-      		<div class="col-sm-3 ">
-      		</div>
-		</div>
+      	<div class="col-sm-2 ">
+      	</div>
+      	<div class="col-sm-2 ">     
+   		  </div>
+      	<div class="col-sm-2 ">
+      	</div>
+      	<div class="col-sm-3 ">
+      	</div>
+		  </div>
 	</div>
 </div>
-	 <!-- like & share -->
+<!-- like & share -->
 <div class="fb-like" data-href="https://www.facebook.com/thelightened/?fref=ts" data-layout="standard" data-action="recommend" data-size="small" data-show-faces="true" data-share="true"></div>
-  <!-- like & share -->
+<!-- like & share -->
 <nav class="navbar navbar-inverse">
   	<div class="container-fluid">
     	<div class="navbar-header">
@@ -208,16 +196,16 @@ FB.getLoginStatus(function(response) {
 
 
 
-           <form action="" method="post">
+           <!-- <form action="" method="post"> 
       <input type ="submit" value ="登入" />
       <label for="username"  ><font color="#808080">用戶名稱:</font></label> {%  csrf_token %}
       <input type="text"  name ="username" value="{{username}}" id="username" <br />
       <label for="password"><font color="#808080"> 用戶密碼: </font></label>
       <input type="password" name="password" value ="" id="password">   
       還沒有帳號?，請 <a href='/indexregister/'>註冊  </a>
-           </form>
+           </form>-->
 
-        		<li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        		<li><a href="{{TEMPLATE_DIRS }}/account"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
         		<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       		</ul>
     	</div>

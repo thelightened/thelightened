@@ -49,6 +49,9 @@ def logout(request):
 	auth.logout(request)
 	return HttpResponseRedirect('/indexrequest/')
 
+def account(request):
+	return render_to_response('account.html')
+
 def register(request):
 	if request.method == 'POST':
 		form = UserCreationForm(request.POST)

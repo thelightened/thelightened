@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
-from cafe.views import index, test, coffeebeans, blog, product, partnershop, about,indexrequest,logout,register
+from cafe.views import index, test, coffeebeans, blog, product, partnershop, about, indexrequest, logout, register, account
 
 
 urlpatterns = patterns('',
@@ -18,6 +18,7 @@ urlpatterns = patterns('',
     url(r'^partnershop/$',partnershop),
     url(r'^tinymce/', include('tinymce.urls')),
     url(r'^mce_filebrowser/', include('mce_filebrowser.urls')),
+    url(r'^account/$',account),
 
     # url(r'^fblog/$',fblog),
     # url(r'^', include('cafe.urls'),
