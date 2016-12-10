@@ -1,14 +1,24 @@
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render_to_response
-from cafe.models import IndexImage, MyModel
+from . import models
 from django.contrib import auth
 from django.template import RequestContext
 from django.contrib.auth.forms import UserCreationForm
 from django.conf.urls import patterns, url
+from django.views import generic
+class BlogIndex(generic.ListView):
+    queryset = models.Entry.objects.published()
+    template_name = "home.html"
+    paginate_by = 2
+
+
+class BlogDetail(generic.DetailView):
+    model = models.Entry
+    template_name = "post.html"
 
 def index(request):
 
-	index = IndexImage.objects.all()
+	index = models.IndexImage.objects.all()
 	if request.user.is_authenticated():
 		return HttpResponseRedirect('/indexrequest/')
 
