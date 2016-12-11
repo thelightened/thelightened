@@ -31,7 +31,7 @@
     $.fn.reveal = function(options) {
         
         
-        var myModal = {  
+        var defaults = {  
 	    	animation: 'fadeAndPop', //fade, fadeAndPop, none
 		    animationspeed: 300, //how fast animtions are
 		    closeonbackgroundclick: true, //if you click background will modal close?
@@ -39,7 +39,7 @@
     	}; 
     	
         //Extend dem' options
-        var options = $.extend({}, myModal, options); 
+        var options = $.extend({}, defaults, options); 
 	
         return this.each(function() {
         
