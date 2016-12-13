@@ -16,14 +16,16 @@
 	
 	.reveal-modal {
 		visibility: hidden;
-		top: 100px; 
+		top: -150px; 
 		left: 50%;
-		margin-left: -300px;
-		width: 520px;
+		margin-left: -355px;
+
+		width: 740px;
+		height: 480px;
 		background: #eee url(modal-gloss.png) no-repeat -200px -80px;
 		position: absolute;
 		z-index: 101;
-		padding: 30px 40px 34px;
+		padding: 30px 40px 30px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
 		border-radius: 5px;
@@ -40,15 +42,14 @@
 	.reveal-modal .close-reveal-modal {
 		font-size: 22px;
 		line-height: .5;
-		position: fixed;
-		top: 8px;
-		right: 11px;
+		position: absolute;
+		top: 9px;
+		right: 10px;
 		color: #aaa;
 		text-shadow: 0 -1px 1px rbga(0,0,0,.6);
 		font-weight: bold;
 		cursor: pointer;
-		} 
-	/*
+		} 	/*
 		
 	NOTES
 	
