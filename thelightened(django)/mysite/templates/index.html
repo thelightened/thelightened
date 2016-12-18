@@ -66,6 +66,8 @@
 
 <body>
 
+
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -74,10 +76,18 @@
   js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.8&appId=101197950365729";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
+ 
 <div class="col-sm-1">
 </div>
 <div class="col-sm-10">
+<!-- 瀏覽 -->
+
+<script>
+function ShowMeDate() {
+FB.AppEvents.logEvent("sentFriendRequest");
+}
+</script>
+
 <script>
 
   // This is called with the results from from FB.getLoginStatus().
@@ -115,14 +125,14 @@
     });
   }
 
-  window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '{101197950365729}',
-    cookie     : true,  // enable cookies to allow the server to access 
-                        // the session
-    xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.8' // use graph api version 2.8
-  });
+window.fbAsyncInit = function() {
+    FB.init({
+      appId      :'{101197950365729}',
+      xfbml      : true,
+      version    :'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
 
   // Now that we've initialized the JavaScript SDK, we call 
   // FB.getLoginStatus().  This function gets the state of the
@@ -135,6 +145,7 @@
   //    your app or not.
   //
   // These three cases are handled in the callback function.
+
 
 FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
@@ -271,7 +282,7 @@ FB.getLoginStatus(function(response) {
 			</div>
       	</div>
     </div>
-    <div class="fb-comments" data-href="http://localhost:8000/index/" data-width="500" data-numposts="7"></div>
+    <div class="fb-comments" data-href="http://localhost:8000/index/" data-width="500" data-numposts="5"></div>
 </div>
 
 
