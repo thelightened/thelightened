@@ -22,7 +22,7 @@
 
 		width: 740px;
 		height: 480px;
-		background: #eee url(modal-gloss.png) no-repeat -200px -80px;
+		background: #eee url(image/modal-gloss.png) no-repeat -200px -80px;
 		position: absolute;
 		z-index: 101;
 		padding: 30px 40px 30px;
