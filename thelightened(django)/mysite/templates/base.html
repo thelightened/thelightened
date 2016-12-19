@@ -1,187 +1,148 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
-		<title>blog</title>
+		<title>{% block title %}{% endblock %}</title>
 		<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="assets/css/main.css" />
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/cwtexyen.css">
   	
-  	<style type=text/css> 
-  	<!--
-		/*全部設定字體*/
- 		body { font-family:微軟正黑體;background-color : white;}
-		//-->
-	  </style>
 
-  <style>
-    {% load static %}
+
+  	<style>
+
+  	/*全部設定字體*/
+ 	body { font-family:'cwTeXYen', sans-serif; background-color: black;}
+
+
     .head {
-      	padding-bottom:10px;
-      	padding-top: 10px;
-        background-image: url("{% static "image/tileable_wood_texture.png" %}");
-        
+    	padding-bottom:35px;
+    	padding-top: 35px;
+      	background-image: url("image/back.jpg");
+      
     }    
-    
-    /* Remove the navbar's default rounded borders and increase the bottom margin */
-    .navbar {
-      	margin-bottom: -10px;
-      	border-radius: 0;
-      	background-color: #352c21;
+        .navbar {       
+        float: center;
+        position: relative;
+       	font-size: 130%;
+        background-color:#272727;
+        border-radius:15px;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-bottom: -1%;
+        margin-top: -1%;
     }
     
-    /* Remove the jumbotron's default bottom margin */
-    .jumbotron {
-      	margin-bottom: 0;
-      	background-image: url("{% static "image/tileable_wood_texture.png" %}");
-    }
+
    
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 650px}
 
     .carousel-inner img {
-      	width: 100%;  /*Set width to 100%*/ 
-      	margin: auto;
-      	max-height: 475px;
-	  }
+    	
+    	border-radius: 7%;
+    	width: 100%;  /*Set width to 100%*/ 
+    	max-height: 650px;
+
+	}
 
     /* Set gray background color and 100% height */
     .sidenav {
-      	padding-top: 0px;
-      	background-color: #352c21;
-      	height: 100%;
+        margin-top:2%;
+        background-color:black;
+        height: 100%;
     }
 
     /* Add a gray background color and some padding to the footer */
     footer {
-       	background-color: #352c21;
-       	padding: 20px;
-       	color: white;
+     	background-color: black;
+     	padding-top: 20px;
+     	color: gray;
     }
  	</style>
+
 </head>
 
 <body>
 
+
+
 <div class="head">
-	<div class="container">
-  		<div class="row">
-    		<div class="col-sm-3 ">
-    		</div>
-      	<div class="col-sm-2 ">
-      	</div>
-      	<div class="col-sm-2 ">
-      		<a href="{{TEMPLATE_DIRS }}/index"><img src="{% static "image/logo3.png" %}" class="img-rounded" width="200" height="200"></a>
-      	</div>
-      	<div class="col-sm-2 ">
-      	</div>
-      	<div class="col-sm-3 ">
-      	</div>
-		  </div>
-	</div>
-</div>
-	
-<nav class="navbar navbar-inverse">
-  	<div class="container-fluid">
-    	<div class="navbar-header">
-      	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        	<span class="icon-bar"></span>
-        	<span class="icon-bar"></span>
-        	<span class="icon-bar"></span>
-      	</button>
-      </div>
-    	<div class="collapse navbar-collapse" id="myNavbar">
-      		<ul class="nav navbar-nav">
-        		<li><a href="{{TEMPLATE_DIRS }}/about"><b>About 點亮咖啡</b></a></li>
-            <li><a href="{{TEMPLATE_DIRS }}/blog"><b>專欄</b></a></li>
-            <li><a href="{{TEMPLATE_DIRS }}/coffeebeans"><b>咖啡豆</b></a></li>   
-            <li><a href="{{TEMPLATE_DIRS }}/product"><b>公平貿易產品</b></a></li>
-            <li><a href="{{TEMPLATE_DIRS }}/partnershop"><b>夥伴商店</b></a></li>
-      		</ul>
-      		<ul class="nav navbar-nav navbar-right">
-        		<li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-        		<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-      		</ul>
-    	</div>
-  	</div>
-</nav>
-
-
-<!-- <blog> -->
-<div class="container-fluid text-left">
-      <div class="col-sm-8">
-<br>
-{% block blog_entries %} {% endblock %}
-
-          {% if is_paginated %}
-            <ul class="pager">
-              <li {% if not page_obj.has_previous %}class="disabled"{% endif %}><a {% if page_obj.has_previous %}href="?page={{ page_obj.previous_page_number }}"{% endif %}>Prev</a></li>
-              <li {% if not page_obj.has_next %}class="disabled"{% endif %}><a {% if page_obj.has_next %}href="?page={{ page_obj.next_page_number }}"{% endif %}>Next</a></li>
-            </ul>
-    {% endif %}
-          </div>
-    <!-- category -->
-    <br>
-                  <div class ="col-sm-4" >
-              <div class="well" >
-                    <h4>文章列表</h4>
-                    <div class="row.content">
-                      
-                            <ul class="container-center">
-                                <li><a href="#">文章1</a>
-                                </li>
-                                <li><a href="#">文章2</a>
-                                </li>
-                                <li><a href="#">文章3</a>
-                                </li>
-                                <li><a href="#">文章4</a>
-                                </li>
-                            </ul>
-                    </div>
+      <div class="container-fluid text-center">
+          <div class="row">
+            <div class="col-sm-3 ">
+            	<a href="index.html"><img src="{% static "image/logo3.png" %}" width="190" height="190"></a>
               </div>
-        </div>
+              <div class="col-sm-2 ">
+              </div>
+              <div class="col-sm-2 ">
 
+              </div>
+              <div class="col-sm-2 ">
+              </div>
+              <div class="col-sm-3 ">
+              </div>
+          </div>
+      </div>
 </div>
-    <div class = "container-fluid text-center">
-    <ul class="pagination" row=>
-    <li class="active"><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-  </ul> -->
-    </div>
-</div>
+
+<nav class="navbar navbar-inverse">
+
+	  	<div class="container-fluid text-center">
+	    	<div class="navbar-header">
 
 
+		      	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        	<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+		      	</button>
+	      	</div>
+	    	<div class="collapse navbar-collapse" id="myNavbar" >
+	      		<ul class="nav navbar-nav" style="margin-left:10%">
+	      			
+	        		<li><a href="{{TEMPLATE_DIRS }}/about">點亮咖啡　　</a></li>
+	        		<li><a href="{{TEMPLATE_DIRS }}/blog">專欄　　</a></li>
+	        		<li><a href="{{TEMPLATE_DIRS }}/coffeebeans">咖啡豆　　</a></li>   
+	        		<li><a href="{{TEMPLATE_DIRS }}/product">公平貿易產品　　</a></li>
+	        		<li><a href="{{TEMPLATE_DIRS }}/partnershop">夥伴商店　　</a></li>
+	        		</ul>
 
+	      		<ul class="nav navbar-nav navbar-right" style="margin-right:5%">
+	      			<li><A Target="_blank" href="account.html"><span class="glyphicon glyphicon-user"></span> Your Account</A></li>
+	        		<li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+	      		</ul>
+	    	</div>
+	  	</div>
+	</nav>
 
-
-
-
+{% block entries %}{% endblock %}
+						
 <footer class="container-fluid text-left">
-  	<div class="container">
+  	
+ 	<div class="container">
   		<div class="row">
-  			<div class="col-sm-4">
-  		<h4>
-  					<p>台北市溫州街74巷5弄3號1樓</p>
-					<p><span class="glyphicon glyphicon-phone-alt"></span>	02-23690041</p>
-					<p><span class="glyphicon glyphicon-time"></span>	12:00 - 21:30</p>
 
-				</h4>
+
+  			<div class="col-sm-8">
+  				<br><br>
+  				<p align="center"><a href="https://www.facebook.com/thelightened/"><img src="{% static "image/icon_fb.gif" %}" width="23"></a>　點亮咖啡 直接貿易咖啡廳　|　聯絡電話：02-23690041　|　營業時間：12:00 - 21:30<br>地址：台北市溫州街74巷5弄3號1樓<br><br>點亮咖啡版權所有 © 2016 The Lightened. All Rights Reserved</p>
   			</div>
   			<div class="col-sm-4">
-  				
-  			</div>
-  			<div class="col-sm-4">
-  				<div class="container-fluid text-right">
-  					<br><img src="{% static "image/logo4.png" %}" class="img-rounded" alt="index.html" width="180" height="70">
+  				<div class="container-fluid text-center">
+  					<br><br>
+  					<br><img src="{% static "image/logo4.png" %}" class="img-rounded" alt="thelightened.html" width="170" height="65">
   				</div>
   			</div>
   		</div>
 	</div>
 
 </footer>
+
+
 </body>
 </html>

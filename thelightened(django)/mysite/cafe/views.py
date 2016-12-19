@@ -8,7 +8,7 @@ from django.conf.urls import patterns, url
 from django.views import generic
 class BlogIndex(generic.ListView):
     queryset = models.Entry.objects.published()
-    template_name = "home.html"
+    template_name = "blog.html"
     paginate_by = 2
 
 

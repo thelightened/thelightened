@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 {% load django_markdown %}
-
-{% block blog_entries %}
+{% block title%}blog{% endblock %}
+{% block entries %}
 {% for object in object_list %}
+<div class="container-fluid text-left">
+      <div class="col-sm-8">
+	  
+	  
+	  
   <div class="post">
     <h2><a href="{% url "entry_detail" slug=object.slug %}">{{ object.title }}</a></h2>
     <p class="meta">
@@ -10,6 +15,8 @@
       Tagged under {{  object.tags.all|join:", " }}
     </p>
     {{ object.body|markdown }}
+  </div>
+  
   </div>
 {% endfor %}
 {% endblock %}
