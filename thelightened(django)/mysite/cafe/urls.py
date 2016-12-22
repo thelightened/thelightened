@@ -1,14 +1,13 @@
 from django.conf.urls import patterns, url
 # from django.contrib import admin
 # from django.conf import settings
-from views import index, test, coffeebeans, blog, product, partnershop, about, indexrequest, logout, register, account
+from views import index, test, coffeebeans, blog, product, partnershop, about, logout, register, account
 from . import views
 
 
 urlpatterns = patterns('',
     url(r'^$', index),
     url(r'^index/$',index),
-    url(r'^indexrequest/$',indexrequest),
     url(r'^logout/$',logout),
     url(r'^indexregister/$',register),
 	url(r'^coffeebeans/$',coffeebeans),

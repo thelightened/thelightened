@@ -1,16 +1,19 @@
 from django.db import models
 from tinymce.models import HTMLField
-
+from django.forms import ModelForm
 class MyModel(models.Model):
     	content = HTMLField()
     	def __unicode__(self):
     		return self.content
 
-class IndexImage(models.Model):
-		name = models.CharField(max_length=20)
-		image = models.ImageField(upload_to = 'images')
-		def __unicode__(self):
-			return self.name
+class IndexImage(ModelForm):
+        name = models.CharField(max_length=20)
+        image = models.ImageField(upload_to = 'images')
+        def save(self, *args, **kwargs):
+            super(Model, self).save(*args, **kwargs)
+
+        def __unicode__(self):
+            return self.name
 
 # class Tag(models.Model):
 #     slug = models.SlugField(max_length=200, unique=True)
