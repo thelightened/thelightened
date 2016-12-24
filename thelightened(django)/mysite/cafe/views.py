@@ -19,23 +19,9 @@ class BlogDetail(generic.DetailView):
 def index(request):
 
 	index = models.IndexImage.objects.all()
-	if request.user.is_authenticated():
-		return HttpResponseRedirect('/indexrequest/')
-
-	username = request.POST.get('username','')
-	password = request.POST.get('password','')
-
-	user = auth.authenticate(username=username,password=password)
-
-	if user is not None and user.is_active:
-		auth.login(request, user)
-		return HttpResponseRedirect('/indexrequest/')
-	else:
-		return render_to_response('index.html',RequestContext(request,locals()))
+	return render_to_response('index.html',RequestContext(request,locals()))
 
 
-def indexrequest(request):
-	return render_to_response('indexrequest.html',RequestContext(request,locals()))
 
 def test(request):
 	return render_to_response('test.html')
