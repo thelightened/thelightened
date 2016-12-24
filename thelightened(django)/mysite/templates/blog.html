@@ -46,10 +46,7 @@
            </div>
        </div>
      </div>
-</div>
-
-
-{% for object in object_list %}  
+     {% for object in object_list %}  
   <div class="post">
     <h2><a href="{% url "entry_detail" slug=object.slug %}">{{ object.title }}</a></h2>
     <p class="meta">
@@ -58,6 +55,10 @@
     </p>
     {{ object.body|markdown }}
   </div>
+</div>
+
+
+
   
 {% endfor %}
 

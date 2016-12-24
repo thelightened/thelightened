@@ -1,366 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>coffeebeans</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-    <style type=text/css> 
-      <!--
-      /*全部設定字體*/
-      body { font-family:微軟正黑體;}
-      //-->
-    </style>
+{% extends "base.html" %}
+    <script type="text/javascript" src="js/jquery.quantity.js"></script>
+    <script type="text/javascript" src="js/jquery.reveal.js"></script>
+    <link rel="stylesheet" href="css/reveal.css">
+{% block entries %}
+{% load static %}
+{% block title%}{% endblock %}
 
-    <style>
-    {% load static %}
-    .head {
-        padding-bottom:10px;
-        padding-top: 10px;
-        background-image: url("{% static "image/tileable_wood_texture.png" %}");
-      
-    }    
-    
-    /* Remove the navbar's default rounded borders and increase the bottom margin */
-    .navbar {
-        margin-bottom: 25px;
-        border-radius: 0;
-        background-color: #352c21;
-    }
-    
-    /* Remove the jumbotron's default bottom margin */
-    .jumbotron {
-        margin-bottom: 0;
-        background-image: url("{% static "image/tileable_wood_texture.png" %}");
-    }
-   
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 500px}
 
-    .carousel-inner img {
-        width: 100%;  /*Set width to 100%*/ 
-        margin: auto;
-        max-height: 475px;
-    }
+  <div class="sidenav">
 
-    /* Set gray background color and 100% height */
-    .sidenav {
-        padding-top: 0px;
-        background-color: #FFFFFF;
-        height: 100%;
-    }
-
-    /* Add a gray background color and some padding to the footer */
-    footer {
-        background-color: #352c21;
-        padding: 20px;
-        color: white;
-    }
-
-    </style>
-</head>
-
-<body>
-
-<div class="head">
-  <div class="container">
-      <div class="row">
-          <div class="col-sm-3 ">
-          </div>
-          <div class="col-sm-2 ">
-          </div>
-          <div class="col-sm-2 ">
-           <a href="{{TEMPLATE_DIRS }}/index"><img src="{% static "image/logo3.png" %}" class="img-rounded" width="200" height="200"></a>
-          </div>
-          <div class="col-sm-2 ">
-          </div>
-          <div class="col-sm-3 ">
-          </div>
-      </div>
-  </div>
-</div>
-  
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li><a href="{{TEMPLATE_DIRS }}/about"><b>About 點亮咖啡</b></a></li>
-            <li><a href="{{TEMPLATE_DIRS }}/blog"><b>專欄</b></a></li>
-            <li><a href="{{TEMPLATE_DIRS }}/coffeebeans"><b>咖啡豆</b></a></li>   
-            <li><a href="{{TEMPLATE_DIRS }}/product"><b>公平貿易產品</b></a></li>
-            <li><a href="{{TEMPLATE_DIRS }}/partnershop"><b>夥伴商店</b></a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-          </ul>
-      </div>
-    </div>
-</nav>
-
-<div class="sidenav">
-      
-      <div class="row" style="position: relative; margin-left: auto; margin-right: auto;">
-      
-        <div class="col-sm-2 ">
-        </div>
-        
-          <div class="col-sm-2">
-              <div class="panel panel-default">
-                <div class="panel-heading">巴西</div>
-                  <div class="panel-body" style="background-color:  #FFFFFF;">
-                    <a href="{% static "image/cafe.jpg" %}" data-toggle="modal" data-target="#myModal">
-                        <img src="{% static "image/cafe.jpg" %}" class="img-responsive" style="width:100%" alt="Image">
-                    </a>
-                  </div>
-                <div class="panel-footer">$550</div>
-              </div>
-              <!-- Modal -->
-              <div class="modal fade" id="myModal" role="dialog">
-                  <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">說明</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>巴西是世界第一的咖啡生產國，咖啡豆的顆粒飽滿，香味與豆性溫和，酸苦口感適中，具有平順口感，是中性咖啡的代表，個別品嚐或與其他咖啡豆做混合搭配均為極佳選擇。</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col-sm-2">
-              <div class="panel panel-default">
-                <div class="panel-heading">哥倫比亞</div>
-                  <div class="panel-body" style="background-color:  #FFFFFF;">
-                    <a href="{% static "image/cafe.jpg" %}" data-toggle="modal" data-target="#myModal">
-                        <img src="{% static "image/cafe.jpg" %}" class="img-responsive" style="width:100%" alt="Image">
-                    </a>
-                  </div>
-                <div class="panel-footer">$750</div>
-              </div>
-              <!-- Modal -->
-              <div class="modal fade" id="myModal" role="dialog">
-                  <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">說明</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>哥倫比亞產區的咖啡中以Supremo最具代表性，咖啡嚐起來軟滑香醇，均衡度佳，散發甜香，酸中帶甘，苦味適中，屬中度咖啡，是用來調配綜合咖啡的上品。</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-
-      <div class="col-sm-2">
-              <div class="panel panel-default">
-                <div class="panel-heading">瓜地馬拉安堤瓜</div>
-                  <div class="panel-body" style="background-color:  #FFFFFF;">
-                    <a href="{% static "image/cafe.jpg" %}" data-toggle="modal" data-target="#myModal">
-                        <img src="{% static "image/cafe.jpg" %}" class="img-responsive" style="width:100%" alt="Image">
-                    </a>
-                  </div>
-                <div class="panel-footer">$950</div>
-              </div>
-              <!-- Modal -->
-              <div class="modal fade" id="myModal" role="dialog">
-                  <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">說明</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>在瓜地馬拉中央高地區生長著一些口味獨特的咖啡，其酸度較強，濃度中等，口感豐富，帶有淡淡可可及炭燒風味，安堤瓜被認為是瓜地馬拉品質最好的咖啡。</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col-sm-2">
-              <div class="panel panel-default">
-                <div class="panel-heading">夏威夷 可娜</div>
-                  <div class="panel-body" style="background-color:  #FFFFFF;">
-                    <a href="{% static "image/cafe.jpg" %}" data-toggle="modal" data-target="#myModal">
-                        <img src="{% static "image/cafe.jpg" %}" class="img-responsive" style="width:100%" alt="Image">
-                    </a>
-                  </div>
-                <div class="panel-footer">$850</div>
-              </div>
-              <!-- Modal -->
-              <div class="modal fade" id="myModal" role="dialog">
-                  <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">說明</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>屬於夏威夷西部火山所栽種的咖啡，也是美國唯一生產的咖啡品種，與藍山齊名堪稱為咖啡之后，口感較強，帶著強酸，並且混著奇妙的葡萄酒香與堅果芳香。</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-
-      <div class="col-sm-2 ">
-        </div>
-      
-      </div>
-
-      <div class="row content" style="position: relative; margin-left: auto; margin-right: auto;">
-      
-        <div class="col-sm-2 ">
-        </div>
-        
-          <div class="col-sm-2">
-              <div class="panel panel-default">
-                <div class="panel-heading">曼特寧</div>
-                  <div class="panel-body" style="background-color:  #FFFFFF;">
-                    <a href="{% static "image/cafe.jpg" %}" data-toggle="modal" data-target="#myModal">
-                        <img src="{% static "image/cafe.jpg" %}" class="img-responsive" style="width:100%" alt="Image">
-                    </a>
-                  </div>
-                <div class="panel-footer">$1550</div>
-              </div>
-              <!-- Modal -->
-              <div class="modal fade" id="myModal" role="dialog">
-                  <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">說明</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>生於印尼，產自蘇門達臘的大顆粒品種曼特寧為其中的代表，個性狂野，風味香濃苦，不帶酸味，醇香順口，是喜愛濃烈口感者的最愛。</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col-sm-2">
-              <div class="panel panel-default">
-                <div class="panel-heading">克里曼佳羅</div>
-                  <div class="panel-body" style="background-color:  #FFFFFF;">
-                    <a href="{% static "image/cafe.jpg" %}" data-toggle="modal" data-target="#myModal">
-                        <img src="{% static "image/cafe.jpg" %}" class="img-responsive" style="width:100%" alt="Image">
-                    </a>
-                  </div>
-                <div class="panel-footer">$650</div>
-              </div>
-              <!-- Modal -->
-              <div class="modal fade" id="myModal" role="dialog">
-                  <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">說明</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>具有豐富的油脂，濃郁甘甜，帶有植物的清香味。酸度較低，口感均勻，香味濃郁。咖啡應有的各種特性 - 酸甘香苦醇四味一香包含其中。</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-
-      <div class="col-sm-2">
-              <div class="panel panel-default">
-                <div class="panel-heading">肯亞 AA</div>
-                  <div class="panel-body" style="background-color:  #FFFFFF;">
-                    <a href="{% static "image/cafe.jpg" %}" data-toggle="modal" data-target="#myModal">
-                        <img src="{% static "image/cafe.jpg" %}" class="img-responsive" style="width:100%" alt="Image">
-                    </a>
-                  </div>
-                <div class="panel-footer">$1850</div>
-              </div>
-              <!-- Modal -->
-              <div class="modal fade" id="myModal" role="dialog">
-                  <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">說明</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>19世紀由衣索比亞引入，是非洲高地栽培的代表性咖啡。咖啡豆肉質圓厚，具有微酸濃稠的香氣與水果芳香，味濃質佳，是品味單品之首選。</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col-sm-2 ">
-        </div>
-      
-      </div>
-    </div>
-
-<footer class="container-fluid text-left">
-    
-    <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <h5>台北市溫州街74巷5弄3號1樓</h5>
-        <h5><span class="glyphicon glyphicon-phone-alt"></span> 02-23690041</h5>
-        <h5><span class="glyphicon glyphicon-time"></span>  12:00 - 21:30</h5>
-          </div>
-          <div class="col-sm-4">
+<div class="container-fluid text-center">
+  <h1>非洲</h1>
+<hr>
+    <div class="col-sm-4">
           
-          </div>
-          <div class="col-sm-4">
-              <div class="container-fluid text-right">
-                <br><img src="{% static "image/logo4.png" %}" class="img-rounded" alt="thelightened.html" width="180" height="70">
-              </div>
-          </div>
-        </div>
-    </div>
+    <a href="" data-reveal-id="myModal"> <img src="{% static "image/beansinbasket.jpg" %}" width="220" height="165" class="img-rounded"></a>
+      <h3 class="text-center">Coffee Beans</h3>
+      <h5 class="text-center">$350.00</h5>
+</div>
 
-</footer>
-</body>
-</html>
+    <div class="col-sm-4">
+          
+    <a href="" data-reveal-id="myModal"> <img src="{% static "image/beansinbasket.jpg" %}"  width="220" height="165" class="img-rounded"></a>
+      <h3 class="text-center">Coffee Beans</h3>
+      <h5 class="text-center">$350.00</h5>
+</div>
+    <div class="col-sm-4">
+          
+    <a href="" data-reveal-id="myModal"> <img src="{% static "image/beansinbasket.jpg" %}"  width="220" height="165" class="img-rounded"></a>
+      <h3 class="text-center">Coffee Beans</h3>
+      <h5 class="text-center">$350.00</h5>
+</div>
+</div>
+</div>
+
+
+    
+        
+<!-- <div id="myModal" class="reveal-modal">
+ -->  <!--content-->
+     <!-- <div class="col-sm-8">
+     <p align="center"><img src="image/beansonthehand.jpg" width="460" height="265" >
+      <h3 class="text-center">Description描述</h3>
+<p>test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試</p>
+    </div>
+    
+ 
+      <div class="col-sm-4">
+      <h2><b>水洗耶加，柯契爾</b></h2>
+      <p>NT$350
+      
+     <div class="xxx" data-name="quantity" data-value="1" data-id="80" style="width: 185px;">
+      <div class="input-group">
+        <span class="input-group-btn"><button type="button" class="btn btn-number" data-type="minus" data-field="quantity[80]">
+          <span class="glyphicon glyphicon-minus"></span></button></span>
+          <input type="text" name="quantity[80]" class="form-control input-number" value="1" min="0" max="100"><span class="input-group-btn">
+          <button type="button" class="btn btn-number" data-type="plus" data-field="quantity[80]"><span class="glyphicon glyphicon-plus"></span></button></span></div></div>
+        </div>
+
+     <a class="close-reveal-modal">&#215;</a>
+</div>
+ -->
+{% endblock %}

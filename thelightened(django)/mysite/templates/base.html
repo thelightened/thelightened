@@ -22,8 +22,8 @@
     .head {
     	padding-bottom:35px;
     	padding-top: 35px;
-      	background-image: url("image/back.jpg");
-      
+      background-image: url("{% static "image/back.jpg" %}");
+      background-size: 100% 100%;      
     }    
         .navbar {       
         float: center;
@@ -80,7 +80,7 @@
       <div class="container-fluid text-center">
           <div class="row">
             <div class="col-sm-3 ">
-            	<a href="index.html"><img src="{% static "image/logo3.png" %}" width="190" height="190"></a>
+            	<a href="{{TEMPLATE_DIRS }}/index"><img src="{% static "image/logo3.png" %}" width="190" height="190"></a>
               </div>
               <div class="col-sm-2 ">
               </div>
@@ -118,12 +118,13 @@
 	        		</ul>
 
 	      		<ul class="nav navbar-nav navbar-right" style="margin-right:5%">
-	      			<li><A Target="_blank" href="account.html"><span class="glyphicon glyphicon-user"></span> Your Account</A></li>
+	      			<li><A Target="_blank" href="{{TEMPLATE_DIRS }}/account"><span class="glyphicon glyphicon-user"></span> Your Account</A></li>
 	        		<li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
 	      		</ul>
 	    	</div>
 	  	</div>
 	</nav>
+
 
 {% block entries %}{% endblock %}
 						
