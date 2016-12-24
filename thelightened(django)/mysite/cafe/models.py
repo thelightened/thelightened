@@ -6,11 +6,11 @@ class MyModel(models.Model):
     	def __unicode__(self):
     		return self.content
 
-class IndexImage(ModelForm):
+class IndexImage(models.Model):
         name = models.CharField(max_length=20)
         image = models.ImageField(upload_to = 'images')
-        def save(self, *args, **kwargs):
-            super(Model, self).save(*args, **kwargs)
+        # def image_tag(self):
+        #     return u'<img src="%s" />' % self.cover.url
 
         def __unicode__(self):
             return self.name
