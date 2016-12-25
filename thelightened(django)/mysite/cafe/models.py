@@ -3,6 +3,8 @@ from tinymce.models import HTMLField
 from django.forms import ModelForm
 from django.contrib.auth.models import User
 
+from django.db.models.signals import pre_delete
+from django.dispatch.dispatcher import receiver
 class MyModel(models.Model):
     	content = HTMLField()
     	def __unicode__(self):
@@ -11,11 +13,17 @@ class MyModel(models.Model):
 class IndexImage(models.Model):
         name = models.CharField(max_length=20)
         image = models.ImageField(upload_to = 'images')
-        # def image_tag(self):
-        #     return u'<img src="%s" />' % self.cover.url
-
         def __unicode__(self):
             return self.name
+        # def image_tag(self):
+        #     return u'<img src="%s" />' % self.cover.url
+@receiver(pre_delete, sender=IndexImage)
+
+def mymodel_delete(sender, instance, **kwargs):
+    # Pass false so FileField doesn't save the model.
+    instance.image.delete(False)
+
+        
 
 # class Tag(models.Model):
 #     slug = models.SlugField(max_length=200, unique=True)
