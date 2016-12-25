@@ -118,13 +118,17 @@
 	        		</ul>
 
 	      		<ul class="nav navbar-nav navbar-right" style="margin-right:5%">
-	      			<li><A Target="_blank" href="{{TEMPLATE_DIRS }}/account"><span class="glyphicon glyphicon-user"></span> Your Account</A></li>
+             {% if request.user.is_authenticated %}
+	      			<li><A Target="_blank" href="{{TEMPLATE_DIRS }}/account"><span class="glyphicon glyphicon-user"></span> Leave Your Account</A></li>
 	        		<li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+              {% else %}
+              <li><A Target="_blank" href="{{TEMPLATE_DIRS }}/account"><span class="glyphicon glyphicon-user"></span> Your Account</A></li>
+              <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+              {% endif %}
 	      		</ul>
 	    	</div>
 	  	</div>
 	</nav>
-
 
 {% block entries %}{% endblock %}
 						

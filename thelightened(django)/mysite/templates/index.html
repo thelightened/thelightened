@@ -111,19 +111,16 @@ FB.getLoginStatus(function(response) {
 <!-- like & share -->
 
 
+<!-- login -->
 
+ {% if request.user.is_authenticated %}
+            <p>{{request.user}} 您已經登入囉</p>
+            <a href="/index/"首頁></a>
+        {% else %}
+            <p>您尚未登入喔~</a></p>
+        {% endif %}
 
-
-           <!-- <form action="" method="post"> 
-      <input type ="submit" value ="登入" />
-      <label for="username"  ><font color="#808080">用戶名稱:</font></label> {%  csrf_token %}
-      <input type="text"  name ="username" value="{{username}}" id="username" <br />
-      <label for="password"><font color="#808080"> 用戶密碼: </font></label>
-      <input type="password" name="password" value ="" id="password">   
-      還沒有帳號?，請 <a href='/indexregister/'>註冊  </a>
-           </form>-->
-
-
+<!-- login -->
 
 
 

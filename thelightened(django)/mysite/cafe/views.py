@@ -45,8 +45,26 @@ def logout(request):
 	auth.logout(request)
 	return HttpResponseRedirect('/indexrequest/')
 
+# def account(request):
+# 	return render_to_response('account.html')
+
 def account(request):
-	return render_to_response('account.html')
+
+    if request.user.is_authenticated(): 
+         auth.logout(request)
+    	 return HttpResponseRedirect('/index/')
+
+    username = request.POST.get('username', '')
+    password = request.POST.get('password', '')
+    
+    user = auth.authenticate(username=username, password=password)
+
+    if user is not None and user.is_active:
+        auth.login(request, user)
+        return HttpResponseRedirect('/index/')
+    else:
+        return render_to_response('account.html') 
+
 
 def register(request):
 	if request.method == 'POST':

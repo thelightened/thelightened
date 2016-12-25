@@ -1,6 +1,8 @@
 from django.db import models
 from tinymce.models import HTMLField
 from django.forms import ModelForm
+from django.contrib.auth.models import User
+
 class MyModel(models.Model):
     	content = HTMLField()
     	def __unicode__(self):
@@ -48,3 +50,4 @@ class Entry(models.Model):
         verbose_name = "Blog Entry"
         verbose_name_plural = "Blog Entries"
         ordering = ["-created"]
+

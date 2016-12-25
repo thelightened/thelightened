@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
+
 # from django.conf import settings
 # from cafe.views import index, test, coffeebeans, blog, product, partnershop, about, indexrequest, logout, register, account
 

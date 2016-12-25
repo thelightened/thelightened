@@ -17,3 +17,5 @@ class EntryAdmin(MarkdownModelAdmin):
 admin.site.register(models.Entry, EntryAdmin)
 admin.site.register(models.MyModel, MyModelAdmin)
 # admin.site.register(models.Tag)
+
+
