@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, url
 # from django.contrib import admin
 from django.conf import settings
-from views import index, test, coffeebeans, blog, product, partnershop, about, logout, register, account
+from views import index, test, coffeebeans, blog, product, partnershop, about, logout, account,RegisterView
 from . import views
 from django.conf.urls.static import static
 
@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     url(r'^$', index),
     url(r'^index/$',index),
     url(r'^logout/$',logout),
-    url(r'^indexregister/$',register),
+    url(r'^register/$',RegisterView.as_view(), name='register'),
 	url(r'^coffeebeans/$',coffeebeans),
     url(r'^blog/$',blog),	
     url(r'^product/$',product),

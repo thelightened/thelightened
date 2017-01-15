@@ -6,6 +6,11 @@ from django.template import RequestContext
 from django.contrib.auth.forms import UserCreationForm
 from django.conf.urls import patterns, url
 from django.views import generic
+
+from django.core.urlresolvers import reverse_lazy 
+from django.views.generic.edit import FormView 
+from django.contrib.auth import authenticate, login 
+from forms import RegisterForm 
 class BlogIndex(generic.ListView):
     queryset = models.Entry.objects.published()
     template_name = "blog.html"
@@ -15,6 +20,20 @@ class BlogIndex(generic.ListView):
 class BlogDetail(generic.DetailView):
     model = models.Entry
     template_name = "post.html"
+
+class RegisterView(FormView):
+    template_name = 'register.html'
+    form_class = RegisterForm
+    success_url = reverse_lazy('index.html')
+
+    def form_valid(self, form):
+        form.save()
+        username = form.cleaned_data.get('username')
+        password = form.cleaned_data.get('password')
+        user = authenticate(username=username, password=password)
+        login(self.request, user)
+        return super(RegisterView, self).form_valid(form)
+
 
 def index(request):
 
@@ -66,14 +85,8 @@ def account(request):
         return render_to_response('account.html') 
 
 
-def register(request):
-	if request.method == 'POST':
-		form = UserCreationForm(request.POST)
-		if form.is_valid():
-			user = form.save()
-			return HttpResponseRedirect('/index/')
-	else:
-		form = UserCreationForm()
-	return render_to_response('indexregister.html',RequestContext(request,locals()))
+
+
+
 
 
