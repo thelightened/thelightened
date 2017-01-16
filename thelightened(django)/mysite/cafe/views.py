@@ -24,7 +24,8 @@ class BlogDetail(generic.DetailView):
 class RegisterView(FormView):
     template_name = 'register.html'
     form_class = RegisterForm
-    success_url = reverse_lazy('index.html')
+    success_url = reverse_lazy('index')
+
 
     def form_valid(self, form):
         form.save()
@@ -33,6 +34,8 @@ class RegisterView(FormView):
         user = authenticate(username=username, password=password)
         login(self.request, user)
         return super(RegisterView, self).form_valid(form)
+
+    
 
 
 def index(request):

@@ -41,7 +41,7 @@ class RegisterForm(forms.Form):
             raise forms.ValidationError(u'暱稱中不能包含空格和@字符')
         res = User.objects.filter(username=username)
         if len(res) != 0:
-            raise forms.ValidationError(u'此暱稱已被使用，请重新輸入')
+            raise forms.ValidationError(u'此暱稱已被使用，請重新輸入')
         return username
 
     def clean_email(self):
@@ -51,6 +51,13 @@ class RegisterForm(forms.Form):
             raise forms.ValidationError(u'此Email已经註冊過，請重新輸入')
         return email
 
+    def save(self):
+        username = self.cleaned_data['username']
+        email = self.cleaned_data['email']
+        password = self.cleaned_data['password']
+        user = User.objects.create_user(username, email, password)
+        user.save()
+
     def clean(self):
         cleaned_data = super(RegisterForm, self).clean()
         password = cleaned_data.get('password')
@@ -59,9 +66,14 @@ class RegisterForm(forms.Form):
             if password != confirm_password:
                 raise forms.ValidationError(u'兩次密碼输入不一致，請重新輸入')
 
-    def save(self):
-        username = self.cleaned_data['username']
-        email = self.cleaned_data['email']
-        password = self.cleaned_data['password']
-        user = User.objects.create_user(username, email, password)
-        user.save()
+    def get(self, request):
+        form = PersonDetailsForm()
+        return render(request, self.template_name, {'class': 'form-control'})
+    def post(self, request):
+        form = PersonDetailsForm(request.POST)
+        if form.is_valid():
+            return redirect('index/')
+        else:
+            return render(request, self.template_name, {'class': 'form-control'})
+
+    
