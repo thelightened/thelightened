@@ -63,6 +63,9 @@ def about(request):
 def partnershop(request):
 	return render_to_response('partnershop.html')
 
+def cart(request):
+    return render_to_response('cart.html')
+
 def logout(request):	
 	auth.logout(request)
 	return HttpResponseRedirect('/indexrequest/')
