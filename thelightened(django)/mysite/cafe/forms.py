@@ -6,17 +6,17 @@ from django import forms
 class RegisterForm(forms.Form):
     username = forms.CharField(
         label=u'暱稱',
-        help_text=u'暱稱可用於登陸，不能包含空格和@字符。',
+        help_text=u'暱稱可用於登入，不可包含空格和@字元。',
         max_length=20,
-        initial='',
+        initial='Nickname',
         widget=forms.TextInput(attrs={'class': 'form-control'}),
         )
 
     email = forms.EmailField(
         label=u'Email',
-        help_text=u'Email可用於登陸，最重要的是需要Email来找回密码，所以請輸入您可使用的Email。',
+        help_text=u'Email可用於登入，且需要Email来找回密碼，所以請輸入您正在使用的Email。',
         max_length=50,
-        initial='',
+        initial='acdefg@gmail.com',
         widget=forms.TextInput(attrs={'class': 'form-control'}),
         )
 
@@ -38,7 +38,7 @@ class RegisterForm(forms.Form):
     def clean_username(self):
         username = self.cleaned_data['username']
         if ' ' in username or '@' in username:
-            raise forms.ValidationError(u'暱稱中不能包含空格和@字符')
+            raise forms.ValidationError(u'暱稱中不能包含空格和@字元')
         res = User.objects.filter(username=username)
         if len(res) != 0:
             raise forms.ValidationError(u'此暱稱已被使用，請重新輸入')
@@ -48,7 +48,7 @@ class RegisterForm(forms.Form):
         email = self.cleaned_data['email']
         res = User.objects.filter(email=email)
         if len(res) != 0:
-            raise forms.ValidationError(u'此Email已经註冊過，請重新輸入')
+            raise forms.ValidationError(u'此Email已經註冊過，請重新輸入')
         return email
 
     def save(self):
