@@ -66,21 +66,11 @@ footer {
 
     <div class="col-sm-4"> 
                    
- <form>
-  <div class="form-group">
-    <h3 align="center">SIGN UP WITH EMAIL ADDRESS</h3><br>
-    <label for="email">Email Address:</label>
-    <input type="email" class="form-control" id="email">
-  </div>
-  <div class="form-group">
-    <label for="name">Name:</label>
-    <input type="name" class="form-control" id="name">
-  </div>
-  <div class="form-group">
-    <label for="pwd">Password:</label>
-    <input type="password" class="form-control" id="pwd">
-  </div>
-  
+ <form action="" method="post">{% csrf_token %}
+      {{ form.as_p }}
+
+
+    
 
 <div class="form-group">
 <label for="BirthDay">Date of birth:</label><br>
@@ -273,7 +263,7 @@ footer {
 
 
  <br> 
-  <button type="button" class="btn btn-block btn-inverse"style="background-color:#4F4F4F;color:#0A0A0A"><b>Sign Up</b></button><br>
+  <button type="submit" class="btn btn-block btn-inverse"style="background-color:#4F4F4F;color:#0A0A0A"><b>Sign Up</b></button><br>
 
 </div>
      
@@ -299,11 +289,9 @@ footer {
 
 
 </footer>
+
 </div>
+
 </body>
 </html>
 
- <form action="" method="post">{% csrf_token %}
-      {{ form.as_p }}
-        <input type="submit" value="註冊">
-      </form>
