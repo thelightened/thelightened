@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load django_markdown %}
+{% block title%}article{% endblock %}
+{% block entries %}
+
+
+<div class="sidenav">
+
+  <div class="blog-head">       
+             <div class="container">
+               <div class="row">
+                <div class="col-md-12 text-left">
+            <h1><b>Blog</b></h1>
+          </div>  
+         </div>
+          <div class="row">
+                <div class="col-md-12">
+            <div class="destination-head">        
+            <!---End-destinatiuons---->
+            <div class="find-place dfind-place">
+              <div class="wrap">
+                
+                <!---strat-date-piker---->
+                  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+                  <script>
+                  $(function() {
+                    $( "#datepicker" ).datepicker();
+                  });
+                  </script>
+                <!---/End-date-piker---->
+                <div class="p-ww">
+                  <form>
+                    <span> Where</span>
+                    <input class="dest" type="text" value="關鍵字" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Lorem ipsum';}">
+                    <span> When</span>
+                    <input class="date" id="datepicker" type="text" value="Select date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Select date';}">
+                    <input type="submit" value="Search" />
+                  </form>
+                </div>
+                <div class="clear"> </div>
+              </div>
+             </div>
+            <!----//End-find-place---->
+            </div>
+           </div>
+           </div>
+       </div>
+     </div>
+     {% for object in object_list %}  
+  <div class="post">
+    <h2><a href="{% url "entry_detail" slug=object.slug %}">{{ object.title }}</a></h2>
+    <p class="meta">
+      {{ object.created }} |
+      Tagged under {{  object.tags.all|join:", " }}
+    </p>
+    {{ object.body|markdown }}
+  </div>
+
+
+
+
+  
+{% endfor %}
+
+{% endblock %}
