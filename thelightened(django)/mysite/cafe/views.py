@@ -64,6 +64,8 @@ def partnershop(request):
 	return render_to_response('partnershop.html')
 
 def cart(request):
+     # if not request.user.is_authenticated():
+     #    return HttpResponseRedirect('/accounts/login/?next={0}'.format(request.path))
     return render_to_response('cart.html')
 
 def menu(request):
