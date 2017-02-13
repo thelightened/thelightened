@@ -10,7 +10,47 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/cwtexyen.css">
-  	
+ 
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : 'your-app-id',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>  //分析problem
+  function lightonclick() {
+  FB.AppEvents.logEvent("lightonclick");
+}
+  function columnonclick() {
+  FB.AppEvents.logEvent("columnonclick");
+}
+  function lightonclick() {
+  FB.AppEvents.logEvent("lightonclick");
+}
+  function fairtradeonclick() {
+  FB.AppEvents.logEvent("fairtradeghtonclick");
+}
+  function partnershoponclick() {
+  FB.AppEvents.logEvent("partnershoponclick");
+}
+  function menuonclick() {
+  FB.AppEvents.logEvent("menuonclick");
+}
+</script>
 
 
   	<style>
@@ -110,12 +150,12 @@
 	    	<div class="collapse navbar-collapse" id="myNavbar" >
 	      		<ul class="nav navbar-nav" style="margin-left:5%">
 	      			
-	        		<li><a href="{{TEMPLATE_DIRS }}/about">點亮咖啡　　</a></li>
-	        		<li><a href="{{TEMPLATE_DIRS }}/blog">專欄　　</a></li>
-	        		<li><a href="{{TEMPLATE_DIRS }}/coffeebeans">咖啡豆　　</a></li>   
-	        		<li><a href="{{TEMPLATE_DIRS }}/product">公平貿易產品　　</a></li>
-	        		<li><a href="{{TEMPLATE_DIRS }}/partnershop">夥伴商店　　</a></li>
-              <li><a href="{{TEMPLATE_DIRS }}/menu">菜單　　</a></li>
+	        		<li onclick="lightonclick()" ><a href="{{TEMPLATE_DIRS }}/about">點亮咖啡　　</a></li>
+	        		<li onclick="columnonclick()" ><a href="{{TEMPLATE_DIRS }}/blog">專欄　　</a></li>
+	        		<li onclick="coffebeansonclick()" ><a href="{{TEMPLATE_DIRS }}/coffeebeans">咖啡豆　　</a></li>   
+	        		<li onclick="fairtradeonclick()" ><a href="{{TEMPLATE_DIRS }}/product">公平貿易產品　　</a></li>
+	        		<li onclick="partnershoponclick()" ><a href="{{TEMPLATE_DIRS }}/partnershop">夥伴商店　　</a></li>
+              <li onclick="menuonclick()" ><a href="{{TEMPLATE_DIRS }}/menu">菜單　　</a></li>
               </ul>
 
 	      		<ul class="nav navbar-nav navbar-right" style="margin-right:5%">

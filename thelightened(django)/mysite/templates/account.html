@@ -42,7 +42,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 </style>
 <body>
 
-
+<script language="javascript">
+function Showtime(){
+　FB.AppEvents.logEvent("sentSignInClick);
+}
+</script>
 
 
 
@@ -79,7 +83,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
     <input type="password" name="password" class="form-control" value="{{password}}" id="password">
   </div> <br> 
   
-  <input type="submit" value="Sign In" class="btn btn-block btn-inverse" style="background-color:#0F0F0F;color:#9C9C9C">
+  <input type="submit" onclick="Showtime()" onKeyPress="return SubmitEnter(this,event)" value="Sign In" class="btn btn-block btn-inverse" style="background-color:#0F0F0F;color:#9C9C9C">
  <!-- stop -->
   <a href="/register"><h5 align="center">New to The Lightened?</h5></a>
 
@@ -108,11 +112,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 
 </script>
 
-<script>
+<!-- <script>
 function ShowMeData() {
 FB.AppEvents.logEvent("sentFriendRequest");
 }
-</script>
+</script> -->
 
 
 <script>
