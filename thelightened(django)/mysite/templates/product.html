@@ -6,17 +6,23 @@
 
 
 <div class="sidenav">
+
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+
+  <div class="container">
+  <div class="row">
   <div class="container-fluid text-center">
     <nav class="col-sm-2" id="myScrollspy">
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">Foody</a></li>
-        <li><a href="#section2">人口販賣T</a></li>
-        <li><a href="#section3">禾餘麥酒</a></li>
-        <li><a href="#section4">布衛生棉</a></li>
-        <li><a href="#section5">手工蛋糕</a></li>
+        <li ><a href="#section2">人口販賣T</a></li>
+        <li ><a href="#section3">禾餘麥酒</a></li>
+        <li ><a href="#section4">布衛生棉</a></li>
+        <li ><a href="#section5">手工蛋糕</a></li>
 		</ul>
     </nav>
+
+
     <div class="col-sm-10">
       <div id="section1">
         <h1>Foody</h1>
@@ -41,7 +47,7 @@
       </div>
       
       <div id="section2"  ><br>
-        <h1>人口販賣T</h1><hr>
+        <h1>人口販賣T</h1><hr><br>
          <div class="col-sm-4">
           
     <a href="" data-reveal-id="myModal"> <img src="{% static "image/beansinbasket.jpg" %}" width="220" height="165" class="img-rounded"></a>
@@ -59,7 +65,7 @@
       <h5 class="text-center">$350.00</h5>
 </div>
       </div>
-      <hr>
+      <br><hr>
       <div id="section3">
         <h1>禾餘麥酒</h1>
         <a href="" data-reveal-id="myModal"> <img src="{% static "image/beansinbasket.jpg" %}" width="220" height="165" class="img-rounded"></a>
@@ -67,7 +73,7 @@
       <h5 class="text-center">$350.00</h5>
         <p></p>
       </div>
-      <hr>
+      <br><hr>
       <div id="section4">
         <h1>布衛生棉</h1>
         <a href="" data-reveal-id="myModal"> <img src="{% static "image/beansinbasket.jpg" %}" width="220" height="165" class="img-rounded"></a>
@@ -75,7 +81,7 @@
       <h5 class="text-center">$350.00</h5>
         <p></p>
       </div>
-      <hr>
+      <br><hr>
       <div id="section5">
         <h1>手工蛋糕</h1>
         <a href="" data-reveal-id="myModal"> <img src="{% static "image/beansinbasket.jpg" %}" width="220" height="165" class="img-rounded"></a>
@@ -85,6 +91,8 @@
       </div>
       <hr>
     </div>
+  </div>
+</div>
   </div>
 </div>
 {% endblock %}

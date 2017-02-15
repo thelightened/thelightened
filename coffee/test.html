@@ -11,8 +11,9 @@
   body {
       position: relative;
   }
-  .affix {
+  ul.nav-pills {
       top: 20px;
+      position: fixed;
   }
   div.col-sm-9 div {
       height: 250px;
@@ -21,25 +22,26 @@
 
   
   @media screen and (max-width: 810px) {
-    #section1, #section2, #section3, #section41, #section42  {
+    #section1, #section2, #section3,#section4,#section5,#section6,#section7 {
         margin-left: 150px;
     }
   }
   </style>
 </head>
-<div data-spy="scroll" data-target="#myScrollspy" data-offset="15">
-
-
-<br>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
 
 <div class="container">
   <div class="row">
     <nav class="col-sm-3" id="myScrollspy">
-      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
-        <li><a href="#section1">Section 1</a></li>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Section 1</a></li>
         <li><a href="#section2">Section 2</a></li>
         <li><a href="#section3">Section 3</a></li>
-
+        <li><a href="#section4">Section 4</a></li>
+        <li><a href="#section5">Section 5</a></li>
+        <li><a href="#section6">Section 6</a></li>
+        <li><a href="#section7">Section 7</a></li>
+        
       </ul>
     </nav>
     <div class="col-sm-9">
@@ -51,11 +53,27 @@
         <h1>Section 2</h1>
         <p>Try to scroll this section and look at the navigation list while scrolling!</p>
       </div>        
-      <div id="section3">
+      <div id="section3">         
         <h1>Section 3</h1>
         <p>Try to scroll this section and look at the navigation list while scrolling!</p>
       </div>
-     
+      <div id="section4">         
+        <h1>Section 3</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      <div id="section5">         
+        <h1>Section 3</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      <div id="section6">         
+        <h1>Section 3</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      <div id="section7">         
+        <h1>Section 3</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      
     </div>
   </div>
 </div>

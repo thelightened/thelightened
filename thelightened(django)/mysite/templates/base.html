@@ -115,6 +115,21 @@
      	padding-top: 20px;
      	color: gray;
     }
+{% block scroll %}
+    ul.nav-pills {
+      
+      
+      position:fixed;
+
+  }
+
+    @media screen and (max-width: 810px) {
+    #section1, #section2, #section3,#section4,#section5,#section6,#section7 {
+        margin-left: 150px;
+    }
+  }
+
+{% endblock %}  
  	</style>
 
 </head>
