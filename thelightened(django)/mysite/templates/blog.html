@@ -2,6 +2,19 @@
 {% block title%}blog{% endblock %}
 {% block entries %}
 {% load static %}
+<!-- google search bar -->
+<script>
+  (function() {
+    var cx = '011187904227738002497:eb46tmimfbk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
 
 <div class="sidenav">
        
@@ -44,14 +57,15 @@
            </div>
        </div>
      
+                   <!-- google search bar -->
+<gcse:search>test</gcse:search>
 
   <!---start-Blog---->
           <div class="container">
           <div class="blog">
             <div class="blog-grids">          
-                <div class="blog-grids-head">
-                  
-                </div>
+                <!-- <div class="blog-grids-head">
+                </div> -->
                 <div class="blog-grids-box">
                   <div class="row">
 
@@ -76,7 +90,7 @@
                       <div class="blog-grid">
                         <div class="blog-poast-head">
                           <div class="blog-art-pic">
-                            <a class="post-pic" href="#"> <img src="{% static "image/初二的哥斯大黎加.jpg" %} width="500" height="350"></a>
+                            <a class="post-pic" href="#"> <img src="{% static "image/初二的哥斯大黎加.jpg" %}" width="500" height="350"></a>
                           </div>
                           
                           
@@ -90,6 +104,50 @@
                         </div>
                        </div> 
                   <div class="clear"></div>
+
+
+
+
+
+<div class="col-md-6">
+                      <div class="blog-grid">
+                        <div class="blog-poast-head">
+                          <div class="blog-art-pic">
+                            <a class="post-pic" href="#"> <img src="{% static "image/抹茶蛋糕與PNG.jpg" %}" width="500" height="350"></a>
+                          </div>
+                          </div>
+
+                          <div class="blog-info">
+                            <h3><a href="{{TEMPLATE_DIRS }}/article">TiTle</a></h3>
+                            <p>text.</p>
+                            <a class="btn" href="{{TEMPLATE_DIRS }}/article">Details</a>
+                          </div>
+
+                        </div>
+                       </div>   
+
+                      <div class="col-md-6">
+                      <div class="blog-grid">
+                        <div class="blog-poast-head">
+                          <div class="blog-art-pic">
+                            <a class="post-pic" href="#"> <img src="{% static "image/初二的哥斯大黎加.jpg" %}" width="500" height="350"></a>
+                          </div>
+                          
+                          
+                          
+                          </div>
+                          <div class="blog-info">
+                            <h3><a href="#">TiTle</a></h3>
+                            <p>text.</p>
+                            <a class="btn" href="#">Details</a>
+                          </div>
+                        </div>
+                       </div> 
+                  <div class="clear"></div>
+
+
+
+
                 </div>
                 <div class="criuse-grid-load"><a href="#">Loading More</a></div>            
             </div>
