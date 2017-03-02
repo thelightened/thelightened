@@ -40,6 +40,7 @@ class EntryQuerySet(models.QuerySet):
 class Entry(models.Model):
     title = models.CharField(max_length=200)
     body = HTMLField()
+    coverr = models.ImageField(upload_to = 'images')
     slug = models.SlugField(max_length=200, unique=True)
     publish = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)

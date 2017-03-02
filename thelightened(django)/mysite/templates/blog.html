@@ -2,6 +2,13 @@
 {% block title%}blog{% endblock %}
 {% block entries %}
 {% load static %}
+{% block reveal %}
+    <link rel="stylesheet" href="{% static "css/reveal.css" %}">
+    <script type="text/javascript" src="{% static "js/jquery-1.4.4.min.js" %}"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+    <script type="text/javascript" src="{% static "js/jquery.reveal.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery.quantity.js" %}"></script>
+{% endblock %} 
 <!-- google search bar -->
 <script>
   (function() {
@@ -103,50 +110,9 @@
                           </div>
                         </div>
                        </div> 
+
+                       
                   <div class="clear"></div>
-
-
-
-
-
-<div class="col-md-6">
-                      <div class="blog-grid">
-                        <div class="blog-poast-head">
-                          <div class="blog-art-pic">
-                            <a class="post-pic" href="#"> <img src="{% static "image/抹茶蛋糕與PNG.jpg" %}" width="500" height="350"></a>
-                          </div>
-                          </div>
-
-                          <div class="blog-info">
-                            <h3><a href="{{TEMPLATE_DIRS }}/article">TiTle</a></h3>
-                            <p>text.</p>
-                            <a class="btn" href="{{TEMPLATE_DIRS }}/article">Details</a>
-                          </div>
-
-                        </div>
-                       </div>   
-
-                      <div class="col-md-6">
-                      <div class="blog-grid">
-                        <div class="blog-poast-head">
-                          <div class="blog-art-pic">
-                            <a class="post-pic" href="#"> <img src="{% static "image/初二的哥斯大黎加.jpg" %}" width="500" height="350"></a>
-                          </div>
-                          
-                          
-                          
-                          </div>
-                          <div class="blog-info">
-                            <h3><a href="#">TiTle</a></h3>
-                            <p>text.</p>
-                            <a class="btn" href="#">Details</a>
-                          </div>
-                        </div>
-                       </div> 
-                  <div class="clear"></div>
-
-
-
 
                 </div>
                 <div class="criuse-grid-load"><a href="#">Loading More</a></div>            
