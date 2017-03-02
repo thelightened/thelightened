@@ -24,6 +24,15 @@
   ga('send', 'pageview');
   ga('require’, ‘displayfeatures');
   ga('require’, ‘linkid’, ‘linkid.js');
+  ga('send', 'timing', {
+  'timingCategory': 'category',
+  'timingVar': 'lookup',
+  'timingValue': 123
+});
+  ga('set', 'userId', {{USER_ID}}); // 使用已登入的 user_id 設定 User-ID。
+  ga(function() {
+  // Logs the tracker created above to the console.
+  console.log(ga.getall());
 </script>
 <!-- google -->
 
