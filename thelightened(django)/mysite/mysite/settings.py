@@ -74,23 +74,28 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
+
+# mysql
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql', 
+#         'NAME': 'thelighteneddb',  
+#         'USER': 'root',  
+#         'PASSWORD': 'admin',   
+#         'HOST': '',  
+#         'PORT': '',   
+#     }
+# }
+
+
+
+# sqlite
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'thelighteneddb',  
-        'USER': 'root',  
-        'PASSWORD': 'admin',   
-        'HOST': '',  
-        'PORT': '',   
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
-    # DATABASES = {
-    #     'default': {
-    #         'ENGINE': 'django.db.backends.sqlite3',
-    #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    #     }
-    # }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/

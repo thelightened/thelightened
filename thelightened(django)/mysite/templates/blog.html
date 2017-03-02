@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title%}blog{% endblock %}
+{% load django_markdown %}
 {% block entries %}
 {% load static %}
 {% block reveal %}
@@ -71,29 +72,35 @@
           <div class="container">
           <div class="blog">
             <div class="blog-grids">          
-                <!-- <div class="blog-grids-head">
-                </div> -->
+                <div class="blog-grids-head">
+                </div>
                 <div class="blog-grids-box">
                   <div class="row">
 
+                  {% for object in object_list %} 
                     <div class="col-md-6">
                       <div class="blog-grid">
                         <div class="blog-poast-head">
                           <div class="blog-art-pic">
-                            <a class="post-pic" href="#"> <img src="{% static "image/抹茶蛋糕與PNG.jpg" %}" width="500" height="350"></a>
+                            <a class="post-pic" href="#"> <img src="{{ object.cover_photo.url }}" width="500" height="350"></a>
                           </div>
                           </div>
-
+                            <p class="meta"> {{ object.created }} | Tagged under {{  object.tags.all|join:", " }} </p>
                           <div class="blog-info">
-                            <h3><a href="{{TEMPLATE_DIRS }}/article">TiTle</a></h3>
-                            <p>text.</p>
-                            <a class="btn" href="{{TEMPLATE_DIRS }}/article">Details</a>
+                            <h3><a href="{% url "entry_detail" slug=object.slug %}">{{ object.title }}</a></h3>
+                            <p>{{ object.body|markdown }}</p>
+                            <a class="btn" href="{% url "entry_detail" slug=object.slug %}">Details</a>
                           </div>
 
                         </div>
                        </div>   
+                    {% endfor %}
 
-                      <div class="col-md-6">
+
+
+
+
+                      <!-- <div class="col-md-6">
                       <div class="blog-grid">
                         <div class="blog-poast-head">
                           <div class="blog-art-pic">
@@ -111,8 +118,8 @@
                         </div>
                        </div> 
 
-                       
-                  <div class="clear"></div>
+
+                  <div class="clear"></div> -->
 
                 </div>
                 <div class="criuse-grid-load"><a href="#">Loading More</a></div>            

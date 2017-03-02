@@ -13,8 +13,8 @@ from django.contrib.auth import authenticate, login
 from forms import RegisterForm 
 class BlogIndex(generic.ListView):
     queryset = models.Entry.objects.published()
-    template_name = "article.html"
-    paginate_by = 2
+    template_name = "blog.html"
+    paginate_by = 6
 
 
 class BlogDetail(generic.DetailView):
