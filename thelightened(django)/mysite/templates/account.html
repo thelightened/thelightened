@@ -44,10 +44,31 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 
 <script language="javascript">
 function Showtime(){
-　FB.AppEvents.logEvent("sentSignInClick);
-}
+　FB.AppEvents.logEvent("sentSignInClick");
+}</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-92609859-1', 'auto');
+  ga('require','displayfeatures');
+  ga('send', 'pageview');
+  ga('require’, ‘linkid’, ‘linkid.js');
 </script>
 
+<script type="text/javascript">
+  function handleOutboundLinkClicks(event) {
+  ga('send', 'event', {
+    eventCategory: 'Newtothetest',
+    eventAction: 'click',
+    eventLabel: event.target.href
+  });
+}
+</script>
 
 
 <div id="container">
@@ -85,7 +106,7 @@ function Showtime(){
   
   <input type="submit" onclick="Showtime()" onKeyPress="return SubmitEnter(this,event)" value="Sign In" class="btn btn-block btn-inverse" style="background-color:#0F0F0F;color:#9C9C9C">
  <!-- stop -->
-  <a href="/register"><h5 align="center">New to The Lightened?</h5></a>
+  <a href="{{TEMPLATE_DIRS }}/register" onclick="ga('send', 'event', 'Button', 'Click', 'newtothelightened');" ><h5 align="center" >New to The Lightened?</h5></a>
 
 <table><tr>
 <td style="width:50%"><hr/></td>

@@ -21,18 +21,34 @@
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-92609859-1', 'auto');
+  ga('require','displayfeatures');
   ga('send', 'pageview');
-  ga('require’, ‘displayfeatures');
   ga('require’, ‘linkid’, ‘linkid.js');
-  ga('send', 'timing', {
-  'timingCategory': 'category',
-  'timingVar': 'lookup',
-  'timingValue': 123
-});
-  ga('set', 'userId', {{USER_ID}}); // 使用已登入的 user_id 設定 User-ID。
-  ga(function() {
-  // Logs the tracker created above to the console.
-  console.log(ga.getall());
+//   ga('send', 'timing', {
+//   'timingCategory': 'category',
+//   'timingVar': 'lookup',
+//   'timingValue': 123
+// });
+
+  function onLoad() { 
+  var now = new Date().getTime();
+  var page_load_time = now - performance.timing.navigationStart;
+  console.log("User-perceived page loading time: " + page_load_time);
+}
+  // Feature detects Navigation Timing API support.
+if (window.performance) {
+  // Gets the number of milliseconds since page load
+  // (and rounds the result since the value must be an integer).
+  var timeSincePageLoad = Math.round(performance.now());
+
+  // Sends the timing hit to Google Analytics.
+  ga('send', 'timing', 'JS Dependencies', 'load', timeSincePageLoad);
+}
+   ga('send', 'social', 'Facebook', 'like', 'http://localhost:8000/index/');
+   // ga('set', 'userId', {{USER_ID}}); // 使用已登入的 user_id 設定 User-ID。
+   // ga(function() {
+   // // Logs the tracker created above to the console.
+   // console.log(ga.getall());
 </script>
 <!-- google -->
 
