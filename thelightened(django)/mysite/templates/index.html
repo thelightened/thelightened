@@ -106,15 +106,25 @@ FB.getLoginStatus(function(response) {
 <div class="fb-like" data-href="https://www.facebook.com/thelightened/?fref=ts" data-layout="standard" data-action="recommend" data-size="small" data-show-faces="true" data-share="true"></div>
 <!-- like & share -->
 
-
+   <!--   <ul class='nav navbar-nav'>
+                <li class='active'><a href='/'>Home</a></li>
+                    {% if username %}
+                    <li><a href='/userinfo'>個人資料</a></li>
+                    <li><a href='/post'>寫日記</a></li>
+                    <li><a href='/logout'>登出</a></li>
+                    {% else %}
+                    <li><a href='/login'>登入</a></li>
+                    {% endif %}
+                    <li><a href='/admin'>後台管理</a></li>  
+            </ul> -->
 <!-- login -->
 
- {% if request.user.is_authenticated %}
+<!--  {% if request.user.is_authenticated %}
             <p>{{request.user}} 您已經登入囉</p>
             <a href="/index/"首頁></a>
         {% else %}
             <p>您尚未登入喔~</a></p>
-        {% endif %}
+        {% endif %} -->
 
 <!-- login -->
 

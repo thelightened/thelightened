@@ -11,6 +11,11 @@ from django.core.urlresolvers import reverse_lazy
 from django.views.generic.edit import FormView 
 from django.contrib.auth import authenticate, login 
 from forms import RegisterForm 
+
+from django.contrib import messages
+from django.template.loader import get_template
+
+
 class BlogIndex(generic.ListView):
     queryset = models.Entry.objects.published()
     template_name = "blog.html"
@@ -27,21 +32,36 @@ class RegisterView(FormView):
     success_url = reverse_lazy('index')
 
 
-    def form_valid(self, form):
-        form.save()
-        username = form.cleaned_data.get('username')
-        password = form.cleaned_data.get('password')
-        user = authenticate(username=username, password=password)
-        login(self.request, user)
-        return super(RegisterView, self).form_valid(form)
+def form_valid(self, form):
+    form.save()
+    username = form.cleaned_data.get('username')
+    password = form.cleaned_data.get('password')
+    user = authenticate(username=username, password=password)
+    login(self.request, user)
+    return super(RegisterView, self).form_valid(form)
 
     
+    # def logout(request):
+    #     auth.logout(request)
+    #     messages.add_message(request, messages.INFO, "")
+    #     return redirect('/')
 
+# def index(request):
 
-def index(request):
+# 	index = models.IndexImage.objects.all()
+# 	return render_to_response('index.html',RequestContext(request,locals()))
 
-	index = models.IndexImage.objects.all()
-	return render_to_response('index.html',RequestContext(request,locals()))
+def index(request, pid=None, del_pass=None):
+    index = models.IndexImage.objects.all()
+    if request.user.is_authenticated():
+        username = request.user.username
+        useremail = request.user.email
+    messages.get_messages(request)
+    template = get_template('index.html')
+    request_context = RequestContext(request)
+    request_context.push(locals())
+    html = template.render(request_context)
+    return HttpResponse(html)
 
 
 
@@ -58,7 +78,16 @@ def product(request):
 	return render_to_response('product.html')
 
 def about(request):
-	return render_to_response('about.html')
+    if request.user.is_authenticated():
+        username = request.user.username
+        useremail = request.user.email
+	messages.get_messages(request)
+    template = get_template('about.html')
+    request_context = RequestContext(request)
+    request_context.push(locals())
+    html = template.render(request_context)
+    return HttpResponse(html)
+    # return render_to_response('about.html')
 
 def partnershop(request):
 	return render_to_response('partnershop.html')
@@ -66,7 +95,16 @@ def partnershop(request):
 def cart(request):
      # if not request.user.is_authenticated():
      #    return HttpResponseRedirect('/accounts/login/?next={0}'.format(request.path))
-    return render_to_response('cart.html')
+     if request.user.is_authenticated():
+        username = request.user.username
+        useremail = request.user.email
+     messages.get_messages(request)
+     template = get_template('cart.html')
+     request_context = RequestContext(request)
+     request_context.push(locals())
+     html = template.render(request_context)
+     return HttpResponse(html)
+     # return render_to_response('cart.html')
 
 def menu(request):
     return render_to_response('menu.html')

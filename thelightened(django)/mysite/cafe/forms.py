@@ -75,5 +75,9 @@ class RegisterForm(forms.Form):
             return redirect('index/')
         else:
             return render(request, self.template_name, {'class': 'form-control'})
-
+            
+class LoginForm(forms.Form):
+    username = forms.CharField(label='姓名', max_length=10)
+    password = forms.CharField(label='密碼', widget=forms.PasswordInput())
+    
     

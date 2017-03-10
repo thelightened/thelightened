@@ -6,8 +6,8 @@
 <div class="sidenav">
    <div class="container">
   <h2>點亮咖啡</h2>
-   {% if request.user.is_authenticated %}
-            <p>{{request.user}} 歡迎選購</p>            
+    {% if username %}
+            <p> 歡迎選購</p>            
  {% else %}
             <p>請登入再行購買~</p>  <!-- <--problem --> 
  {% endif %}                                                                                       

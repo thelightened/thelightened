@@ -16,6 +16,7 @@ class EntryAdmin(MarkdownModelAdmin):
     admin.site.register(models.IndexImage)
 admin.site.register(models.Entry, EntryAdmin)
 admin.site.register(models.MyModel, MyModelAdmin)
+admin.site.register(models.User)
 # admin.site.register(models.Tag)
 
 

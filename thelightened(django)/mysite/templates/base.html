@@ -24,11 +24,11 @@
   ga('require','displayfeatures');
   ga('send', 'pageview');
   ga('require’, ‘linkid’, ‘linkid.js');
-//   ga('send', 'timing', {
-//   'timingCategory': 'category',
-//   'timingVar': 'lookup',
-//   'timingValue': 123
-// });
+  ga('send', 'timing', {
+  'timingCategory': 'category',
+  'timingVar': 'lookup',
+  'timingValue': 123
+});
 
   function onLoad() { 
   var now = new Date().getTime();
@@ -44,7 +44,7 @@ if (window.performance) {
   // Sends the timing hit to Google Analytics.
   ga('send', 'timing', 'JS Dependencies', 'load', timeSincePageLoad);
 }
-   ga('send', 'social', 'Facebook', 'like', 'http://localhost:8000/index/');
+  
    // ga('set', 'userId', {{USER_ID}}); // 使用已登入的 user_id 設定 User-ID。
    // ga(function() {
    // // Logs the tracker created above to the console.
@@ -222,13 +222,14 @@ if (window.performance) {
 
 
 	      		<ul class="nav navbar-nav navbar-right" style="margin-right:5%">
-             {% if request.user.is_authenticated %}
-	      			<li><A Target="_blank" href="{{TEMPLATE_DIRS }}/account"><span class="glyphicon glyphicon-user"></span> Leave Your Account</A></li>
+        
+	  {% if username %}     			<li><A Target="_blank" href="{{TEMPLATE_DIRS }}/account"><span class="glyphicon glyphicon-user"></span> Profile</A></li>
+    {% else %}
+              <li><A Target="_blank" href="{{TEMPLATE_DIRS }}/account"><span class="glyphicon glyphicon-user"></span> Login</A></li>
+    {% endif %}
 	        		<li><a href="{{TEMPLATE_DIRS }}/cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-              {% else %}
-              <li><A Target="_blank" href="{{TEMPLATE_DIRS }}/account"><span class="glyphicon glyphicon-user"></span> Your Account</A></li>
-              <li><a href="{{TEMPLATE_DIRS }}/cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-              {% endif %}
+           
+            
 	      		</ul>
 	    	</div>
 	  	</div>
