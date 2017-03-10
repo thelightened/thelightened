@@ -13,7 +13,7 @@ class EntryAdmin(MarkdownModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
     # Next line is a workaround for Python 2.x
     # formfield_overrides = {TextField: {'widget': AdminMarkdownWidget}}
-    admin.site.register(models.IndexImage)
+admin.site.register(models.IndexImage)
 admin.site.register(models.Entry, EntryAdmin)
 admin.site.register(models.MyModel, MyModelAdmin)
 admin.site.register(models.User)

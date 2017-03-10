@@ -1,264 +1,297 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>account</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<link rel="stylesheet" href="assets/css/main.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/cwtexyen.css">
+  <title>account</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/cwtexyen.css">
 </head>
 <style>
- {% load static %}
- body { font-family:'cwTeXYen', sans-serif; color:black ;font-size: 155%}
+  {% load static %}
+  
+  body {
+    font-family: 'cwTeXYen', sans-serif;
+    color: black;
+    font-size: 155%
+  }
+  
+  .head {
+    padding-bottom: 0.5%;
+    padding-top: 1.2%;
+  }
+  
 
 
- .head {
-    	padding-bottom: 0.5%;
-    	padding-top:1.2%;
-      	}    
-
-#container{
-height:100%;
-max-width: 100%;
-background-size: cover;
-background: rgb(125,126,125);
-background: -moz-linear-gradient(top,  rgba(125,126,125,1) 10%, rgba(14,14,14,1) 79%);
-background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 10%,rgba(14,14,14,1) 79%);
-background: linear-gradient(to bottom,  rgba(125,126,125,1) 10%,rgba(14,14,14,1) 79%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); 
-}
- footer {
-      
-      padding-top: 2%;
-      padding-bottom: 3.5%;
-      
-    }
-
-
-
+  #container {
+    height: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background: rgb(125, 126, 125);
+    background: -moz-linear-gradient(top, rgba(125, 126, 125, 1) 10%, rgba(14, 14, 14, 1) 79%);
+    background: -webkit-linear-gradient(top, rgba(125, 126, 125, 1) 10%, rgba(14, 14, 14, 1) 79%);
+    background: linear-gradient(to bottom, rgba(125, 126, 125, 1) 10%, rgba(14, 14, 14, 1) 79%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e', GradientType=0);
+  }
+  
+  footer {
+    padding-top: 2%;
+    padding-bottom: 3.5%;
+  }
 </style>
+
 <body>
 
-<script language="javascript">
-function Showtime(){
-　FB.AppEvents.logEvent("sentSignInClick");
-}</script>
+  <script language="javascript">
+    function Showtime() {
+      document.getElementById("demo").innerHTML = 'HI';
+    }
+  </script>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-
-  ga('create', 'UA-92609859-1', 'auto');
-  ga('require','displayfeatures');
-  ga('send', 'pageview');
-  ga('require’, ‘linkid’, ‘linkid.js');
-</script>
-
-<script type="text/javascript">
-  function handleOutboundLinkClicks(event) {
-  ga('send', 'event', {
-    eventCategory: 'Newtothetest',
-    eventAction: 'click',
-    eventLabel: event.target.href
-  });
-}
-</script>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
 
-<div id="container">
-<div class="head">
+    ga('create', 'UA-92609859-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+    ga('require’, ‘linkid’, ‘linkid.js');
+  </script>
+
+  <script type="text/javascript">
+    function handleOutboundLinkClicks(event) {
+      ga('send', 'event', {
+        eventCategory: 'Newtothetest',
+        eventAction: 'click',
+        eventLabel: event.target.href
+      });
+    }
+  </script>
+
+
+  <div id="container">
+    <div class="head">
       <div class="container-fluid text-center">
-          <div class="row">
-            <div class="col-sm-4">
-            	</div>              
-              <div class="col-sm-4 ">
-              	<a href="{{TEMPLATE_DIRS }}/index"><img src="{% static "image/logo3.png" %}" width="165" height="165"></a>
-              </div>
-              <div class="col-sm-4">
-              </div>
+        <div class="row">
+          <div class="col-sm-4">
           </div>
+          <div class="col-sm-4 ">
+            <a href="{{TEMPLATE_DIRS }}/index"><img src="{% static "image/logo3.png" %}" width="165" height="165"></a>
+          </div>
+          <div class="col-sm-4">
+          </div>
+        </div>
       </div>
-</div>
+    </div>
 
 
-<div>
-  <div class="container-fluid text-left">
-    <div class="col-sm-4"></div>
+    <div>
+      <div class="container-fluid text-left">
+        <div class="col-sm-4"></div>
 
-    <div class="col-sm-4"> 
-        <!-- yo做修改 name是django內部定義值  -->
- <form action="" method="post">
-  <div class="form-group">
-    <h3 align="center">SIGN IN WITH EMAIL</h3><br>
-    <label for="username">Username:</label>{%  csrf_token %}   
-    <input type="username" name="username" class="form-control" value="{{username}}" id="username">
-  </div>
-  <div class="form-group">
-    <label for="password">Password:</label>
-    <input type="password" name="password" class="form-control" value="{{password}}" id="password">
-  </div> <br> 
-  
-  <input type="submit" onclick="Showtime()" onKeyPress="return SubmitEnter(this,event)" value="Sign In" class="btn btn-block btn-inverse" style="background-color:#0F0F0F;color:#9C9C9C">
- <!-- stop -->
-  <a href="{{TEMPLATE_DIRS }}/register" onclick="ga('send', 'event', 'href', 'Click', 'New_to_thelightened');" ><h5 align="center" >New to The Lightened?</h5></a>
+        <div class="col-sm-4">
+          <!-- yo做修改 name是django內部定義值  -->
 
-<table><tr>
-<td style="width:50%"><hr/></td>
-<td style="vertical-align:middle; text-align: center"><h4 style="color:#E8E8E8"><b>OR</b></h4></td>
-<td style="width:50%"><hr/></td>
-</tr></table><br>
-  
-  <div class="col-sm-6 text-center"><br>
-  <h4 style="color:#BABABA">Sign in with...</h4>
-  </div>
-  <div class="col-sm-6 text-center">
-    <br>
 
-<!-- fb 登入 -->
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.8&appId=101197950365729";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+            {% for message in messages %}
+    <div class='alert alert-{{message.tags}}'>{{ message }}</div>
+{% endfor %}
+            <div class="form-group">
+              <h3 align="center">SIGN IN WITH EMAIL</h3><br>
+              <form action='.' method='POST'>
+              
+            <div class="form-group">
 
-</script>
+            {% csrf_token %}
+            
+            {{ login_form.as_p }}
+            
+            </div>
+    
 
-<!-- <script>
+              <!-- <label for="username">Username:</label>{% csrf_token %}
+              <input type="username" name="username" class="form-control" value="{{username}}" id="username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" name="password" class="form-control" value="{{password}}" id="password">
+            </div>  --><br>
+
+            <input type="submit" onclick="Showtime()" onKeyPress="return SubmitEnter(this,event)" value="Sign In" class="btn btn-block btn-inverse"
+              style="background-color:#0F0F0F;color:#9C9C9C">
+            <!-- stop -->
+            <a href="{{TEMPLATE_DIRS }}/accounts/register" onclick="ga('send', 'event', 'href', 'Click', 'New_to_thelightened');">
+              <h5 align="center">New to The Lightened?</h5>
+            </a>
+
+            <table>
+              <tr>
+                <td style="width:50%">
+                  <hr/>
+                </td>
+                <td style="vertical-align:middle; text-align: center">
+                  <h4 style="color:#E8E8E8"><b>OR</b></h4>
+                </td>
+                <td style="width:50%">
+                  <hr/>
+                </td>
+              </tr>
+            </table><br>
+
+            <div class="col-sm-6 text-center"><br>
+              <h4 style="color:#BABABA">Sign in with...</h4>
+            </div>
+            <div class="col-sm-6 text-center">
+              <br>
+
+              <!-- fb 登入 -->
+
+              <div id="fb-root"></div>
+              <script>
+                                                           (function (d, s, id) {
+                                                             var js, fjs = d.getElementsByTagName(s)[0];
+                                                             if (d.getElementById(id)) return;
+                                                             js = d.createElement(s); js.id = id;
+                                                             js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.8&appId=101197950365729";
+                                                             fjs.parentNode.insertBefore(js, fjs);
+                                                           }(document, 'script', 'facebook-jssdk'));
+              </script>
+
+              <!-- <script>
 function ShowMeData() {
 FB.AppEvents.logEvent("sentFriendRequest");
 }
 </script> -->
 
 
-<script>
-  // This is called with the results from from FB.getLoginStatus().
-  function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
-    // The response object is returned with a status field that lets the
-    // app know the current login status of the person.
-    // Full docs on the response object can be found in the documentation
-    // for FB.getLoginStatus().
-    if (response.status === 'connected') {
-      // Logged into your app and Facebook.
-      testAPI();
-    } else if (response.status === 'not_authorized') {
-      // The person is logged into Facebook, but not your app.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
-    } else {
-      // The person is not logged into Facebook, so we're not sure if
-      // they are logged into this app or not.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook.';
-    }
-  }
+              <script>
+                // This is called with the results from from FB.getLoginStatus().
+                function statusChangeCallback(response) {
+                  console.log('statusChangeCallback');
+                  console.log(response);
+                  // The response object is returned with a status field that lets the
+                  // app know the current login status of the person.
+                  // Full docs on the response object can be found in the documentation
+                  // for FB.getLoginStatus().
+                  if (response.status === 'connected') {
+                    // Logged into your app and Facebook.
+                    testAPI();
+                  } else if (response.status === 'not_authorized') {
+                    // The person is logged into Facebook, but not your app.
+                    document.getElementById('status').innerHTML = 'Please log ' +
+                      'into this app.';
+                  } else {
+                    // The person is not logged into Facebook, so we're not sure if
+                    // they are logged into this app or not.
+                    document.getElementById('status').innerHTML = 'Please log ' +
+                      'into Facebook.';
+                  }
+                }
 
-  // This function is called when someone finishes with the Login
-  // Button.  See the onlogin handler attached to it in the sample
-  // code below.
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
- 
-window.fbAsyncInit = function() {
-    FB.init({
-      appId      :'{101197950365729}',
-      xfbml      : true,
-      version    :'v2.8'
-    });
-    FB.AppEvents.logPageView();
-  };
+                // This function is called when someone finishes with the Login
+                // Button.  See the onlogin handler attached to it in the sample
+                // code below.
+                function checkLoginState() {
+                  FB.getLoginStatus(function (response) {
+                    statusChangeCallback(response);
+                  });
+                }
 
-
-
-  // Now that we've initialized the JavaScript SDK, we call 
-  // FB.getLoginStatus().  This function gets the state of the
-  // person visiting this page and can return one of three states to
-  // the callback you provide.  They can be:
-  //
-  // 1. Logged into your app ('connected')
-  // 2. Logged into Facebook, but not your app ('not_authorized')
-  // 3. Not logged into Facebook and can't tell if they are logged into
-  //    your app or not.
-  //
-  // These three cases are handled in the callback function.
+                window.fbAsyncInit = function () {
+                  FB.init({
+                    appId: '{101197950365729}',
+                    xfbml: true,
+                    version: 'v2.8'
+                  });
+                  FB.AppEvents.logPageView();
+                };
 
 
 
-  // Load the SDK asynchronously
+                // Now that we've initialized the JavaScript SDK, we call 
+                // FB.getLoginStatus().  This function gets the state of the
+                // person visiting this page and can return one of three states to
+                // the callback you provide.  They can be:
+                //
+                // 1. Logged into your app ('connected')
+                // 2. Logged into Facebook, but not your app ('not_authorized')
+                // 3. Not logged into Facebook and can't tell if they are logged into
+                //    your app or not.
+                //
+                // These three cases are handled in the callback function.
 
 
-  // Here we run a very simple test of the Graph API after login is
-  // successful.  See statusChangeCallback() for when this call is made.
-  function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
-  }
 
-</script>
+                // Load the SDK asynchronously
 
-<!--
+
+                // Here we run a very simple test of the Graph API after login is
+                // successful.  See statusChangeCallback() for when this call is made.
+                function testAPI() {
+                  console.log('Welcome!  Fetching your information.... ');
+                  FB.api('/me', function (response) {
+                    console.log('Successful login for: ' + response.name);
+                    document.getElementById('status').innerHTML =
+                      'Thanks for logging in, ' + response.name + '!';
+                  });
+                }
+              </script>
+
+              <!--
   Below we include the Login Button social plugin. This button uses
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
 
-    <div class="fb-login-button" data-max-rows="1" data-size="large" data-scope="user_about_me" data-show-faces="false" data-auto-logout-link="true" onlogin="checkLoginState();"></div>
+              <div class="fb-login-button" data-max-rows="1" data-size="large" data-scope="user_about_me" data-show-faces="false" data-auto-logout-link="true"
+                onlogin="checkLoginState();"></div>
 
-    <div id="status">
-    </div>
-  </div>
+              <div id="status">
+              </div>
+            </div>
 
-  <!-- fb 登入 -->
-
-     
-  
-</form>
-  
-
-    <div class="col-sm-4"></div>
-
-  </div>
-
-</div>
+            <!-- fb 登入 -->
 
 
 
-<br><br>
-<footer class="container-fluid text-center">
-    
+          </form>
 
-  
-        <div class="col-sm-4"></div>
-          
-        <div class="col-sm-4">
-          
-            <img src="{% static "image/logo4.png" %}" class="img-rounded" alt="thelightened.html" width="170" height="65">
-          </div>
-     <div class="col-sm-4"></div>
+
+          <div class="col-sm-4"></div>
+
+        </div>
+
+      </div>
  
 
 
-</footer>
-</div>
-</body>
-</html>
+      <br><br>
+      <footer class="container-fluid text-center">
 
+
+
+        <div class="col-sm-4"></div>
+
+        <div class="col-sm-4">
+
+          <img src="{% static " image/logo4.png " %}" class="img-rounded" alt="thelightened.html" width="170" height="65">
+        </div>
+        <div class="col-sm-4"></div>
+
+
+
+      </footer>
+    </div>
+</body>
+
+</html>
