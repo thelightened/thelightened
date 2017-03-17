@@ -54,7 +54,7 @@ INSTALLED_APPS = (
 
 EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
 MAILGUN_ACCESS_KEY = 'key-97b3b4b8468b3d35eea2e7f8ff8f3e51'
-MAILGUN_SERVER_NAME = 'sandboxfb9672cff30f4f5a84fd05c02860564e.mailgun.org'
+MAILGUN_SERVER_NAME = 'thelightened.tk'
 
 ACCOUNT_ACTIVATION_DAYS = 7
 SITE_ID = 2

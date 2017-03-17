@@ -1,7 +1,9 @@
 <!-- activate.html (ch10www project) -->
 {% extends "base.html" %}
-{% block title %}分享日記{% endblock %}
-{% block content %}
+{% block title %}分Activate failed{% endblock %}
+{% block entries %}
+{% load static %}
+<div class="sidenav">
 <div class='container'>
 {% for message in messages %}
     <div class='alert alert-{{message.tags}}'>{{ message }}</div>

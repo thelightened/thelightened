@@ -2,6 +2,6 @@
 使用者：{{ user }}
 在網站：{{ site }}註冊
 您的連結：http://{{ site }}/accounts/activate/{{ activation_key }}
-將於{{ expiration_days }}天後到期
+啟用信將於{{ expiration_days }}天後到期
 
 

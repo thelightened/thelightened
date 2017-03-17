@@ -88,15 +88,32 @@ class LoginForm(forms.Form):
         max_length=18,
         widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
-# class RegisterForm(forms.Form):
-#     username = forms.CharField(label=u'暱稱',
+class RegisterForm(forms.Form):
+    username = forms.CharField(label=u'暱稱',
        
-#         max_length=20,
+        max_length=20,
         
-#         widget=forms.TextInput(attrs={'class': 'form-control'}))
-    
-#     password = forms.CharField(label=u'密碼',
+        widget=forms.TextInput(attrs={'class': 'form-control'}))
+    # def __init__(self, *args, **kwargs):
+    #     super(MyForm, self).__init__(*args, **kwargs)
+    #     self.fields['myfield'].widget.attrs.update({'class' : 'form-control'})
+
+    email = forms.EmailField(
+        max_length=50,
+      
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
+        )
+
+
+
+    password = forms.CharField(label=u'密碼',
         
-#         min_length=3,
-#         max_length=18,
-#         widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+        min_length=3,
+        max_length=18,
+        widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+
+    password_check = forms.CharField(label=u'密碼確認',
+        
+        min_length=3,
+        max_length=18,
+        widget=forms.PasswordInput(attrs={'class': 'form-control'}))
