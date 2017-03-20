@@ -144,6 +144,7 @@ def partnershop(request):
     html = template.render(request_context)
     return HttpResponse(html)
 
+@login_required(login_url='/account')
 def cart(request):
      # if not request.user.is_authenticated():
      #    return HttpResponseRedirect('/accounts/login/?next={0}'.format(request.path))
@@ -158,7 +159,7 @@ def cart(request):
     return HttpResponse(html)
      # return render_to_response('cart.html')
 
-@login_required(login_url='/account')
+
 def menu(request):
     if request.user.is_authenticated():
         username = request.user.username

@@ -47,15 +47,17 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'mce_filebrowser',
     'django_markdown',
+    'registration', 
 	# 'google_analytics',
 
 
 )
 
+EMAIL_HOST = 'localhost'
+DEFAULT_FROM_EMAIL = 'succowork@gmail.com'
 EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
-MAILGUN_ACCESS_KEY = 'key-97b3b4b8468b3d35eea2e7f8ff8f3e51'
-MAILGUN_SERVER_NAME = 'thelightened.tk'
-
+MAILGUN_ACCESS_KEY = 'key-ecda648dbaaebda1966ec529ba1c98be'
+MAILGUN_SERVER_NAME = 'thelightened.gq'
 ACCOUNT_ACTIVATION_DAYS = 7
 SITE_ID = 2
 
