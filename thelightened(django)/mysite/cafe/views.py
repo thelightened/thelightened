@@ -220,7 +220,7 @@ def account(request):
             if user is not None:
                 if user.is_active:
                     auth.login(request, user)
-                    messages.add_message(request, messages.SUCCESS, 'successful')
+                    # messages.add_message(request, messages.SUCCESS, 'successful')
                     return redirect('/index')
                 else:
                     messages.add_message(request, messages.WARNING, 'wrong password, please check again!')
