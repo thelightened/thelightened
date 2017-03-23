@@ -1,3 +1,6 @@
+{% load socialaccount %}
+{% providers_media_js %}
+
 <!DOCTYPE html>
 <html>
 
@@ -253,8 +256,11 @@ FB.AppEvents.logEvent("sentFriendRequest");
   the FB.login() function when clicked.
 -->
 
-              <div class="fb-login-button" data-max-rows="1" data-size="large" data-scope="user_about_me" data-show-faces="false" data-auto-logout-link="true"
-                onlogin="checkLoginState();"></div>
+              <!-- <div class="fb-login-button" data-max-rows="1" data-size="large" data-scope="user_about_me" data-show-faces="false" data-auto-logout-link="true"
+                onlogin="checkLoginState();"></div> -->
+
+<a href="{% provider_login_url "facebook" method="oauth2" next=redirecturl redirect_uri=redirecturl %}">fuck</a>
+<!-- <a href="{% provider_login_url "facebook" process="connect" %}">Connect a facebook account</a> -->
 
               <div id="status">
               </div>

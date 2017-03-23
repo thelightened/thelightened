@@ -31,7 +31,7 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-LOGIN_URL = "accoutn/"
+LOGIN_URL = "account/"
 # Application definition
 
 INSTALLED_APPS = (
@@ -48,6 +48,11 @@ INSTALLED_APPS = (
     'mce_filebrowser',
     'django_markdown',
     'registration', 
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
 	# 'google_analytics',
 
 
@@ -59,7 +64,14 @@ EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
 MAILGUN_ACCESS_KEY = 'key-ecda648dbaaebda1966ec529ba1c98be'
 MAILGUN_SERVER_NAME = 'thelightened.gq'
 ACCOUNT_ACTIVATION_DAYS = 7
-SITE_ID = 2
+SITE_ID = 3
+
+
+# facebook social
+ACCOUNT_EMAIL_REQUIRED=True
+ACCOUNT_USERNAME_REQURIED=True
+LOGIN_REDIRECT_URL = "/index"
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -70,6 +82,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.auth_backends.AuthenticationBackend',
+    'django.contrib.auth.backends.ModelBackend',
 )
 
 ROOT_URLCONF = 'mysite.urls'
@@ -126,3 +140,30 @@ TINYMCE_DEFAULT_CONFIG = {
   'file_browser_callback': 'mce_filebrowser'
 }
 
+# facebook test
+
+SOCIALACCOUNT_PROVIDERS = \
+    {'facebook':
+       {'METHOD': 'oauth2',
+        'SCOPE': ['email','public_profile', 'user_friends'],
+        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+        'FIELDS': [
+            'id',
+            'email',
+            'name',
+            'first_name',
+            'last_name',
+            'verified',
+            'locale',
+            'timezone',
+            'link',
+            'gender',
+            'updated_time'],
+        'EXCHANGE_TOKEN': True,
+        'LOCALE_FUNC': lambda request: 'kr_KR',
+        'VERIFIED_EMAIL': False,
+        'VERSION': 'v2.4'}}
+
+#facebook
+SOCIAL_AUTH_FACEBOOK_KEY = '101197950365729'  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET ='a32dd33e7590fa655d211903e6d00e4b' #app key
