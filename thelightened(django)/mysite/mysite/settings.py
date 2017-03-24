@@ -65,7 +65,7 @@ EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
 MAILGUN_ACCESS_KEY = 'key-ecda648dbaaebda1966ec529ba1c98be'
 MAILGUN_SERVER_NAME = 'thelightened.gq'
 ACCOUNT_ACTIVATION_DAYS = 7
-SITE_ID = 2
+SITE_ID = 3
 
 # facebook social
 ACCOUNT_EMAIL_REQUIRED=True

@@ -18,6 +18,7 @@ urlpatterns = [
     url(r'^about/$',about),
     url(r'^partnershop/$',partnershop),
     url(r'^account/$',account),
+    url(r'^account_allauth/',include('allauth.urls')),
     url(r'^accounts/', include('registration.backends.hmac.urls')),
     # url(r'^register/', include('registration.backends.hmac.urls')),
     url(r'^cart/$',cart),

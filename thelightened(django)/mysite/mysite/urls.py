@@ -38,6 +38,7 @@ urlpatterns = [
  #    url(r'^about/$',about),
  #    url(r'^partnershop/$',partnershop),
     url(r'^tinymce/', include('tinymce.urls')),
+    
     # url(r'^mce_filebrowser/', include('mce_filebrowser.urls')),
     # url(r'^account/$',account),
     # url(r'^markdown/', include("django_markdown.urls")),
