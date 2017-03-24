@@ -6,9 +6,9 @@ from django.contrib.auth.models import User
 from django.db.models.signals import pre_delete
 from django.dispatch.dispatcher import receiver
 class MyModel(models.Model):
-    	content = HTMLField()
-    	def __unicode__(self):
-    		return self.content
+        content = HTMLField()
+        def __unicode__(self):
+            return self.content
 
 class IndexImage(models.Model):
         name = models.CharField(max_length=20)

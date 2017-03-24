@@ -1,5 +1,8 @@
 from django.contrib import admin
 from . import models
+
+# Register your models here.
+
 # from django.forms import ModelForm
 from mce_filebrowser.admin import MCEFilebrowserAdmin
 from django_markdown.admin import MarkdownModelAdmin

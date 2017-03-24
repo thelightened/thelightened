@@ -1,5 +1,5 @@
-from django.conf.urls import patterns, url
-# from django.contrib import admin
+from django.conf.urls import url
+from django.contrib import admin
 from django.conf import settings
 from views import index, test, coffeebeans, blog, product, partnershop, about, logout, account,cart,menu,article
 from . import views
@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 from django.conf.urls import include
 
 
-urlpatterns = patterns('',
+urlpatterns = [
     url(r'^$', index),
     url(r'^index/$',views.index, name='index'),
     url(r'^logout/$',logout),
@@ -17,8 +17,7 @@ urlpatterns = patterns('',
     url(r'^product/$',product),
     url(r'^about/$',about),
     url(r'^partnershop/$',partnershop),
-    url(r'^account/', account),
-    url(r'^account_allauth/', include('allauth.urls')),
+    url(r'^account/$',account),
     url(r'^accounts/', include('registration.backends.hmac.urls')),
     # url(r'^register/', include('registration.backends.hmac.urls')),
     url(r'^cart/$',cart),
@@ -27,5 +26,5 @@ urlpatterns = patterns('',
     # url(r'^accounts/login/$',login),
     url(r'^blog', views.BlogIndex.as_view(), name="blog"),
     url(r'^entry/(?P<slug>\S+)$', views.BlogDetail.as_view(), name="entry_detail"),
-)+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     

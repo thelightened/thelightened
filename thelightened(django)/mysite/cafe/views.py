@@ -1,10 +1,14 @@
+from django.shortcuts import render
+
+# Create your views here.
+
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render_to_response,redirect
 from . import models
 from django.contrib import auth
 from django.template import RequestContext
 from django.contrib.auth.forms import UserCreationForm
-from django.conf.urls import patterns, url
+from django.conf.urls import  url
 from django.views import generic
 
 from django.core.urlresolvers import reverse_lazy 
@@ -13,8 +17,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required 
 # from forms import RegisterForm 
 
-from django.contrib import messages
-from django.template.loader import get_template
+
 from cafe import forms
 from django.template import loader
 from django.shortcuts import render
@@ -22,8 +25,8 @@ from django.template import Context
 from django.core.mail import EmailMessage
 
 # temp
-from django.core.mail import EmailMessage
-from django.template import RequestContext
+
+
 from django.template import Context, Template
 from django.template.loader import get_template
 from django.http import HttpResponse, HttpResponseRedirect
@@ -33,6 +36,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
+
+
 
 class BlogIndex(generic.ListView):
     queryset = models.Entry.objects.published()
@@ -64,10 +69,7 @@ class BlogDetail(generic.DetailView):
     #     messages.add_message(request, messages.INFO, "")
     #     return redirect('/')
 
-# def index(request):
 
-# 	index = models.IndexImage.objects.all()
-# 	return render_to_response('index.html',RequestContext(request,locals()))
 
 def index(request, pid=None, del_pass=None):
     index = models.IndexImage.objects.all()
@@ -84,48 +86,22 @@ def index(request, pid=None, del_pass=None):
 
 
 def test(request):
-    return render_to_response('test.html')
-    
+	return render_to_response('test.html')
+	
 def coffeebeans(request):
-    if request.user.is_authenticated():
-        username = request.user.username
-        useremail = request.user.email
-    messages.get_messages(request)
-    template = get_template('coffeebeans.html')
-    request_context = RequestContext(request)
-    request_context.push(locals())
-    html = template.render(request_context)
-    return HttpResponse(html)
+	return render_to_response('coffeebeans.html')
 
-
-def blog(request): 
-    if request.user.is_authenticated():
-        username = request.user.username
-        useremail = request.user.email
-    messages.get_messages(request)
-    template = get_template('blog.html')
-    request_context = RequestContext(request)
-    request_context.push(locals())
-    html = template.render(request_context)
-    return HttpResponse(html)
-
+def blog(request):
+	return render_to_response('blog.html')
 
 def product(request):
-    if request.user.is_authenticated():
-        username = request.user.username
-        useremail = request.user.email
-    messages.get_messages(request)
-    template = get_template('product.html')
-    request_context = RequestContext(request)
-    request_context.push(locals())
-    html = template.render(request_context)
-    return HttpResponse(html)
+	return render_to_response('product.html')
 
 def about(request):
     if request.user.is_authenticated():
         username = request.user.username
         useremail = request.user.email
-    messages.get_messages(request)
+	messages.get_messages(request)
     template = get_template('about.html')
     request_context = RequestContext(request)
     request_context.push(locals())
@@ -134,32 +110,23 @@ def about(request):
     # return render_to_response('about.html')
 
 def partnershop(request):
-    if request.user.is_authenticated():
-        username = request.user.username
-        useremail = request.user.email
-    messages.get_messages(request)
-    template = get_template('partnershop.html')
-    request_context = RequestContext(request)
-    request_context.push(locals())
-    html = template.render(request_context)
-    return HttpResponse(html)
+	return render_to_response('partnershop.html')
 
-@login_required(login_url='/account')
 def cart(request):
      # if not request.user.is_authenticated():
      #    return HttpResponseRedirect('/accounts/login/?next={0}'.format(request.path))
-    if request.user.is_authenticated():
-       username = request.user.username
-       useremail = request.user.email
-    messages.get_messages(request)
-    template = get_template('cart.html')
-    request_context = RequestContext(request)
-    request_context.push(locals())
-    html = template.render(request_context)
-    return HttpResponse(html)
+     if request.user.is_authenticated():
+        username = request.user.username
+        useremail = request.user.email
+     messages.get_messages(request)
+     template = get_template('cart.html')
+     request_context = RequestContext(request)
+     request_context.push(locals())
+     html = template.render(request_context)
+     return HttpResponse(html)
      # return render_to_response('cart.html')
 
-
+@login_required(login_url='/account')
 def menu(request):
     if request.user.is_authenticated():
         username = request.user.username
@@ -174,15 +141,7 @@ def menu(request):
     # return render_to_response('menu.html')
 
 def article(request):
-    if request.user.is_authenticated():
-        username = request.user.username
-        useremail = request.user.email
-    messages.get_messages(request)
-    template = get_template('article.html')
-    request_context = RequestContext(request)
-    request_context.push(locals())
-    html = template.render(request_context)
-    return HttpResponse(html)  
+    return render_to_response('article.html')    
 
 def logout(request):
     auth.logout(request)
@@ -190,13 +149,13 @@ def logout(request):
     return redirect('/index')
 
 # def account(request):
-#   return render_to_response('account.html')
+# 	return render_to_response('account.html')
 
 # def account(request):
 
 #     if request.user.is_authenticated(): 
 #          auth.logout(request)
-#        return HttpResponseRedirect('/index/')
+#     	 return HttpResponseRedirect('/index/')
 
 #     username = request.POST.get('username', '')
 #     password = request.POST.get('password', '')
@@ -220,12 +179,12 @@ def account(request):
             if user is not None:
                 if user.is_active:
                     auth.login(request, user)
-                    # messages.add_message(request, messages.SUCCESS, 'successful')
+                    messages.add_message(request, messages.SUCCESS, 'successful')
                     return redirect('/index')
                 else:
                     messages.add_message(request, messages.WARNING, 'wrong password, please check again!')
             else:
-                messages.add_message(request, messages.WARNING, 'wrong password, please check again!')
+                messages.add_message(request, messages.WARNING, 'It can not login now!')
         else:
             messages.add_message(request, messages.INFO,'please check the column info')
     else:
@@ -236,4 +195,8 @@ def account(request):
     request_context.push(locals())
     html = template.render(request_context)
     return HttpResponse(html)
+
+
+
+
 
