@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block title%}index{% endblock %} {% block entries %} {% load static %}
+{% extends "base_index.html" %} {% block title%}點亮咖啡{% endblock %} {% block entries %} {% load static %}
 <!-- google -->
 
 
@@ -104,8 +104,8 @@
 
 
 <!-- like & share -->
-<div class="fb-like" data-href="https://www.facebook.com/thelightened/?fref=ts" data-layout="standard" data-action="recommend"
-  data-size="small" data-show-faces="true" data-share="true"></div>
+<!-- <div class="fb-like" data-href="https://www.facebook.com/thelightened/?fref=ts" data-layout="standard" data-action="recommend"
+  data-size="small" data-show-faces="true" data-share="true"></div> -->
 <!-- like & share -->
 
 <!--   <ul class='nav navbar-nav'>
@@ -132,58 +132,95 @@
 
 
 
-<div class="row content">
-  <div class="col-sm-1">
-  </div>
-  <div class="col-sm-10">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-      <!-- Indicators-->
-
-      <ol class="carousel-indicators">
-        {% for i in index %} {% if forloop.counter == 1 %}
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        {% else %}
-        <li data-target="#myCarousel" data-slide-to="{{forloop.counter}}"></li>
-        {% endif %} {% endfor %}
-      </ol>
 
 
 
-      <!-- Wrapper for slides-->
-      <div class="carousel-inner" role="listbox">
-        {% for i in index %} {% if forloop.counter == 1 %}
-        <div class="item active">
-          {% else %}
-          <div class="item">
-            {% endif %}
-            <img src="{{ i.image.url }}" width="60%" height="60%">
-            <div class="carousel-caption">
-              <h3></h3>
-              <p></p>
+<!-- section start -->
+    <!-- ================ -->
+    <div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 id="about" class="title text-center">關於 <span>直接貿易</span></h1>
+            <p class="lead text-center">直接貿易顧名思義，是指店家或咖啡貿易商（我們的美國夥伴）與咖啡農的直接交易關係。這樣的關係除了建立在農民的耕作品質、耕作方式、與交易價格的直接把關上，也創造農民較合理的收購價格、使第三世界國家農民有機會藉咖啡產業脫離貧窮。</p>
+            <div class="space"></div>
+            <div class="row">
+              <div class="col-md-6">
+                <img src="{% static "images/beansinbasket.jpg" %}" alt="">
+                <div class="space"></div>
+              </div>
+              <div class="col-md-6">
+                <p> 在直接貿易的過程，咖啡小農必須使用環境友善的耕種方式種植高品質的咖啡，以獲取符合生產成本與勞動成本的報酬；咖啡貿易商除了進行採購，一年會有大部分的時間待在產地，確保農民生產方式與品質、保障農民報酬。更重要的是，咖啡豆賣到消費市場後的獲利會有部分（約25%-35%)，回到第三世界國家進行農村建設。使生產、環境、消費者產生永續的發展；直接貿易聯盟相信，當咖啡農的生活獲得改善、並且有足夠的報酬動力，咖啡市場便有更大的機會取得好品質的精品咖啡。</p>
+                <p>直接貿易的好處有二；第一，透過貿易商直接與農民的培力關係，發展中國家的農村能夠因咖啡產業的發展逐漸脫離貧窮；第二，因為咖啡貿易商與小農直接共存的貿易關係，能夠快速直接取得新鮮的高品質咖啡生豆。</p>
+                <!-- <ul class="list-unstyled">
+                  <li><i class="fa fa-caret-right pr-10 text-colored"></i> Lorem ipsum dolor sit amet</li>
+                  <li><i class="fa fa-caret-right pr-10 text-colored"></i> Reiciendis deleniti neque aliquid</li>
+                  <li><i class="fa fa-caret-right pr-10 text-colored"></i> Ipsam fuga error commodi</li>
+                  <li><i class="fa fa-caret-right pr-10 text-colored"></i> Lorem ipsum dolor sit amet</li>
+                  <li><i class="fa fa-caret-right pr-10 text-colored"></i> Dignissimos molestiae necessitatibus</li>
+                </ul> -->
+              </div>
+            </div>
+            <div class="space"></div>
+            <h2>Becessitatibus quae beatae possimus ullam</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi adipisci illo, voluptatum ipsam fuga error commodi architecto, laudantium culpa tenetur at id, beatae placeat deserunt iure quas voluptas fugit eveniet.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ducimus explicabo quibusdam temporibus deserunt doloremque pariatur ea, animi a. Delectus similique atque eligendi, enim vel reiciendis deleniti neque aliquid, sit?</p>
+                <p>Vitae dolores quam magnam accusantium nam, voluptatibus expedita delectus, dolorum odio magni ut nemo nihil ex earum pariatur molestias velit eveniet, facere autem saepe aut. Ut minima itaque porro facere. Cumque vitae autem, dignissimos molestiae necessitatibus culpa aliquam deleniti soluta sunt voluptatibus tenetur, unde dolorem eligendi doloribus quibusdam facere totam. Possimus atque deserunt numquam aliquam magnam, facilis officiis illo alias ipsa voluptas laborum, praesentium eveniet nobis velit voluptatem odio eligendi, corporis et iste distinctio! Repellendus, id, ad.</p>
+              </div>
+              <div class="col-md-6">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Collapsible Group Item #1
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                      <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Collapsible Group Item #2
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                      <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Collapsible Group Item #3
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                      <div class="panel-body">
+                        Richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          {% endfor %}
-
-
-
-          <!-- Left and right controls-->
-          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-
         </div>
       </div>
     </div>
-  </div>
- <!--  <div class="fb-comments" data-href="http://localhost:8000/index/" data-width="500" data-numposts="5"></div> -->
-  <div class="col-sm-1"></div>
-</div>
+    <!-- section end -->
 
 
 

@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title%}coffeebeans{% endblock %}
+{% block entries %}
+{% load static %}
+
+{% block reveal %}
+    <link rel="stylesheet" href="{% static "css/reveal.css" %}">
+    <script type="text/javascript" src="{% static "js/jquery-1.4.4.min.js" %}"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+    <script type="text/javascript" src="{% static "js/jquery.reveal.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery.quantity.js" %}"></script>
+{% endblock %} 
+
+  <div class="sidenav">
+
+<div class="container-fluid text-center">
+  <h1>非洲</h1>
+<hr>
+    <div class="col-sm-4">
+          
+    <a href="" data-reveal-id="myModal"> <img src="{% static "image/beansinbasket.jpg" %}" width="220" height="165" class="img-rounded"></a>
+      <h3 class="text-center">Coffee Beans</h3>
+      <h5 class="text-center">$350.00</h5>
+</div>
+
+    <div class="col-sm-4">
+          
+    <a href="" data-reveal-id="myModal"> <img src="{% static "image/beansinbasket.jpg" %}"  width="220" height="165" class="img-rounded"></a>
+      <h3 class="text-center">Coffee Beans</h3>
+      <h5 class="text-center">$350.00</h5>
+</div>
+    <div class="col-sm-4">
+          
+    <a href="" data-reveal-id="myModal"> <img src="{% static "image/beansinbasket.jpg" %}"  width="220" height="165" class="img-rounded"></a>
+      <h3 class="text-center">Coffee Beans</h3>
+      <h5 class="text-center">$350.00</h5>
+</div>
+</div>
+</div>
+
+
+    
+        
+<div id="myModal" class="reveal-modal">
+  <!--content-->
+     <div class="col-sm-8">
+     <p align="center"><img src="image/beansonthehand.jpg" width="460" height="265" >
+      <h3 class="text-center">Description描述</h3>
+<p>test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試test測試</p>
+    </div>
+    
+ 
+      <div class="col-sm-4">
+      <h2><b>水洗耶加，柯契爾</b></h2>
+      <p>價錢：NT$350</p>
+      
+    
+     <div class="container">
+  <div class="row">
+            
+        
+ <div class="col-lg-2">
+ <p>數量：</p>
+  <div class="input-group">
+  <span class="input-group-btn">
+  <button type="button" class="quantity-left-minus btn btn-number btn-number"  data-type="minus" data-field="">
+  <span class="glyphicon glyphicon-minus"></span>
+  </button>
+  </span>
+  <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="100">
+  <span class="input-group-btn">
+  <button type="button" class="quantity-right-plus btn btn-number btn-number" data-type="plus" data-field="">
+  <span class="glyphicon glyphicon-plus"></span>
+  </button>
+  </span>
+  </div>
+  </div>
+
+
+
+
+  </div>
+</div>
+<br>
+<button>加入購物車</button>
+</div>
+     <a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+
+{% endblock %}
