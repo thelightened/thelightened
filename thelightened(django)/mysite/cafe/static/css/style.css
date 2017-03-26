@@ -483,6 +483,10 @@ textarea {
 .main-navigation .navbar-default .navbar-nav > li.active > a:hover {
 	color: #55acee;
 }
+
+.test .navbar-default{
+	background-color: black;
+}
 @media (min-width:768px) {
 	.main-navigation .navbar-default .navbar-nav > li > a {
 		padding-top: 30px;

@@ -9,7 +9,7 @@ File Description: Place here your custom CSS styles
 */
 
 
-body { font-family:'cwTeXYen', sans-serif; background-color: black; position: relative;}
+body { font-family:'cwTeXYen','Open Sans', sans-serif; background-color: black; position: relative;}
 
 .subfooter p {
 	margin-bottom: 0;
