@@ -5,6 +5,7 @@ from views import index, test, coffeebeans, blog, product, partnershop, about, l
 from . import views
 from django.conf.urls.static import static
 from django.conf.urls import include
+from django.contrib.auth.views import password_change
 
 
 urlpatterns = [
@@ -26,6 +27,9 @@ urlpatterns = [
     url(r'^article/$',article),
     # url(r'^accounts/login/$',login),
     url(r'^blog', views.BlogIndex.as_view(), name="blog"),
+    # url(r"^signup/$", allauth.account.views.SignupView, name="account_allath_signup"),
+    url(r"^account_reset_password/$", password_change,
+        name="account_allath_change_password"),
     url(r'^entry/(?P<slug>\S+)$', views.BlogDetail.as_view(), name="entry_detail"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     
