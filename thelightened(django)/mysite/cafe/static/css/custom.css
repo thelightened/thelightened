@@ -14,3 +14,10 @@ body { font-family:'cwTeXYen','Open Sans', sans-serif; background-color: black; 
 .subfooter p {
 	margin-bottom: 0;
 }
+
+/*linkstyle*/
+A.Blog {color:red;}
+A.Blog:link  {text-decoration: none; color: red;}
+A.Blog:visited {text-decoration: none; color: red;}
+A.Blog:hover {text-decoration: underline; color: red;}
+A.Blog:active {text-decoration: none; color: red;}

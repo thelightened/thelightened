@@ -29,18 +29,16 @@
       <div class="container">
         <div class="row">
         {% for object in object_list %} 
-          <div class="col-md-4">
-            <h1 class="title text-center"><a href="{% url "entry_detail" slug=object.slug %}">{{ object.title }}</a></h1>
-            <p class="lead text-center">{{ object.body|slice:"15" }}</p>
+          <div class="col-md-4" align="middle">
             <div class="row">
-              <div class="col-md-6">
-                <img src="{{ object.cover_photo.url }}" alt="" >
-                <div class="space"></div>
-              </div>
-              <div class="col-md-6">
-                <!-- {{ object.body|truncatewords:5 }} -->
+              <div class="col-md-6" text-align="center">
+                <img src="{{ object.cover_photo.url }}" alt="" width="150%" text-align="center">
+                <br>
               </div>
             </div>
+            <a href="{% url "entry_detail" slug=object.slug %}" class="Blog">{{ object.title }}</a>
+            <p class="lead text-center">{{ object.body|slice:"15" }}</p>
+
             <div class="space"></div>
           </div>
         {% endfor %}
