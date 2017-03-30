@@ -32,7 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
-LOGIN_URL = "account/"
+# LOGIN_URL = "account/"
 
 # Application definition
 
@@ -101,7 +101,7 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.i18n',
                 'django.template.context_processors.media',
-                'django.template.context_processors.static',
+                # 'django.templxate.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.request',
@@ -219,4 +219,4 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 
-ACCOUNT_FORMS = {'login': 'myapp.forms.LoginForm'}
+# ACCOUNT_FORMS = {'login': 'myapp.forms.LoginForm'}

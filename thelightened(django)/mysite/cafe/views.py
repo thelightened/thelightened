@@ -38,7 +38,6 @@ from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 
 
-
 class BlogIndex(generic.ListView):
     queryset = models.Entry.objects.published()
     template_name = "blog.html"
@@ -144,7 +143,7 @@ def article(request):
     return render_to_response('article.html')    
 
 def logout(request):
-    auth.logout(request)
+    auth.logout(retempquest)
     messages.add_message(request, messages.INFO, "logout success")
     return redirect('/index')
 
@@ -190,7 +189,7 @@ def account(request):
     else:
         login_form = forms.LoginForm()
 
-    template = get_template('account.html')
+    late = get_template('account.html')
     request_context = RequestContext(request)
     request_context.push(locals())
     html = template.render(request_context)
