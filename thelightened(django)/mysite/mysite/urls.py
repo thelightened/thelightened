@@ -18,8 +18,10 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf.urls.static import static
-
 from cafe import urls
+#oscar
+from oscar.app import application
+
 
 # from cafe.views import index, test, coffeebeans, blog, product, partnershop, about, indexrequest, logout, register, account
 
@@ -37,11 +39,12 @@ urlpatterns = [
  #    url(r'^about/$',about),
  #    url(r'^partnershop/$',partnershop),
     url(r'^tinymce/', include('tinymce.urls')),
-    
+    url(r'^i18n/', include('django.conf.urls.i18n')),
     # url(r'^mce_filebrowser/', include('mce_filebrowser.urls')),
     # url(r'^account/$',account),
     # url(r'^markdown/', include("django_markdown.urls")),
     # url(r'^fblog/$',fblog),
     url(r'^', include('cafe.urls')),
+    url(r'', include(application.urls)),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
