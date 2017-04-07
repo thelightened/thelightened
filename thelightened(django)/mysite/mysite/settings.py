@@ -115,8 +115,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates'),
-                OSCAR_MAIN_TEMPLATE_DIR],
+        'DIRS': [
+            os.path.join(BASE_DIR,'templates'),
+            OSCAR_MAIN_TEMPLATE_DIR
+        ],
 
         'OPTIONS': {
             'debug': DEBUG,
@@ -131,11 +133,11 @@ TEMPLATES = [
                  # allauth` needs this from django
                 'django.template.context_processors.request',
                 #oscar
-                # 'oscar.apps.search.context_processors.search_form',
-                # 'oscar.apps.promotions.context_processors.promotions',
-                # 'oscar.apps.context_processors.checkout',
-                # 'oscar.apps.customer.notification.context_processors.notification',
-                # 'oscar.core.context_processors.metadata',                
+                'oscar.apps.search.context_processors.search_form',
+                'oscar.apps.promotions.context_processors.promotions',
+                'oscar.apps.checkout.context_processors.checkout',
+                'oscar.apps.customer.notifications.context_processors.notifications',
+                'oscar.core.context_processors.metadata',                  
             ],
             'loaders': [
             ('django.template.loaders.cached.Loader', [
@@ -235,7 +237,8 @@ AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
     "django.contrib.auth.backends.ModelBackend",
     # `allauth` specific authentication methods, such as login by e-mail
-    "allauth.account.auth_backends.AuthenticationBackend"
+    "allauth.account.auth_backends.AuthenticationBackend",
+    'oscar.apps.customer.auth_backends.EmailBackend',
 )
 
 
