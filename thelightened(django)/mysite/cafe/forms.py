@@ -2,6 +2,7 @@
 # coding=utf-8
 from django.contrib.auth.models import User
 from django import forms
+from allauth.account.forms import LoginForm
 
 # class RegisterForm(forms.Form):
 #     username = forms.CharField(
@@ -77,11 +78,16 @@ def get(self, request):
             return render(request, self.template_name, {'class': 'form-control'})
 class LoginForm(forms.Form):
     username = forms.CharField(label=u'暱稱',
-       
-        max_length=20,
-        
+     initial='Nickname',
+        max_length=3,
         widget=forms.TextInput(attrs={'class': 'form-control'}))
     
+    # email = forms.CharField(
+    #     max_length=50,
+    #     initial='acdefg@gmail.com',
+    #     widget=forms.TextInput(attrs={'class': 'form-control'}),
+    #     )
+
     password = forms.CharField(label=u'密碼',
         
         min_length=3,

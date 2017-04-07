@@ -21,7 +21,6 @@ from django.conf.urls.static import static
 
 from cafe import urls
 
-from django.conf import settings
 # from cafe.views import index, test, coffeebeans, blog, product, partnershop, about, indexrequest, logout, register, account
 
 
