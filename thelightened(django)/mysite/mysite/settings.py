@@ -18,7 +18,7 @@ from oscar import get_core_apps
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 STATIC_URL = '/static/'
-MEDIA_ROOT = BASE_DIR + '/mfedia/'
+MEDIA_ROOT = BASE_DIR + '/media/'
 MEDIA_URL = '/media/' 
 
 
@@ -245,8 +245,15 @@ AUTHENTICATION_BACKENDS = (
 
 
 
+ACCOUNT_ADAPTER = "allauth.account.adapter.DefaultAccountAdapter"
+LOGIN_URL = "allauth/login"
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT =3
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT =30
 ACCOUNT_UNIQUE_EMAIL =True
-ACCOUNT_LOGIN_FORM_CLASS = 'cafe.forms.LogingForm'
 ACCOUNT_FORMS = {'allauth/login': 'cafe.forms.LoginForm'}
+ACCOUNT_LOGIN_FORM_CLASS = 'cafe.forms.LogingForm'
+
+# ACCOUNT_FORMS = {'allauth/signup': 'cafe.forms.SignupForm'}
+ACCOUNT_SIGNUP_FORM_CLASS= 'cafe.forms.SignupForm'
+
+ACCOUNT_LOGOUT_REDIRECT_URL ='/index'
