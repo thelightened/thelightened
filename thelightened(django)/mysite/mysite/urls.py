@@ -44,7 +44,7 @@ urlpatterns = [
     # url(r'^account/$',account),
     # url(r'^markdown/', include("django_markdown.urls")),
     # url(r'^fblog/$',fblog),
-    url(r'^', include('cafe.urls')),
+    url(r'', include('cafe.urls')),
     url(r'', include(application.urls)),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

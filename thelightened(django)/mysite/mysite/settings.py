@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'django.contrib.flatpages',
     'widget_tweaks',
+    # 'compressor',
 ] + get_core_apps()
 
 
