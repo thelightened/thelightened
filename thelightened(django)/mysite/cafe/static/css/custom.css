@@ -50,3 +50,10 @@ p.blog{
 	text-align: left;
 	text-indent: 2em;
 }
+
+form {
+width: 350px;
+padding: 20px;
+/*border: 1px solid #270644;*/
+}
+
