@@ -33,7 +33,7 @@ DEBUG = True
 
 
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost','thelightened.gq','140.118.9.169']
 
 LOGIN_URL = "allauth/login"
 
@@ -185,7 +185,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'zh-TW'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Taipei'
 
