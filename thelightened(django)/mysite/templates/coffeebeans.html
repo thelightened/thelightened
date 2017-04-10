@@ -26,20 +26,20 @@
             <div class="filters text-center">
               <ul class="nav nav-pills">
                 <li class="active"><a href="#" data-filter="*">全部</a></li>
-                <li><a href="#" data-filter=".web-designd">非洲</a></li>
-                <li><a href="#" data-filter=".web-design">中南美洲</a></li>
-                <li><a href="#" data-filter=".app-development">亞洲</a></li>
-                <li><a href="#" data-filter=".site-building">綜合</a></li>
+                <li><a href="#" data-filter=".african">非洲</a></li>
+                <li><a href="#" data-filter=".msouthamerican">中南美洲</a></li>
+                <li><a href="#" data-filter=".asian">亞洲</a></li>
+                <li><a href="#" data-filter=".blended">綜合</a></li>
               </ul>
             </div>
             <!-- isotope filters end -->
 
             <!-- portfolio items start -->
             <div class="isotope-container row grid-space-20">
-              <div class="col-sm-6 col-md-3 isotope-item web-design">
+              <div class="col-sm-6 col-md-3 isotope-item msouthamerican">
                 <div class="image-box">
                   <div class="overlay-container">
-                    <img src="{% static "images/beansinbasket.jpg" %}" alt="">
+                    <img src="{% static "images/beansinbasket.jpg" %}" alt="" class="beans">
                     <a class="overlay" data-toggle="modal" data-target="#project-1">
                       <i class="fa fa-search-plus"></i>
                       <span>Detail</span>
@@ -59,13 +59,14 @@
                         <h3>瓜地馬拉 薇薇特南果 奧利薇</h3>
                         <div class="row">
                           <div class="col-md-6">
-                            <p>地區：Guatemara</p>
-                            <p>處理廠：</p>
-                            <p>品種：</p>
-                            <p>海拔：</p>
-                            <p>烘培：</p>
-                            <p>價格：</p>
-                            <p>備註：</p>
+                            <p>地區：Guatemala</p>
+                            <p>處理廠：SHB EP Huehuetenango</p>
+                            <p>處理法：Washed</p>
+                            <p>品種：Catura</p>
+                            <p>海拔：2000~2500m</p>
+                            <p>烘培：中淺焙</p>
+                            <p>價格：400/半磅</p>
+                            <p>備註：柑橘調性、檸檬酸、酸度中等、甜感佳，尾韻有青果子調。</p>
                           </div>
                           <div class="col-md-6">
                             <img src="{% static "images/beansinbasket.jpg" %}" alt="">
@@ -81,16 +82,16 @@
                 <!-- Modal end -->
               </div>
 
-              <div class="col-sm-6 col-md-3 isotope-item app-development">
+              <div class="col-sm-6 col-md-3 isotope-item african">
                 <div class="image-box">
                   <div class="overlay-container">
-                    <img src="images/portfolio-2.jpg" alt="">
+                    <img src="{% static "images/crc.jpg" %}" alt="" class="beans">
                     <a class="overlay" data-toggle="modal" data-target="#project-2">
                       <i class="fa fa-search-plus"></i>
-                      <span>App Development</span>
+                      <span>Detail</span>
                     </a>
                   </div>
-                  <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-2">Project Title</a>
+                  <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-2">衣索比亞 耶加雪菲 海倫娜</a>
                 </div>
                 <!-- Modal -->
                 <div class="modal fade" id="project-2" tabindex="-1" role="dialog" aria-labelledby="project-2-label" aria-hidden="true">
@@ -98,17 +99,23 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="project-2-label">Project Title</h4>
+                        <h4 class="modal-title" id="project-2-label">衣索比亞 耶加雪菲 海倫娜</h4>
                       </div>
                       <div class="modal-body">
-                        <h3>Project Description</h3>
+                        <h3>衣索比亞 耶加雪菲 海倫娜</h3>
                         <div class="row">
                           <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-                            <p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+                            <p>地區：Yirgacheffe</p>
+                            <p>處理廠：Kochere</p>
+                            <p>處理法：Washed</p>
+                            <p>品種：Typica</p>
+                            <p>海拔：2300masi</p>
+                            <p>烘培：中淺焙</p>
+                            <p>價格：430/半磅</p>
+                            <p>備註：從研磨後的乾粉就可以聞到明顯的柑橘、檸檬、花香，濕香氣有隱約的肉桂蘋果派一般令人愉悅的香氣。</p>
                           </div>
                           <div class="col-md-6">
-                            <img src="images/portfolio-2.jpg" alt="">
+                            <img src="{% static "images/crc.jpg" %}" alt="">
                           </div>
                         </div>
                       </div>
@@ -121,16 +128,18 @@
                 <!-- Modal end -->
               </div>
               
-              <div class="col-sm-6 col-md-3 isotope-item web-design">
+
+
+              <div class="col-sm-6 col-md-3 isotope-item asian">
                 <div class="image-box">
                   <div class="overlay-container">
-                    <img src="images/portfolio-3.jpg" alt="">
+                    <img src="{% static "images/DSC00555.jpg" %}" alt="" class="beans">
                     <a class="overlay" data-toggle="modal" data-target="#project-3">
                       <i class="fa fa-search-plus"></i>
-                      <span>Web Design</span>
+                      <span>Detail</span>
                     </a>
                   </div>
-                  <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-3">Project Title</a>
+                  <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-2">蘇門達臘 黃金曼特寧</a>
                 </div>
                 <!-- Modal -->
                 <div class="modal fade" id="project-3" tabindex="-1" role="dialog" aria-labelledby="project-3-label" aria-hidden="true">
@@ -138,17 +147,23 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="project-3-label">Project Title</h4>
+                        <h4 class="modal-title" id="project-3-label">蘇門達臘 黃金曼特寧</h4>
                       </div>
                       <div class="modal-body">
-                        <h3>Project Description</h3>
+                        <h3>蘇門達臘 黃金曼特寧</h3>
                         <div class="row">
                           <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-                            <p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+                            <p>地區：Sumatra</p>
+                            <p>處理廠：Kochere</p>
+                            <p>處理法：Washed</p>
+                            <p>品種：Typica</p>
+                            <p>海拔：1200~1400masi</p>
+                            <p>烘培：深焙</p>
+                            <p>價格：500/半磅</p>
+                            <p>備註：喝起來醇厚飽滿，溫暖綿密，回甘極佳，悠長的黑巧克力餘韻。</p>
                           </div>
                           <div class="col-md-6">
-                            <img src="images/portfolio-3.jpg" alt="">
+                            <img src="{% static "images/DSC00555.jpg" %}" alt="">
                           </div>
                         </div>
                       </div>
@@ -160,17 +175,18 @@
                 </div>
                 <!-- Modal end -->
               </div>
-              
-              <div class="col-sm-6 col-md-3 isotope-item site-building">
+
+
+              <div class="col-sm-6 col-md-3 isotope-item blended">
                 <div class="image-box">
                   <div class="overlay-container">
-                    <img src="images/portfolio-4.jpg" alt="">
+                    <img src="{% static "images/beans.jpg" %}" alt="" class="beans">
                     <a class="overlay" data-toggle="modal" data-target="#project-4">
                       <i class="fa fa-search-plus"></i>
-                      <span>Site Building</span>
+                      <span>Detail</span>
                     </a>
                   </div>
-                  <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-4">Project Title</a>
+                  <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-4">點亮小農綜合</a>
                 </div>
                 <!-- Modal -->
                 <div class="modal fade" id="project-4" tabindex="-1" role="dialog" aria-labelledby="project-4-label" aria-hidden="true">
@@ -178,177 +194,23 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="project-4-label">Project Title</h4>
+                        <h4 class="modal-title" id="project-4-label">點亮小農綜合</h4>
                       </div>
                       <div class="modal-body">
-                        <h3>Project Description</h3>
+                        <h3>點亮小農綜合</h3>
                         <div class="row">
                           <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-                            <p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+                            <p>地區：-</p>
+                            <p>處理廠：-</p>
+                            <p>處理法：-</p>
+                            <p>品種：Typica, Catura, Pacamara</p>
+                            <p>海拔：-</p>
+                            <p>烘培：-</p>
+                            <p>價格：350/半磅</p>
+                            <p>備註：嚴選七隻不同種類的咖啡豆進行配方，北義風格與牛奶非常相稱。</p>
                           </div>
                           <div class="col-md-6">
-                            <img src="images/portfolio-4.jpg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Modal end -->
-              </div>
-              
-              <div class="col-sm-6 col-md-3 isotope-item app-development">
-                <div class="image-box">
-                  <div class="overlay-container">
-                    <img src="images/portfolio-5.jpg" alt="">
-                    <a class="overlay" data-toggle="modal" data-target="#project-5">
-                      <i class="fa fa-search-plus"></i>
-                      <span>App Development</span>
-                    </a>
-                  </div>
-                  <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-5">Project Title</a>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="project-5" tabindex="-1" role="dialog" aria-labelledby="project-5-label" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="project-5-label">Project Title</h4>
-                      </div>
-                      <div class="modal-body">
-                        <h3>Project Description</h3>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-                            <p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-                          </div>
-                          <div class="col-md-6">
-                            <img src="images/portfolio-5.jpg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Modal end -->
-              </div>
-              
-              <div class="col-sm-6 col-md-3 isotope-item web-design">
-                <div class="image-box">
-                  <div class="overlay-container">
-                    <img src="images/portfolio-6.jpg" alt="">
-                    <a class="overlay" data-toggle="modal" data-target="#project-6">
-                      <i class="fa fa-search-plus"></i>
-                      <span>Web Design</span>
-                    </a>
-                  </div>
-                  <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-6">Project Title</a>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="project-6" tabindex="-1" role="dialog" aria-labelledby="project-6-label" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="project-6-label">Project Title</h4>
-                      </div>
-                      <div class="modal-body">
-                        <h3>Project Description</h3>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-                            <p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-                          </div>
-                          <div class="col-md-6">
-                            <img src="images/portfolio-6.jpg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Modal end -->
-              </div>
-              
-              <div class="col-sm-6 col-md-3 isotope-item site-building">
-                <div class="image-box">
-                  <div class="overlay-container">
-                    <img src="images/portfolio-7.jpg" alt="">
-                    <a class="overlay" data-toggle="modal" data-target="#project-7">
-                      <i class="fa fa-search-plus"></i>
-                      <span>Site Building</span>
-                    </a>
-                  </div>
-                  <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-7">Project Title</a>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="project-7" tabindex="-1" role="dialog" aria-labelledby="project-7-label" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="project-7-label">Project Title</h4>
-                      </div>
-                      <div class="modal-body">
-                        <h3>Project Description</h3>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-                            <p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-                          </div>
-                          <div class="col-md-6">
-                            <img src="images/portfolio-7.jpg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Modal end -->
-              </div>
-              
-              <div class="col-sm-6 col-md-3 isotope-item web-design">
-                <div class="image-box">
-                  <div class="overlay-container">
-                    <img src="images/portfolio-8.jpg" alt="">
-                    <a class="overlay" data-toggle="modal" data-target="#project-8">
-                      <i class="fa fa-search-plus"></i>
-                      <span>Web Design</span>
-                    </a>
-                  </div>
-                  <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-8">Project Title</a>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="project-8" tabindex="-1" role="dialog" aria-labelledby="project-8-label" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="project-8-label">Project Title</h4>
-                      </div>
-                      <div class="modal-body">
-                        <h3>Project Description</h3>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-                            <p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-                          </div>
-                          <div class="col-md-6">
-                            <img src="images/portfolio-8.jpg" alt="">
+                            <img src="{% static "images/beans.jpg" %}" alt="">
                           </div>
                         </div>
                       </div>
@@ -361,165 +223,6 @@
                 <!-- Modal end -->
               </div>
 
-              <div class="col-sm-6 col-md-3 isotope-item web-design">
-                <div class="image-box">
-                  <div class="overlay-container">
-                    <img src="images/portfolio-9.jpg" alt="">
-                    <a class="overlay" data-toggle="modal" data-target="#project-9">
-                      <i class="fa fa-search-plus"></i>
-                      <span>Web Design</span>
-                    </a>
-                  </div>
-                  <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-9">Project Title</a>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="project-9" tabindex="-1" role="dialog" aria-labelledby="project-9-label" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="project-9-label">Project Title</h4>
-                      </div>
-                      <div class="modal-body">
-                        <h3>Project Description</h3>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-                            <p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-                          </div>
-                          <div class="col-md-6">
-                            <img src="images/portfolio-9.jpg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Modal end -->
-              </div>
-
-              <div class="col-sm-6 col-md-3 isotope-item site-building">
-                <div class="image-box">
-                  <div class="overlay-container">
-                    <img src="images/portfolio-10.jpg" alt="">
-                    <a class="overlay" data-toggle="modal" data-target="#project-10">
-                      <i class="fa fa-search-plus"></i>
-                      <span>Site Building</span>
-                    </a>
-                  </div>
-                  <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-10">Project Title</a>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="project-10" tabindex="-1" role="dialog" aria-labelledby="project-10-label" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="project-10-label">Project Title</h4>
-                      </div>
-                      <div class="modal-body">
-                        <h3>Project Description</h3>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-                            <p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-                          </div>
-                          <div class="col-md-6">
-                            <img src="images/portfolio-10.jpg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Modal end -->
-              </div>
-
-              <div class="col-sm-6 col-md-3 isotope-item web-design">
-                <div class="image-box">
-                  <div class="overlay-container">
-                    <img src="images/portfolio-11.jpg" alt="">
-                    <a class="overlay" data-toggle="modal" data-target="#project-11">
-                      <i class="fa fa-search-plus"></i>
-                      <span>Web Design</span>
-                    </a>
-                  </div>
-                  <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-11">Project Title</a>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="project-11" tabindex="-1" role="dialog" aria-labelledby="project-11-label" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="project-11-label">Project Title</h4>
-                      </div>
-                      <div class="modal-body">
-                        <h3>Project Description</h3>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-                            <p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-                          </div>
-                          <div class="col-md-6">
-                            <img src="images/portfolio-11.jpg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Modal end -->
-              </div>
-
-              <div class="col-sm-6 col-md-3 isotope-item app-development">
-                <div class="image-box">
-                  <div class="overlay-container">
-                    <img src="images/portfolio-12.jpg" alt="">
-                    <a class="overlay" data-toggle="modal" data-target="#project-12">
-                      <i class="fa fa-search-plus"></i>
-                      <span>App Development</span>
-                    </a>
-                  </div>
-                  <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-12">Project Title</a>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="project-12" tabindex="-1" role="dialog" aria-labelledby="project-12-label" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="project-12-label">Project Title</h4>
-                      </div>
-                      <div class="modal-body">
-                        <h3>Project Description</h3>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-                            <p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-                          </div>
-                          <div class="col-md-6">
-                            <img src="images/portfolio-12.jpg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Modal end -->
-              </div>
 
             </div>
             <!-- portfolio items end -->

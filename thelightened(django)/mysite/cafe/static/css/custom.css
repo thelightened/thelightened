@@ -9,15 +9,44 @@ File Description: Place here your custom CSS styles
 */
 
 
-body { font-family:'cwTeXYen','Open Sans', sans-serif; background-color: black; position: relative;}
-
+body { font-family:'cwTeXHei','Josefin Sans', sans-serif; background-color: black; position: relative;}
+/*body { font-family:'cwTeXFangSong','Josefin Sans', sans-serif; background-color: black; position: relative;}*/
 .subfooter p {
 	margin-bottom: 0;
 }
 
-/*linkstyle*/
-A.Blog {color:red;}
-A.Blog:link  {text-decoration: none; color: red;}
-A.Blog:visited {text-decoration: none; color: red;}
-A.Blog:hover {text-decoration: underline; color: red;}
-A.Blog:active {text-decoration: none; color: red;}
+/*blog theme*/
+A.Blog {color:black; font-size: 25px; text-indent: 2em;}
+A.Blog:link  {text-decoration: none; color: black;}
+A.Blog:visited {text-decoration: none; color: black;}
+A.Blog:hover {text-decoration: bold; color: green;}
+A.Blog:active {text-decoration: none; color: black;}
+
+
+img.Blog{
+	height: 250px;
+	width: 75%;
+	text-align: center;
+	vertical-align: center;
+	/*-webkit-filter:grayscale(1);*/
+	/*-webkit-filter:sepia(1);*/
+}
+
+img.beans{
+	height: 220px;
+	width: 100%;
+	text-align: center;
+	vertical-align: center;
+	/*-webkit-filter:grayscale(1);*/
+	/*-webkit-filter:sepia(1);*/
+}
+
+
+.space_blog{
+	padding: 5px 0;
+}
+
+p.blog{
+	text-align: left;
+	text-indent: 2em;
+}

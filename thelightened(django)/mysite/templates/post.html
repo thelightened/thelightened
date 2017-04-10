@@ -1,13 +1,50 @@
 {% extends "base.html" %}
 {% load django_markdown %}
+{% block title %}{{ object.title }}{% endblock %}
 
 {% block entries %}
-  <div class="post">
+
+<!-- Facebook comment API -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.8&appId=101197950365729";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- API End -->
+
+
+
+
+<!-- section start -->
+    <!-- ================ -->
+    <div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+      <div class="container">
+        <h2><a href="{% url "entry_detail" slug=object.slug %}" class="Blog">{{ object.title }}</a></h2>
+    	<p class="meta">
+      	{{ object.created }}
+    	</p>
+    	{{ object.body|markdown }}
+		<div class="space"></div>
+		<hr>
+    	<!-- FB comment section -->
+		<div class="fb-comments" data-href="http://localhost:8000/entry/{{ object.slug }}" data-numposts="5"></div>
+		<!-- section End -->
+      </div>
+    </div>
+    <!-- section end -->
+
+
+
+
+<!--   <div class="post">
     <h2><a href="{% url "entry_detail" slug=object.slug %}">{{ object.title }}</a></h2>
     <p class="meta">
       {{ object.created }} |
       Tagged under {{  object.tags.all|join:", " }}
     </p>
     {{ object.body|markdown }}
-  </div>
+  </div> -->
 {% endblock %}
