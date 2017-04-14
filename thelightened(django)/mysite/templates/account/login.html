@@ -3,10 +3,11 @@
 {% load i18n %}
 {% load account socialaccount %}
 
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block title %}登入{% endblock %}
 
 {% block entries %}
-
+<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+  <div class="container">
 <h1>{% trans "Sign In" %}</h1>
 
 {% get_providers as socialaccount_providers %}
@@ -15,24 +16,7 @@
 <p>{% blocktrans with site.name as site_name %}Please sign in with one
 of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
 for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
-<style>
-  .button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
 
-
-
-}
-
-
-
-</style>
 <div class="socialaccount_ballot">
 
   <ul class="socialaccount_providers">
@@ -56,8 +40,9 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
   <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
+  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
 </form>
-
+</div>
+</div>
 {% endblock %}
