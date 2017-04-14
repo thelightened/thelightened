@@ -14,13 +14,17 @@ import os
 
 from oscar.defaults import *
 from oscar import OSCAR_MAIN_TEMPLATE_DIR
+location = lambda x: os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', x)
 from oscar import get_core_apps
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 STATIC_URL = '/static/'
-MEDIA_ROOT = BASE_DIR + '/mfedia/'
+MEDIA_ROOT = BASE_DIR + '/media/'
 MEDIA_URL = '/media/' 
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'staticfiles'),
+    os.path.join(BASE_DIR, 'media'),
+]
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -87,6 +91,13 @@ OSCAR_ORDER_STATUS_PIPELINE = {
     'Cancelled':(),
 }
 
+OSCAR_SHOP_NAME = 'OSCAR'
+OSCAR_SHOP_TAGLINE = 'oscar-shop'
+OSCAR_FROM_EMAIL = 'oscar@example.com'
+OSCAR_DEFAULT_CURRENCY = 'TWD'
+
+
+
 HAYSTACK_CONNECTIONS = {
     'default':{
         'ENGINE':'haystack.backends.simple_backend.SimpleEngine',
@@ -117,10 +128,11 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,'templates'),
-            OSCAR_MAIN_TEMPLATE_DIR
+            os.path.join(BASE_DIR, 'templates'),
+            # location('templates'),
+            OSCAR_MAIN_TEMPLATE_DIR,
         ],
-
+        'APP_DIRS': True,
         'OPTIONS': {
             'debug': DEBUG,
             'context_processors': [
@@ -140,12 +152,6 @@ TEMPLATES = [
                 'oscar.apps.customer.notifications.context_processors.notifications',
                 'oscar.core.context_processors.metadata',                  
             ],
-            'loaders': [
-            ('django.template.loaders.cached.Loader', [
-                'django.template.loaders.filesystem.Loader',
-                'django.template.loaders.app_directories.Loader',
-            ]),
-            ]
         },
     },
 ]
@@ -185,7 +191,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'zh-TW'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Taipei'
 

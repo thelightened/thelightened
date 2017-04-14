@@ -20,7 +20,7 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from cafe import urls
 #oscar
-from oscar.app import application
+
 
 
 # from cafe.views import index, test, coffeebeans, blog, product, partnershop, about, indexrequest, logout, register, account
@@ -45,6 +45,6 @@ urlpatterns = [
     # url(r'^markdown/', include("django_markdown.urls")),
     # url(r'^fblog/$',fblog),
     url(r'', include('cafe.urls')),
-    url(r'', include(application.urls)),
+
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
