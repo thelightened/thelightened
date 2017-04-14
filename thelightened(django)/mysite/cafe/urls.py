@@ -7,6 +7,8 @@ from django.conf.urls.static import static
 from django.conf.urls import include
 from django.contrib.auth.views import *
 
+admin.autodiscover()
+admin.site.login = login_required(admin.site.login)
 
 urlpatterns = [
     url(r'^$', index),

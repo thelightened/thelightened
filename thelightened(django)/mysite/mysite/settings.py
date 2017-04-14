@@ -35,7 +35,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost','thelightened.gq','140.118.9.169']
 
-LOGIN_URL = "allauth/login"
+
 
 # Application definition
 
@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'django.contrib.flatpages',
     'widget_tweaks',
+    'adminrestrict', 
     # 'compressor',
 ] + get_core_apps()
 
@@ -107,6 +108,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'oscar.apps.basket.middleware.BasketMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware', 
+    'adminrestrict.middleware.AdminPagesRestrictMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -257,3 +259,7 @@ ACCOUNT_LOGIN_FORM_CLASS = 'cafe.forms.LogingForm'
 ACCOUNT_SIGNUP_FORM_CLASS= 'cafe.forms.SignupForm'
 
 ACCOUNT_LOGOUT_REDIRECT_URL ='/index'
+
+ACCOUNT_EMAIL_REQUIRED=True
+ACCOUNT_USERNAME_REQURIED=True
+LOGIN_REDIRECT_URL = "/index"
