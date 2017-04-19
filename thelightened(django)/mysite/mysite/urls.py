@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-import django
+
 from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
@@ -45,6 +45,7 @@ urlpatterns = [
     # url(r'^markdown/', include("django_markdown.urls")),
     # url(r'^fblog/$',fblog),
     url(r'', include('cafe.urls')),
+    # url(r'^checkout/paypal/', include('paypal.express.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

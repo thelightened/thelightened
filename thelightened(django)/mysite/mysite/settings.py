@@ -20,11 +20,9 @@ from oscar import get_core_apps
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 STATIC_URL = '/static/'
 MEDIA_ROOT = BASE_DIR + '/media/'
+STATIC_ROOT = BASE_DIR + '/static/'
 MEDIA_URL = '/media/' 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'staticfiles'),
-    os.path.join(BASE_DIR, 'media'),
-]
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -65,7 +63,8 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'widget_tweaks',
     'adminrestrict', 
-    # 'compressor',
+    'compressor',
+    'paypal',
 ] + get_core_apps()
 
 
@@ -96,6 +95,17 @@ OSCAR_SHOP_NAME = 'OSCAR'
 OSCAR_SHOP_TAGLINE = 'oscar-shop'
 OSCAR_FROM_EMAIL = 'oscar@example.com'
 OSCAR_DEFAULT_CURRENCY = 'TWD'
+
+
+PAYPAL_API_USERNAME = 'tom20314-facilitator_api1.gmail.com'
+PAYPAL_API_PASSWORD = 'N2F42W7J9EP5NKWR'
+PAYPAL_API_SIGNATURE = 'AFcWxV21C7fd0v3bYYYRCpSSRl31AmsacHUYUY3jX8S7Nnio-KsKWpiF'
+
+PAYPAL_SANDBOX_MODE = True
+PAYPAL_CURRENCY = 'TWD'
+PAYPAL_BRAND_NAME = 'My SHOP'
+PAYPAL_CALLBACK_HTTPS=False
+
 
 
 

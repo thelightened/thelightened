@@ -6,14 +6,14 @@ from . import views
 from django.conf.urls.static import static
 from django.conf.urls import include
 from django.contrib.auth.views import *
-<<<<<<< HEAD
+
 from oscar.app import application
-=======
+
 
 admin.autodiscover()
 admin.site.login = login_required(admin.site.login)
 
->>>>>>> cd1de7c97bcc98604d8109ae0971b4225ea7b124
+
 urlpatterns = [
     url(r'^$', index),
     url(r'^index/$',views.index, name='index'),
