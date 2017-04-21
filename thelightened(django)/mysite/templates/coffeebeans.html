@@ -1,4 +1,16 @@
 {% extends "base.html" %}
+{% load history_tags %}
+{% load currency_filters %}
+{% load reviews_tags %}
+{% load staticfiles %}
+{% load product_tags %}
+{% load display_tags %}
+{% load i18n %}
+{% load purchase_info_tags %}
+
+
+
+
 {% block title%}coffeebeans{% endblock %}
 {% block entries %}
 {% load static %}
@@ -67,12 +79,22 @@
                             <p>烘培：中淺焙</p>
                             <p>價格：400/半磅</p>
                             <p>備註：柑橘調性、檸檬酸、酸度中等、甜感佳，尾韻有青果子調。</p>
-                             <button type="submit" class="btn btn-lg btn-primary btn-add-to-basket" value="Add to basket" data-loading-text="Add...">Add to basket</button>
+
+
+
                           </div>
                           <div class="col-md-6">
                             <img src="{% static "images/beansinbasket.jpg" %}" alt="">
                           </div>
                         </div>
+
+
+                        <form id="add_to_basket_form" action="/basket/add/4/" method="post" class="add-to-basket">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="xR3zIgnnkP931mciaVAoszqzIXsv6wkhAgHeeWcLsiet1rmREAPGhajjjevgz4l7">
+                        <input id="id_quantity" name="quantity" type="hidden" value="1">
+                        <button type="submit" class="btn btn-lg btn-primary btn-add-to-basket" value="Add to cart" data-loading-text="Adding...">Add to basket</button>
+                        </form>
+
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
@@ -119,6 +141,15 @@
                             <img src="{% static "images/crc.jpg" %}" alt="">
                           </div>
                         </div>
+
+                        <form id="add_to_basket_form" action="/basket/add/5/" method="post" class="add-to-basket">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="9MXDwFIroTIT3Nwf7FBoDBSXTEFngettsjS6tjKagakmTN7iBnbyAZtNFE0XfA1T">
+                        <input id="id_quantity" name="quantity" type="hidden" value="1">
+                        <button type="submit" class="btn btn-lg btn-primary btn-add-to-basket" value="Add to cart" data-loading-text="Adding...">Add to basket</button>
+                        </form>
+
+
+
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
@@ -167,6 +198,13 @@
                             <img src="{% static "images/DSC00555.jpg" %}" alt="">
                           </div>
                         </div>
+
+                        <form id="add_to_basket_form" action="/basket/add/6/" method="post" class="add-to-basket">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="fBcm0tOkWgpZ4SwXATmzreAYby0dLRhuCHF4xu6RogCpxoXb22exuCyVo6LHBOiE">
+                        <input id="id_quantity" name="quantity" type="hidden" value="1">
+                        <button type="submit" class="btn btn-lg btn-primary btn-add-to-basket" value="Add to cart" data-loading-text="Adding...">Add to basket</button>
+                        </form>
+
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
@@ -214,6 +252,15 @@
                             <img src="{% static "images/beans.jpg" %}" alt="">
                           </div>
                         </div>
+
+                        <form id="add_to_basket_form" action="/basket/add/7/" method="post" class="add-to-basket">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="HRbpIFpEd97ayAf8UWWXWFH4QXCc0tEovjHFfCkGuEHghNpcVFIGpD4KCyUaVq2k">
+                        <input id="id_quantity" name="quantity" type="hidden" value="1">
+                        <button type="submit" class="btn btn-lg btn-primary btn-add-to-basket" value="Add to cart" data-loading-text="Adding...">Add to basket</button>
+                        </form>
+
+
+
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>

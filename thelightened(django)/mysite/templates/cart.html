@@ -1,49 +1,323 @@
 {% extends "base.html" %}
-{% block title%}cart{% endblock %}
-{% block entries %}
+
+
 {% load static %}
 
-<div class="sidenav">
-   <div class="container">
-  <h2>點亮咖啡</h2>
-    {% if username %}
-            <p> 歡迎選購</p>            
- {% else %}
-            <p>請登入再行購買~</p>  <!-- <--problem --> 
- {% endif %}                                                                                       
-  <div class="table-responsive" >          
-  <table class="table">
-    <thead>
-      <tr>
-        
-        <th>商品</th>
-        <th>規格</th>
-        <th>單價</th>
-        <th>數量</th>
-        <th>小計</th>
-        <th>刪除</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        
-        <td><h4><img src="{% static "image/beansinbasket.jpg" %}" width="100" height="80" class="img-rounded">　空卡</h3></td>
-        <td><br><h4>200g</td>
-        <td><br><h4>$ 300</td>
-        <td><br><h4><div class="input-group"</div>
-        </div></td>
-        <td><br><h4>300</td>
-        <td><br><h4>delete</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-</div>
-<div class="container-fluid text-right">
+{% load thumbnail %}
+{% load i18n %}
 
-<button>確認購買</button>
+{% block title%}coffeebeans{% endblock %}
+{% block entries %}
+
+<div class="container-fluid page">
+            <div class="page_inner">
+                
+    <ul class="breadcrumb">
+        <li>
+            <a href="/">首頁</a>
+        </li>
+        <li class="active">Cart</li>
+    </ul>
+
+                
+                    <div class="page-header action">
+                        <h1>
+    Cart
+</h1>
+                    </div>
+                
+                
+
+
+
+<div id="messages">
 
 </div>
+
+                
+                <div class="content">
+                    
+
+                    
+                    <div id="promotions">
+                        
+                    </div>
+
+                    
+                    <div id="content_inner">
+    
+    
+
+
+
+
+
+
+
+
+
+
+    
+        <div class="basket-title hidden-xs">
+            <div class="row">
+                <h2 class="col-sm-6 h3">Items to buy now</h2>
+                <p class="col-sm-3 h3">Quantity</p>
+                <p class="col-sm-1 h3 align-right">Price</p>
+                <p class="col-sm-2 h3 align-right">Total</p>
+            </div>
+        </div>
+    
+
+    
+        <form action="." method="post" class="basket_summary" id="basket_formset">
+            <input type="hidden" name="csrfmiddlewaretoken" value="QeS0EuhxrwPijbKih4bDWzpal5ppyOrbuGziThdwrPZZlUzkabSSpmxgV6lTmnVr">
+            <input id="id_form-TOTAL_FORMS" name="form-TOTAL_FORMS" type="hidden" value="1"><input id="id_form-INITIAL_FORMS" name="form-INITIAL_FORMS" type="hidden" value="1"><input id="id_form-MIN_NUM_FORMS" name="form-MIN_NUM_FORMS" type="hidden" value="0"><input id="id_form-MAX_NUM_FORMS" name="form-MAX_NUM_FORMS" type="hidden" value="1000">
+
+            
+                
+                    
+                    <div class="basket-items">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <input id="id_form-0-id" name="form-0-id" type="hidden" value="3">
+                                
+                                    
+                                        <a href="/catalogue/dian-liang-xiao-nong-zong-he_7/">
+                                            <img class="thumbnail" src="/media/cache/4d/c9/4dc94bffd9b0583b04b118aa8ca35a0f.jpg" alt="點亮小農綜合">
+                                        </a>
+                                    
+                                
+                            </div>
+                            <div class="col-sm-4">
+                                <h3><a href="/catalogue/dian-liang-xiao-nong-zong-he_7/">點亮小農綜合</a></h3>
+                                <p class="availability instock">In stock (100 available)</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="checkout-quantity">
+                                    <div class="input-group  ">
+                                        <input class="form-control" id="id_form-0-quantity" min="0" name="form-0-quantity" type="number" value="1">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit" data-loading-text="Updating...">Update</button>
+                                    </span>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <a href="#" data-id="0" data-behaviours="remove" class="inline">移除</a>
+                                        
+                                            | <a href="#" data-id="0" data-behaviours="save" class="inline">Save for later</a>
+                                        
+                                        <div style="display:none">
+                                            <input id="id_form-0-save_for_later" name="form-0-save_for_later" type="checkbox">
+                                            <input id="id_form-0-DELETE" name="form-0-DELETE" type="checkbox">
+                                        </div>
+                                        
+                                    </div>
+
+                            </div>
+                            <div class="col-sm-1">
+                                <p class="price_color align-right">
+                                    
+                                        $100.00
+                                    
+                                </p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="price_color align-right">
+                                    
+                                        $100.00
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                
+            
+        </form>
+    
+
+    <div class="row">
+        
+            
+            
+                <div class="col-sm-6">
+                    <div class="sub-header">
+                        <h2>Coupon/promo code</h2>
+                    </div>
+                    <p id="voucher_form_link"><a href="#voucher" class="btn btn-default btn-full">I have a coupon code...</a></p>
+
+                    <div id="voucher_form_container" style="display:none">
+                        <form id="voucher_form" action="/basket/vouchers/add/" method="post">
+                            <input type="hidden" name="csrfmiddlewaretoken" value="QeS0EuhxrwPijbKih4bDWzpal5ppyOrbuGziThdwrPZZlUzkabSSpmxgV6lTmnVr">
+                            
+
+
+
+
+
+
+    
+
+
+
+    
+    
+
+    
+        <div class="form-group ">
+
+            
+                
+                    <label for="id_code" class=" control-label required">
+                        Code
+                    </label>
+                
+            
+
+            
+                <div class="">
+                    
+                        
+                            <input class="form-control" id="id_code" maxlength="128" name="code" type="text" required="">
+                        
+                    
+
+                    
+                        
+                    
+
+                    
+                        
+                    
+                </div>
+            
+        </div>
+    
+
+
+
+
+                            <button type="submit" class="btn btn-info" data-loading-text="Adding...">Add coupon</button>
+                            或 <a href="#" id="voucher_form_cancel">cancel</a>
+                        </form>
+                    </div>
+                </div>
+            
+        
+
+        
+            <div class="col-sm-6">
+                <div class="sub-header">
+                    <h2>Totals</h2>
+                </div>
+                
+
+
+
+<div id="basket_totals">
+    <table class="table table-condensed">
+        <tbody>
+            <tr>
+                <th colspan="2"><h3>Cart</h3></th>
+            </tr>
+            
+                
+                    
+                
+
+                
+                    
+                        
+                        <tr>
+                            <th class="total">Cart total</th>
+                            <th class="total align-right">
+                                
+                                    $100.00
+                                
+                            </th>
+                        </tr>
+                    
+                
+            
+
+            
+                <tr>
+                    <th>&nbsp;</th>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <th colspan="2">
+                        <h3>Shipping</h3>
+                        
+                    </th>
+                </tr>
+                
+                    <tr>
+                        <th class="total">
+                            Free shipping
+                        </th>
+                        <th class="total align-right">
+                            
+                                $0.00
+                            
+                        </th>
+                    </tr>
+                
+            
+
+            
+                
+            
+
+            
+                
+            
+
+            
+                <tr>
+                    <th>&nbsp;</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="total"><h3>Order total</h3></th>
+                    <td class="total align-right">
+                        <h3 class="price_color">
+                            
+                                $100.00
+                            
+                        </h3>
+                    </td>
+                </tr>
+                
+            
+        </tbody>
+    </table>
 </div>
+
+            </div>
+        
+    </div>
+
+
+    
+        <div class="form-group clearfix">
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-8">
+                    <a href="/checkout/" class="btn btn-lg btn-primary btn-block">Proceed to checkout</a>
+                </div>
+            </div>
+        </div>
+    
+
+
+
+
+    
+
+
+</div>
+                </div>
+            </div>
+        </div>
 
 {% endblock %}

@@ -69,11 +69,11 @@ class User(models.Model):
     def __unicode__(self):
         return self.name
 
-class AllowedIP(models.Model):
-    """
-    Represents a whitelisted IP address who can access admin pages.
-    """
-    ip_address = models.CharField(max_length=512)
+# class AllowedIP(models.Model):
+#     """
+#     Represents a whitelisted IP address who can access admin pages.
+#     """
+#     ip_address = models.CharField(max_length=512)
 
-    def __unicode__(self):
-        return u'%s' % self.ip_address
+#     def __unicode__(self):
+#         return u'%s' % self.ip_address

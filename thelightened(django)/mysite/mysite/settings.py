@@ -64,7 +64,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'adminrestrict', 
     'compressor',
-    'paypal',
+    # 'paypal',
 ] + get_core_apps()
 
 
@@ -91,8 +91,8 @@ OSCAR_ORDER_STATUS_PIPELINE = {
     'Cancelled':(),
 }
 
-OSCAR_SHOP_NAME = 'OSCAR'
-OSCAR_SHOP_TAGLINE = 'oscar-shop'
+OSCAR_SHOP_NAME = 'thelightened'
+OSCAR_SHOP_TAGLINE = 'thelightened'
 OSCAR_FROM_EMAIL = 'oscar@example.com'
 OSCAR_DEFAULT_CURRENCY = 'TWD'
 
@@ -129,7 +129,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'oscar.apps.basket.middleware.BasketMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware', 
-    'adminrestrict.middleware.AdminPagesRestrictMiddleware',
+    # 'adminrestrict.middleware.AdminPagesRestrictMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
