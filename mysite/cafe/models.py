@@ -2,7 +2,6 @@ from django.db import models
 from tinymce.models import HTMLField
 from django.forms import ModelForm
 from django.contrib.auth.models import User
-
 from django.db.models.signals import pre_delete
 from django.dispatch.dispatcher import receiver
 class MyModel(models.Model):
@@ -69,6 +68,7 @@ class User(models.Model):
     def __unicode__(self):
         return self.name
 
+#IP Access deny
 # class AllowedIP(models.Model):
 #     """
 #     Represents a whitelisted IP address who can access admin pages.

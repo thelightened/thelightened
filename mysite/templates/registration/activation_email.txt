@@ -1,7 +1,0 @@
-感謝您的註冊
-使用者：{{ user }}
-在網站：{{ site_name }}註冊
-您的連結：http://{{ site_name }}/accounts/activate/{{ activation_key }}
-啟用信將於{{ expiration_days }}天後到期
-
-

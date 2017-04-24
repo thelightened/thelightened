@@ -54,7 +54,6 @@ INSTALLED_APPS = [
     # 'sorl.thumbnail',
     'mce_filebrowser',
     'django_markdown',
-    'registration', 
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -65,8 +64,8 @@ INSTALLED_APPS = [
     'adminrestrict', 
     'compressor',
     # 'paypal',
-    'djangosecure',
-    'sslserver',
+    # 'djangosecure',
+    # 'sslserver',
 ] + get_core_apps()
 
 
@@ -132,11 +131,11 @@ MIDDLEWARE_CLASSES = [
     'oscar.apps.basket.middleware.BasketMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware', 
     # 'adminrestrict.middleware.AdminPagesRestrictMiddleware',
-    'djangosecure.middleware.SecurityMiddleware'
+    # 'djangosecure.middleware.SecurityMiddleware'
 ]
 
 #secure
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 
 
 ROOT_URLCONF = 'mysite.urls'
