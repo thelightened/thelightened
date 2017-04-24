@@ -35,7 +35,7 @@ DEBUG = True
 
 
 
-ALLOWED_HOSTS = ['localhost','thelightened.gq','140.118.9.169']
+ALLOWED_HOSTS = ['localhost','thelightened.gq','140.118.9.169','127.0.0.1']
 
 
 
@@ -65,6 +65,8 @@ INSTALLED_APPS = [
     'adminrestrict', 
     'compressor',
     # 'paypal',
+    'djangosecure',
+    'sslserver',
 ] + get_core_apps()
 
 
@@ -130,7 +132,12 @@ MIDDLEWARE_CLASSES = [
     'oscar.apps.basket.middleware.BasketMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware', 
     # 'adminrestrict.middleware.AdminPagesRestrictMiddleware',
+    'djangosecure.middleware.SecurityMiddleware'
 ]
+
+#secure
+SECURE_SSL_REDIRECT = True
+
 
 ROOT_URLCONF = 'mysite.urls'
 
