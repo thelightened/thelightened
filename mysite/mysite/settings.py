@@ -34,7 +34,6 @@ SECRET_KEY = 'na2+sbbiap)(hg%grnn%iv*4+zq3q8uh&%35lq5f*pp&1@9*f1'
 DEBUG = True
 
 
-
 ALLOWED_HOSTS = ['localhost','thelightened.gq','140.118.9.169','127.0.0.1']
 
 
