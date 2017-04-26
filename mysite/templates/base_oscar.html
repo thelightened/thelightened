@@ -42,7 +42,6 @@
     <!-- Custom css --> 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/cwtexhei.css">
-
   
         {# Block where global CSS will go. #}
         {% block styles %}{% endblock %}
@@ -65,6 +64,7 @@
 
 
   <body class="no-trans">
+
     <!-- scrollToTop -->
     <!-- ================ -->
     <div class="scrollToTop"><i class="icon-up-open-big"></i></div>
@@ -143,16 +143,18 @@
 
           </div>
         </div>
+
+
       </div>
 
-
+     
     </header>
     <!-- header end -->
         
-
+ 
 
      <body id="{% block body_id %}default{% endblock %}" class="{% block body_class %}default{% endblock %}">
-
+        <img src="{% static "images/back_test.jpg" %}" width="1" alt="1" class="banners">
 
         {% block entries %}{% endblock %}
         
