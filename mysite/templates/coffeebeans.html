@@ -13,6 +13,7 @@
 
 <!-- section start -->
     <!-- ================ -->
+
     <div class="section">
       <div class="container">
         <h1 class="text-center title" id="portfolio">直接貿易咖啡豆</h1>
@@ -67,7 +68,14 @@
                             <p>烘培：中淺焙</p>
                             <p>價格：400/半磅</p>
                             <p>備註：柑橘調性、檸檬酸、酸度中等、甜感佳，尾韻有青果子調。</p>
-                             <button type="submit" class="btn btn-lg btn-primary btn-add-to-basket" value="Add to basket" data-loading-text="Add...">Add to basket</button>
+                            
+                             <form action="/basket/add/4/" method="post">
+                            <input type="hidden" name="csrfmiddlewaretoken" value="ZVer3eZnc3XedLbUJ9mhPZvBa0TUqqDxnRQsWqnIcsR78bLpj0iajg01st4LNtCt">
+                            <input id="id_quantity" name="quantity" type="hidden" value="1">
+                            <button type="submit" class="btn btn-primary btn-block" data-loading-text="Adding...">Add to basket</button>
+                            </form>
+
+                            
                           </div>
                           <div class="col-md-6">
                             <img src="{% static "images/beansinbasket.jpg" %}" alt="">
@@ -114,6 +122,16 @@
                             <p>烘培：中淺焙</p>
                             <p>價格：430/半磅</p>
                             <p>備註：從研磨後的乾粉就可以聞到明顯的柑橘、檸檬、花香，濕香氣有隱約的肉桂蘋果派一般令人愉悅的香氣。</p>
+
+
+                          <form action="/basket/add/5/" method="post">
+                          <input type="hidden" name="csrfmiddlewaretoken" value="exGBSocWe2IjeRDHUNXVKWo0Byaw4673Scob8TXlF5lLV04YfLKX7FT9mYIDa0sa">
+                          <input id="id_quantity" name="quantity" type="hidden" value="1">
+                          <button type="submit" class="btn btn-primary btn-block" data-loading-text="Adding...">Add to basket</button>
+                          </form>
+
+
+
                           </div>
                           <div class="col-md-6">
                             <img src="{% static "images/crc.jpg" %}" alt="">
@@ -162,6 +180,14 @@
                             <p>烘培：深焙</p>
                             <p>價格：500/半磅</p>
                             <p>備註：喝起來醇厚飽滿，溫暖綿密，回甘極佳，悠長的黑巧克力餘韻。</p>
+
+
+                             <form action="/basket/add/6/" method="post">
+                             <input type="hidden" name="csrfmiddlewaretoken" value="TqedOvc5G36ZNLEqJIUpayYGKjKAUFXN9GAjUUMDI0KuW3ZfDyMJSXwkyDb3MWG3">
+                             <input id="id_quantity" name="quantity" type="hidden" value="1">
+                             <button type="submit" class="btn btn-primary btn-block" data-loading-text="Adding...">Add to basket</button>
+                             </form>
+
                           </div>
                           <div class="col-md-6">
                             <img src="{% static "images/DSC00555.jpg" %}" alt="">
@@ -209,6 +235,14 @@
                             <p>烘培：-</p>
                             <p>價格：350/半磅</p>
                             <p>備註：嚴選七隻不同種類的咖啡豆進行配方，北義風格與牛奶非常相稱。</p>
+
+                            <form action="/basket/add/7/" method="post">
+                            <input type="hidden" name="csrfmiddlewaretoken" value="TqedOvc5G36ZNLEqJIUpayYGKjKAUFXN9GAjUUMDI0KuW3ZfDyMJSXwkyDb3MWG3">
+                            <input id="id_quantity" name="quantity" type="hidden" value="1">
+                            <button type="submit" class="btn btn-primary btn-block" data-loading-text="Adding...">Add to basket</button>
+                            </form>
+
+
                           </div>
                           <div class="col-md-6">
                             <img src="{% static "images/beans.jpg" %}" alt="">
