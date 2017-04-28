@@ -52,10 +52,23 @@ p.blog{
 }
 
 form {
-width: 350px;
+width: 2em;
 padding: 20px;
-/*border: 1px solid #270644;*/
 }
 
+@media (max-width:767px) {
+	.header.navbar-fixed-top {
+		position: absolute;
+	}
+	.main-navigation .navbar-default {
+		background-color: #000000;
+	}
 
+	.header.navbar-fixed-top {
+		background-color: #000000;
+	}
 
+	img.banners{
+	padding-top: 200px;
+}
+}
