@@ -42,8 +42,12 @@
     <!-- Custom css --> 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/cwtexhei.css">
+<<<<<<< HEAD
     <link href="{% static "css/custom.css" %}" rel="stylesheet">
   
+=======
+    <!-- <link href="{% static "css/custom.css" %}" rel="stylesheet"> -->
+>>>>>>> 201ca713c92f57378dd7bb79019dbf911b2d1696
         {# Block where global CSS will go. #}
         {% block styles %}{% endblock %}
 
@@ -127,15 +131,20 @@
                         <li><a href="{{TEMPLATE_DIRS }}/blog">點亮專欄</a></li>
                         <li><a href="{{TEMPLATE_DIRS }}/coffeebeans">商品資訊</a></li>
                         <li><a href="{{TEMPLATE_DIRS }}/partnershop">顆伴商店</a></li>
+<<<<<<< HEAD
                         {% if user.is_authenticated %}
                         <li><a href="{{TEMPLATE_DIRS }}/accounts/profile">會員專區</a></li>
                         {% else %}
                         <li><a href="{{TEMPLATE_DIRS }}/allauth/login">會員專區</a></li>
                         {% endif %}
+=======
+                        <li><a href="{{TEMPLATE_DIRS }}/allauth/login">會員專區</a></li>
+>>>>>>> 201ca713c92f57378dd7bb79019dbf911b2d1696
                       </ul>
                     </div>
 
                   </div>
+
                 </nav>
                 <!-- navbar end -->
 
@@ -145,16 +154,30 @@
             </div>
             <!-- header-right end -->
           </div>
+<<<<<<< HEAD
         </div>
       </div>
+=======
+
+
+        </div>
+
+      </div>
+
+>>>>>>> 201ca713c92f57378dd7bb79019dbf911b2d1696
     </header>
     <!-- header end -->
         
  
 
+<<<<<<< HEAD
      <body>
 <!-- <img src="{% static "images/back_test.jpg" %}" width="15%" alt="" class="banners">         -->
 
+=======
+     <body id="{% block body_id %}default{% endblock %}" class="{% block body_class %}default{% endblock %}">
+        <img src="{% static "images/back_test.jpg" %}" width="1" alt="" class="banners">
+>>>>>>> 201ca713c92f57378dd7bb79019dbf911b2d1696
         {% block entries %}{% endblock %}
         
 
