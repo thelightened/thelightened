@@ -52,8 +52,8 @@ p.blog{
 }
 
 form {
-width: 2em;
-padding: 20px;
+/*	width: 2em;
+	padding: 20px;*/
 }
 
 @media (max-width:767px) {
@@ -70,5 +70,20 @@ padding: 20px;
 
 	img.banners{
 	padding-top: 200px;
+	}
 }
+
+.btn {
+	min-width: 10px;
+}
+
+.header {
+	color: #ffffff;
+	background-color: rgba(0, 0, 0, 0.10);
+	padding: 10px 0;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }

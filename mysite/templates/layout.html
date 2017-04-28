@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% load promotion_tags %}
 
-{% block styles %}
+<!-- {% block styles %}
     {% comment %}
         If you are developing Oscar's CSS, or overriding Oscar's CSS
         files in your project, then set USE_LESS = True in your
@@ -15,14 +15,14 @@
     {% endif %}
     <link rel="stylesheet" href="{% static "oscar/js/bootstrap-datetimepicker/bootstrap-datetimepicker.css" %}" />
     <link rel="stylesheet" type="text/css" href="{% static "oscar/css/datetimepicker.css" %}" />
-{% endblock %}
+{% endblock %} -->
 
 {% block layout %}
     
 
     {# Main content of page - other layout templates may override this block #}
     {% block content_wrapper %}
-        <div class="container-fluid page">
+        <div class="section">
             <div class="page_inner">
                 {% block breadcrumbs %}{% endblock %}
                 {% block header %}
