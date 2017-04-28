@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load promotion_tags %}
+
 {% block title%}coffeebeans{% endblock %}
 {% block entries %}
 {% load static %}
@@ -130,8 +132,8 @@
                           <input id="id_quantity" name="quantity" type="hidden" value="1">
                           <button type="submit" class="btn btn-primary btn-block" data-loading-text="Adding...">Add to basket</button>
                           </form>
-
-
+                          
+                          {% include "partials/alert_messages.html" %}
 
                           </div>
                           <div class="col-md-6">
