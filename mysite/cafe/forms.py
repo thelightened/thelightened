@@ -13,18 +13,7 @@ def get(self, request):
             return redirect('index/')
         else:
             return render(request, self.template_name, {'class': 'form-control'})
-class LoginForm(forms.Form):
-    username = forms.CharField(label=u'暱稱',
-     initial='Nickname',
-        max_length=3,
-        widget=forms.TextInput(attrs={'class': 'form-control'}))
-    
 
-    password = forms.CharField(label=u'密碼',
-        
-        min_length=3,
-        max_length=18,
-        widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
 class SignupForm(forms.Form):
     first_name = forms.CharField(min_length=2,max_length=18, )
