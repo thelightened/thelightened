@@ -80,7 +80,7 @@ SITE_ID = 3
 # facebook social
 ACCOUNT_EMAIL_REQUIRED=True
 ACCOUNT_USERNAME_REQURIED=True
-LOGIN_REDIRECT_URL = "/index"
+# LOGIN_REDIRECT_URL = "/index"
 
 # Oscar
 OSCAR_INITIAL_ORDER_STATUS = 'Pending'
@@ -93,7 +93,7 @@ OSCAR_ORDER_STATUS_PIPELINE = {
 
 OSCAR_SHOP_NAME = 'thelightened'
 OSCAR_SHOP_TAGLINE = 'thelightened'
-OSCAR_FROM_EMAIL = 'oscar@example.com'
+OSCAR_FROM_EMAIL = 'succowork@gmail.com'
 OSCAR_DEFAULT_CURRENCY = 'TWD'
 
 
@@ -129,7 +129,9 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'oscar.apps.basket.middleware.BasketMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware', 
+    #adminrestrction
     # 'adminrestrict.middleware.AdminPagesRestrictMiddleware',
+    #Security
     # 'djangosecure.middleware.SecurityMiddleware'
 ]
 
@@ -272,7 +274,9 @@ ACCOUNT_ADAPTER = "allauth.account.adapter.DefaultAccountAdapter"
 LOGIN_URL = "allauth/login"
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT =3
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT =30
-ACCOUNT_UNIQUE_EMAIL =True
+#unfixed
+ACCOUNT_UNIQUE_EMAIL =False
+
 ACCOUNT_FORMS = {'allauth/login': 'cafe.forms.LoginForm'}
 ACCOUNT_LOGIN_FORM_CLASS = 'cafe.forms.LogingForm'
 
@@ -283,4 +287,4 @@ ACCOUNT_LOGOUT_REDIRECT_URL ='/index'
 
 ACCOUNT_EMAIL_REQUIRED=True
 ACCOUNT_USERNAME_REQURIED=True
-LOGIN_REDIRECT_URL = "/index"
+# LOGIN_REDIRECT_URL = "/index"
