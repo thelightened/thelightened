@@ -6,11 +6,27 @@
     {% trans "Basket" %} | {{ block.super }}
 {% endblock %}
 
+{% block breadcrumbs %}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{{ homepage_url }}">{% trans "Home" %}</a>
+        </li>
+        {% for category in category.get_ancestors %}
+            <li>
+                <a href="{{ category.get_absolute_url }}">{{ category.name }}</a>
+            </li>
+        {% endfor %}
+        <li class="active">{{ category.name }}</li>
+    </ul>
+{% endblock breadcrumbs %}
+
 
 {# Hide mini-basket so we don't have two baskets to keep in sync #}
 {% block mini_basket %}{% endblock %}
 
-
+{% block headertext %}
+    {% trans "Basket" %}
+{% endblock %}
 
 {% block content %}
     {# Use a partial template so that AJAX can be used to re-render basket #}

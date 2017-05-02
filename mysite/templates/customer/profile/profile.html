@@ -31,19 +31,30 @@
     </table>
 
 
-    <br>
-    <a href="{% url 'customer:change-password' %}" class="btn btn-primary">{% trans 'Change password' %}</a>
-    <br>
-    <a href="{% url 'customer:profile-update' %}" class="btn btn-primary">{% trans 'Edit profile' %}</a>
-    <br>
-    <a id="delete_profile" href="{% url 'customer:profile-delete' %}" class="btn btn-danger">{% trans 'Delete profile' %}</a><br>
+<div class = "row">
 
+    <div class="col-md-6">  
+    <a href="{% url 'customer:change-password' %}" class="btn btn-primary">{% trans 'Change password' %}</a>
+    
+    <a href="{% url 'customer:profile-update' %}" class="btn btn-primary">{% trans 'Edit profile' %}</a>
+    
+    <a id="delete_profile" href="{% url 'customer:profile-delete' %}" class="btn btn-danger">{% trans 'Delete profile' %}</a>
+    </div> 
+
+    <div class="col-md-2">
     <form method="post" action="{% url 'account_logout' %}">
       {% csrf_token %}
       {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
       {% endif %}
-      <button type="submit">{% trans 'Sign Out' %}</button>
+      <button  class="btn btn-primary" type="submit">{% trans 'Sign Out' %}</button>
     </form>
+    </div>
+
+    <!-- admin/dashboard 寫裡面-->
+    <div class="col-md-4">
+    </div>    
+
+</div>
 
 {% endblock %}

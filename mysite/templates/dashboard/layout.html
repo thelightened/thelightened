@@ -35,8 +35,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <span class="navbar-brand">{{ shop_name }}</span>
-            </div>
+
+                <div class="col-md-4">
+                <span>
+                    <img src="{% static "images/logo3.png" %}" style="width:16%;height:16%;" >
+                </span>
+                </div>
+
+
+            <div class="col-md-8">
             <div class="collapse navbar-collapse nav-accounts">
                 <ul class="nav navbar-nav navbar-right">
                     <li><span>{% trans "Welcome" %} <em>{{ user.get_full_name|default:request.user.email }}</em></span></li>
@@ -44,6 +51,8 @@
                     <li><a href="{% url 'customer:summary' %}"><i class="icon-user"></i> {% trans "Account" %}</a></li>
                     <li><a href="{% url 'dashboard:logout' %}"><i class="icon-signout"></i> {% trans "Log out" %}</a></li>
                 </ul>
+            </div>
+        </div>
             </div>
         </div><!-- /navbar-inner -->
     </nav><!-- /navbar -->
