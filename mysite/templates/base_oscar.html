@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load account %}
 {% load staticfiles %}
 {% load static %}
 <!DOCTYPE html>
@@ -129,7 +130,7 @@
                         <li><a href="{{TEMPLATE_DIRS }}/blog">點亮專欄</a></li>
                         <li><a href="{{TEMPLATE_DIRS }}/coffeebeans">商品資訊</a></li>
                         <li><a href="{{TEMPLATE_DIRS }}/partnershop">顆伴商店</a></li>
-                        {% if username %}
+                        {% if request.user %}
                         <li><a href="{{TEMPLATE_DIRS }}/accounts/profile">{{ username }}</a></li>
                         {% else %}
                         <li><a href="{{TEMPLATE_DIRS }}/allauth/login">會員專區</a></li>
