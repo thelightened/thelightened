@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.google',
     'django.contrib.flatpages',
     'widget_tweaks',
     'adminrestrict', 
@@ -299,3 +298,6 @@ ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 # ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = 'index'
 ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL ='/accounts/profile'
 # LOGIN_REDIRECT_URL = "/index"
+
+SOCIALACCOUNT_EMAIL_VERIFICATION = False
+SOCIALACCOUNT_EMAIL_REQUIRED = True
