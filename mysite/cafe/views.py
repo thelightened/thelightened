@@ -27,6 +27,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from allauth.account.forms import LoginForm
 from django.contrib.auth import authenticate, login
+from allauth.account.adapter import DefaultAccountAdapter
+
 
 class BlogIndex(generic.ListView):
     queryset = models.Entry.objects.published()
@@ -183,3 +185,21 @@ def logout(request):
 #     request_context.push(locals())
 #     html = template.render(request_context)
 #     return HttpResponse(html)
+
+class AccountAdapter(DefaultAccountAdapter):
+    def save_user(self, request, user, form, commit=False):
+        data = form.cleaned_data
+        user.username = data['username']
+        user.email = data['email']
+        user.first_name = data['first_name']
+        user.last_name = data['last_name']
+        user.gender = data['gender']
+        user.birth_date = data['birth_date']
+        if 'password1' in data:
+            user.set_password(data['password1'])
+        else:
+            user.set_unusable_password()
+        self.populate_username(request, user)
+        if commit:
+            user.save()
+        return user

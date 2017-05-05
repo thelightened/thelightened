@@ -274,7 +274,7 @@ ACCOUNT_ADAPTER = "allauth.account.adapter.DefaultAccountAdapter"
 LOGIN_URL = "allauth/login"
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT =3
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT =30
-#unfixed
+
 
 
 ACCOUNT_FORMS = {'allauth/login': 'cafe.forms.LoginForm'}

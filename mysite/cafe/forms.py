@@ -2,6 +2,7 @@
 # coding=utf-8
 from django.contrib.auth.models import User
 from django import forms
+from django.forms.extras import widgets
 
 def get(self, request):
     form = PersonDetailsForm()
@@ -21,10 +22,12 @@ class SignupForm(forms.Form):
        
     last_name = forms.CharField(min_length=1,max_length=18,)
       
+    birth_date = forms.DateField(widget=widgets.SelectDateWidget(years=range(1900, 2100))) 
+
     widget=forms.TextInput(attrs={'class': 'form-control'})
     def signup(self, request, user):
         user.first_name = self.cleaned_data['first_name']
         user.last_name = self.cleaned_data['last_name']
-        # user.birthday = self.cleaned_data['birthday']
+        user.birthday = self.cleaned_data['birth_date']
         user.email = self.cleaned_data['email']
         user.save()
