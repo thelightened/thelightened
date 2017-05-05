@@ -209,6 +209,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'zh-TW'
 
+LOCALE_PATHS = [
+  os.path.join(BASE_DIR, 'locale'),
+]
+
 TIME_ZONE = 'Asia/Taipei'
 
 USE_I18N = True
