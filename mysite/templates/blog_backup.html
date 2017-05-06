@@ -1,0 +1,51 @@
+{% extends "base_blog.html" %}
+{% block title%}blog{% endblock %}
+{% load django_markdown %}
+{% block entries %}
+{% load static %}
+
+<!-- google search bar -->
+<!-- <script>
+  (function() {
+    var cx = '011187904227738002497:eb46tmimfbk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  ga('send', 'timing', {
+  'timingCategory': 'category2',
+  'timingVar': 'lookup2',
+  'timingValue': 20
+});
+</script> -->
+
+<!-- section start -->
+    <div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+      <div class="container">
+        <div class="row">
+        {% for object in object_list %} 
+          <div class="col-md-4">
+            <div class="row">
+              <div class="blog-art-pic" align="middle">
+                <a href="{% url "entry_detail" slug=object.slug %}"><img src="{{ object.cover_photo.url }}" class="Blog"></a>
+                <div class="space_blog"></div>
+              </div>
+            </div>
+            <p class="blog"><a href="{% url "entry_detail" slug=object.slug %}" class="Blog">{{ object.title }}</a></p>
+            <p class="blog">{{ object.created }}</p>
+            <p class="blog">{{ object.body|slice:"15" }}</p>
+            <div class="space"></div>
+            <div class="space"></div>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- section end -->
+
+
+{% endblock %}
