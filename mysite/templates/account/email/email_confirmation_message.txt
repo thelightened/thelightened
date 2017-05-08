@@ -1,0 +1,8 @@
+{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}親愛的The Lightened用戶您好: 
+
+謝謝您在The Lightened中註冊成為使用者 {{ user_display }} 
+
+為確認為本人操作以及顧慮您的帳號安全性，請透過點選連結確認這是您的您的帳號，{{ activate_url }}
+{% endblocktrans %}{% endautoescape %}
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}The Lightened 敬上
+{% endblocktrans %}
