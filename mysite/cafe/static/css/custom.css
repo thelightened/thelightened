@@ -24,8 +24,8 @@ A.Blog:active {text-decoration: none; color: black;}
 
 
 img.Blog{
-	height: 250px;
-	width: 80%;
+	height: 330px;
+	width: 90%;
 	text-align: center;
 	vertical-align: center;
 	border-radius: 1%;
@@ -102,4 +102,8 @@ p.test{
 
 form.blog{
 	width: 100%;
+}
+
+p.test1{
+	font-size: 18px;
 }
