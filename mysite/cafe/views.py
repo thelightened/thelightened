@@ -30,6 +30,7 @@ from django.contrib.auth import authenticate, login
 from allauth.account.adapter import DefaultAccountAdapter
 
 
+
 class BlogIndex(generic.ListView):
     queryset = models.Entry.objects.published()
     template_name = "blog.html"
@@ -203,3 +204,5 @@ class AccountAdapter(DefaultAccountAdapter):
         if commit:
             user.save()
         return user
+
+

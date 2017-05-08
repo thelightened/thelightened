@@ -14,7 +14,7 @@ import os
 
 from oscar.defaults import *
 from oscar import OSCAR_MAIN_TEMPLATE_DIR
-location = lambda x: os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', x)
+# location = lambda x: os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', x)
 from oscar import get_core_apps
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -61,7 +61,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'adminrestrict', 
     'compressor',
-    # 'paypal',
+    'paypal',
     # 'djangosecure',
     # 'sslserver',
 ] + get_core_apps()
@@ -207,7 +207,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'zh-TW'
+LANGUAGE_CODE = 'zh-hant'
 
 LOCALE_PATHS = [
   os.path.join(BASE_DIR, 'locale'),

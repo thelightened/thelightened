@@ -45,7 +45,7 @@ urlpatterns = [
     # url(r'^markdown/', include("django_markdown.urls")),
     # url(r'^fblog/$',fblog),
     url(r'', include('cafe.urls')),
-    # url(r'^checkout/paypal/', include('paypal.express.urls')),
-
+    url(r'^checkout/paypal/', include('paypal.express.urls')),
+    
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
