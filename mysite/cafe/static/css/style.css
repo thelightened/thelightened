@@ -152,7 +152,7 @@ blockquote {
 	z-index: 2;
 }
 .subfooter {
-	background-color: #000000;
+	background-color: rgba(119, 136, 153, 0.95);
 	border-top: 1px solid #f3f3f3;
 	border-bottom: 1px solid #f3f3f3;
 	padding: 40px 0;
