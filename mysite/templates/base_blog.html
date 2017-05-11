@@ -104,14 +104,9 @@
                         
                         {% if user.is_authenticated %}
                         <li><a href="{{TEMPLATE_DIRS }}/basket">購物車</a></li>
-                        {% else %}
-                        <li><a href="{{TEMPLATE_DIRS }}/allauth/login">購物車</a></li>
-                        {% endif %}
-
-
-                        {% if user.is_authenticated %}
                         <li><a href="{{TEMPLATE_DIRS }}/accounts/profile">{{ user }}</a></li>
                         {% else %}
+                        <li><a href="{{TEMPLATE_DIRS }}/allauth/login">購物車</a></li>
                         <li><a href="{{TEMPLATE_DIRS }}/allauth/login">會員專區</a></li>
                         {% endif %}
                       </ul>
