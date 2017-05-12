@@ -42,7 +42,7 @@ class Entry(models.Model):
     cover_photo = models.ImageField(upload_to = 'images')
     slug = models.SlugField(max_length=200, unique=True)
     publish = models.BooleanField(default=True)
-    created = models.DateTimeField(auto_now_add=True)
+    created = models.DateField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     # tags = models.ManyToManyField(Tag)
 
