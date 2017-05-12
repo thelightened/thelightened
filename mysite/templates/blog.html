@@ -24,7 +24,7 @@
               <h1 class="text-center title" id="portfolio">點亮小農專欄</h1>
         <div class="separator"></div>
         <p class="lead text-center">願小農的點點滴滴，映照在你我心中。</p>
-        <br>   
+        <div class="space"></div>
           <!-- <div class="blog"> -->
             <div class="blog-grids">          
                 <div class="blog-grids-head">
@@ -53,18 +53,22 @@
                       <div class="blog-grid">
                         <div class="blog-poast-head">
                           <div class="blog-art-pic">
-                            <a class="post-pic" href="#"> <img src="{{ object.cover_photo.url }}" class="Blog"></a>
-                          </div>
-                          </div>
-                            <p class="meta"> {{ object.created }}</p>
-                          <div class="blog-info">
                             <h3><a href="{% url "entry_detail" slug=object.slug %}" class="Blog">{{ object.title }}</a></h3>
-                            <p class="meta test">{{ object.body|markdown }}</p>
-                            <a class="btn" href="{% url "entry_detail" slug=object.slug %}">Details</a>
+                            <hr>
+                            <p class="blog"><i class="fa fa-clock-o"></i>
+ {{ object.created }}</p> 
+                            <hr>
+                            <a class="post-pic" href="{% url "entry_detail" slug=object.slug %}"> <img src="{{ object.cover_photo.url }}" class="Blog"></a>
+                          </div>
+                          </div>
+                          <div class="blog-info">
+                            
+                            <div class="space_blog"></div>
+                            <!-- <p class="meta test">{{ object.body|markdown }}</p> -->
                           </div>
 
                         </div>
-                       </div>   
+                       </div>
                     {% endfor %}
 
 
@@ -93,7 +97,7 @@
                   <div class="clear"></div> -->
 
                 </div>
-                <div class="criuse-grid-load"><a href="#">Loading More</a></div>            
+                <!-- <div class="criuse-grid-load"><a href="#">Loading More</a></div>             -->
             </div>
           </div>
         </div>

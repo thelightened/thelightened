@@ -16,7 +16,7 @@ body { font-family:'cwTeXHei','Josefin Sans', sans-serif; background-color: rgba
 }
 
 /*blog theme*/
-A.Blog {color:black; font-size: 25px; text-indent: 2em;}
+A.Blog {color:black; font-size: 30px; text-indent: 2em;}
 A.Blog:link  {text-decoration: none; color: black;}
 A.Blog:visited {text-decoration: none; color: black;}
 A.Blog:hover {text-decoration: bold; color: green;}
@@ -25,15 +25,16 @@ A.Blog:active {text-decoration: none; color: black;}
 
 img.Blog{
 	height: 330px;
-	width: 90%;
+	width: 100%;
 	text-align: center;
 	vertical-align: center;
-	border-radius: 1%;
-	-webkit-filter:grayscale(1);
+	border-radius: 3%;
+	-webkit-filter:grayscale(0);
 	/*-webkit-filter:sepia(1);*/
 }
 img.Blog:hover{
-	-webkit-filter:grayscale(0);
+	/*-webkit-animation: fadeout 2s;*/
+	filter: sepia(100%);
 }
 
 img.beans{
@@ -47,17 +48,17 @@ img.beans{
 
 
 .space_blog{
-	padding: 5px 0;
+	padding: 50px 0;
 }
 
 p.blog{
-	text-align: left;
-	text-indent: 2em;
+	text-align: right;
+	line-height: 0px;
 }
 
-form {
-/*	width: 2em;
-	padding: 20px;*/
+form.login {
+	width: 22em;
+	padding: 10px;
 }
 
 @media (max-width:767px) {
@@ -104,7 +105,7 @@ form.blog{
 	width: 100%;
 }
 
-p.test1{
+p.trade{
 	font-size: 18px;
 }
 
