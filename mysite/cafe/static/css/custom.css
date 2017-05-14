@@ -53,10 +53,15 @@ img.beans{
 
 p.blog{
 	text-align: right;
-	line-height: 0px;
+	line-height: 0;
 }
 
-form.login {
+p.text-left{
+	text-align: left;
+	line-height: 0;
+}
+
+form.allauth {
 	width: 22em;
 	padding: 10px;
 }

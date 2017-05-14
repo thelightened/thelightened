@@ -34,8 +34,7 @@ from allauth.account.adapter import DefaultAccountAdapter
 class BlogIndex(generic.ListView):
     queryset = models.Entry.objects.published()
     template_name = "blog.html"
-    paginate_by = 6
-
+    paginate_by = 4
 
 class BlogDetail(generic.DetailView):
     model = models.Entry
