@@ -207,7 +207,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'zh-hant'
+LANGUAGE_CODE = 'zh_Hant'
 
 LOCALE_PATHS = [
   os.path.join(BASE_DIR, 'locale'),
