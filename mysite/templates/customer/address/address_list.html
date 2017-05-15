@@ -7,7 +7,7 @@
         <table class="table table-striped table-bordered">
             <tbody>
                 <tr>
-                    <th>{% trans 'Address' %}</th>
+                    <th>地址</th>
                     <th></th>
                 </tr>
                 {% for address in addresses %}
@@ -34,7 +34,7 @@
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="{% url 'customer:address-delete' pk=address.id %}">
-                                            {% trans 'Delete' %}
+                                            刪除
                                         </a>
                                     </li>
 
@@ -61,10 +61,10 @@
         </table>
         {% include "partials/pagination.html" %}
     {% else %}
-        <p>{% trans 'There are no addresses in your address book.' %}</p>
+        <p>沒有任何地址存在</p>
     {% endif %}
     <p>
-        <a href="{% url 'customer:address-create' %}" class="btn btn-primary">{% trans 'Add a new address' %}</a>
+        <a href="{% url 'customer:address-create' %}" class="btn btn-primary">新增新的地址</a>
     </p>
 {% endblock tabcontent %}
 

@@ -4,7 +4,11 @@
 {% load account %}
 {% load socialaccount %}
 {% load static %}
+{% block headertext %}個人資訊{% endblock %}
 {% block tabcontent %}
+
+
+
 
 
     <table class="table table-striped table-bordered">
@@ -63,7 +67,7 @@
 
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
       {% endif %}
-      <button  class="btn btn-primary" type="submit">{% trans 'Sign Out' %}</button>
+      <button  class="btn btn-primary" type="submit">登出</button>
     </form>
     </div>
 

@@ -1,12 +1,11 @@
 {% extends "customer/emails/base.html" %}
 {% load currency_filters i18n %}
 
-{% block body %}<p xmlns="http://www.w3.org/1999/html">{% trans 'Hello,' %}</p>
+{% block body %}<p xmlns="http://www.w3.org/1999/html">您好：</p>
 
-<p>{% blocktrans with order_number=order.number %}We are pleased to confirm your order {{ order_number }} has been received and
-will be processed shortly.{% endblocktrans %}</p>
+<p>{% blocktrans with order_number=order.number %}我們很榮信得為您確認訂單，訂單編號：{{ order_number }已經收到並盡快為您服務.{% endblocktrans %}</p>
 
-<p>{% trans 'Your order contains:' %}</p>
+<p>您的訂單包含：</p>
 
 <ul>
     {% for line in order.lines.all %}
