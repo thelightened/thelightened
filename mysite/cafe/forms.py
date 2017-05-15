@@ -17,12 +17,10 @@ def get(self, request):
 
 
 class SignupForm(forms.Form):
-    first_name = forms.CharField(min_length=2,max_length=18, )
-      
-       
-    last_name = forms.CharField(min_length=1,max_length=18,)
-      
-    birth_date = forms.DateField(widget=widgets.SelectDateWidget(years=range(1900, 2100))) 
+
+    last_name = forms.CharField(label=("姓氏"),min_length=1,max_length=18,)
+    first_name = forms.CharField(label=("名字"),min_length=2,max_length=18, )
+    birth_date = forms.DateField(label=("生日"),widget=widgets.SelectDateWidget(years=range(1900, 2100))) 
 
     widget=forms.TextInput(attrs={'class': 'form-control'})
     def signup(self, request, user):
