@@ -68,7 +68,7 @@ INSTALLED_APPS = [
 
 
 # MailGun
-EMAIL_HOST = 'localhost'
+EMAIL_HOST = 'thelightened'
 DEFAULT_FROM_EMAIL = 'succowork@gmail.com'
 EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
 MAILGUN_ACCESS_KEY = 'key-ecda648dbaaebda1966ec529ba1c98be'
