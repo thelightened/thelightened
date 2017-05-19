@@ -9,16 +9,16 @@
 
 <ul>
     {% for line in order.lines.all %}
-    <li>{{ line.title }} - {%  trans 'quantity:' %} {{ line.quantity }} - {% trans 'price:' %} {{ line.line_price_incl_tax|currency:order.currency }}</li>
+    <li>{{ line.title }} - 數量 {{ line.quantity }} - 價錢 {{ line.line_price_incl_tax|currency:order.currency }}</li>
     {% endfor %}
 </ul>
 <p>
-{% trans 'Basket total:' %} {{ order.basket_total_incl_tax|currency:order.currency }}<br/>
-{% trans 'Shipping:' %} {{ order.shipping_incl_tax|currency:order.currency }}<br/>
-{% trans 'Order Total:' %} {{ order.total_incl_tax|currency:order.currency }}
+金額: {{ order.basket_total_incl_tax|currency:order.currency }}<br/>
+運費: {{ order.shipping_incl_tax|currency:order.currency }}<br/>
+總金額: {{ order.total_incl_tax|currency:order.currency }}
 </p>
 
-<p>{% trans 'Shipping address:' %}</p>
+<p>運輸地址:</p>
 <p>{% for field in order.shipping_address.active_address_fields %}  {{ field }}<br/>
 {% endfor %}</p>
 
