@@ -31,7 +31,7 @@ MEDIA_URL = '/media/'
 SECRET_KEY = 'na2+sbbiap)(hg%grnn%iv*4+zq3q8uh&%35lq5f*pp&1@9*f1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True    
 
 
 ALLOWED_HOSTS = ['localhost','thelightened.gq','140.118.9.169','127.0.0.1']
@@ -62,8 +62,8 @@ INSTALLED_APPS = [
     'adminrestrict', 
     'compressor',
     'paypal',
-    # 'djangosecure',
-    # 'sslserver',
+    'djangosecure',
+    'sslserver',
 ] + get_core_apps()
 
 
@@ -127,9 +127,9 @@ MIDDLEWARE_CLASSES = [
     'oscar.apps.basket.middleware.BasketMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware', 
     #adminrestrction
-    # 'adminrestrict.middleware.AdminPagesRestrictMiddleware',
+    'adminrestrict.middleware.AdminPagesRestrictMiddleware',
     #Security
-    # 'djangosecure.middleware.SecurityMiddleware'
+    'djangosecure.middleware.SecurityMiddleware'
 ]
 
 #secure
